@@ -1334,7 +1334,7 @@ const ftroli = {
 
 
     const menulist = `
-    Konichiwa ${pushname} dear 👋. I am ${global.BotName}, a bot developed by: ✨️MAGIC✨️ to take your WhatsApp usage into next level.
+    Konichiwa ${pushname} dear 👋. I am ${global.BotName}, a bot developed by: Sebastian to take your WhatsApp usage into next level.
         
        「 System Info 」
     
@@ -1552,7 +1552,7 @@ const random=pages[Math.floor(Math.random() * pages.length)]
         const i = Math.floor(Math.random() * wallpaper.length);
 		
 let buttons = [
-            {buttonId: `${prefix}wallpaper ${args.join(" ")}`, buttonText: {displayText: '>>'}, type: 1}
+            {buttonId: `${prefix}wallpaper ${args.join(" ")}`, buttonText: {displayText: 'Mehr❤'}, type: 1}
         ]
         let buttonMessage = {
             image: {url:wallpaper[i].image},
@@ -3366,7 +3366,7 @@ case 'music': case 'play': case 'song': case 'ytplay': {
         // Convert the file size to megabytes (optional)
         let fileSizeInMegabytes = fileSizeInBytes / (1024 * 1024);
         console.log("Audio downloaded ! Size: " + fileSizeInMegabytes);
-        if (fileSizeInMegabytes <= 40) {
+        if (fileSizeInMegabytes <= 4000) {
             Miku.sendMessage(
              m.chat,
             {
@@ -3397,7 +3397,7 @@ break
         }
         let infoYt = await ytdl.getInfo(urlYt);
         //30 MIN
-        if (infoYt.videoDetails.lengthSeconds >= 1800) {
+        if (infoYt.videoDetails.lengthSeconds >= 180000) {
           m.reply(`❌ Video file too big!`);
           return;
         }
