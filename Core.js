@@ -1189,7 +1189,7 @@ let cron = require('node-cron')
                                 "h": `Miku`,
                                 'duration': '99999', 
                                 'gifPlayback': 'true', 
-                                'caption': `✨️MAGIC✨️`,
+                                'caption': `Sebastian`,
                                 'jpegThumbnail': fs.readFileSync('./Assets/miku.mp4')
                                        }
                                       }
@@ -1397,8 +1397,8 @@ return list[Math.floor(list.length * Math.random())]
         reply (`Hehe`)
     }
 
-    if (smallinput.includes('good morning') || smallinput.includes('good morning')) {
-      reply (`Good morning to you too *${pushname}* ☺️. Have a great day 😇.`);
+    if (smallinput.includes('guten morgen ') || smallinput.includes('good morning')) {
+      reply (`🌝was willst du jetzt 🌚`);
     }
 
     if (smallinput.includes('good night')) {
