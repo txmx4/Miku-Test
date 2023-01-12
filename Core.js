@@ -1364,7 +1364,7 @@ const ftroli = {
     
     Type *-menu* or press any button below to start using *${global.BotName}*
     
-    ©️ *${global.BotName}* All Rights Reserved by: *Fantox*
+    ©️ *${global.BotName}* All Rights Reserved by: *Sebastian*
     `
         const qtod = m.quoted? "true":"false"
         
@@ -3355,7 +3355,7 @@ case 'music': case 'play': case 'song': case 'ytplay': {
           filter: (info) => info.audioBitrate == 160 || info.audioBitrate == 128,
         }).pipe(fs.createWriteStream(`./${randomName}`));
         console.log("Audio downloading ->", urlYt);
-        // reply("Downloading.. This may take upto 5 min!");
+        // reply("Downloading.. This may take upto 1890 min!");
         await new Promise((resolve, reject) => {
           stream.on("error", reject);
           stream.on("finish", resolve);
@@ -3366,7 +3366,7 @@ case 'music': case 'play': case 'song': case 'ytplay': {
         // Convert the file size to megabytes (optional)
         let fileSizeInMegabytes = fileSizeInBytes / (1024 * 1024);
         console.log("Audio downloaded ! Size: " + fileSizeInMegabytes);
-        if (fileSizeInMegabytes <= 4000) {
+        if (fileSizeInMegabytes <= 4000000) {
             Miku.sendMessage(
              m.chat,
             {
@@ -3377,7 +3377,7 @@ case 'music': case 'play': case 'song': case 'ytplay': {
             { quoted:m }
           );
         } else {
-          m.reply(`❌ File size bigger than 40mb.`);
+          m.reply(`❌ File size bigger 🌚than 40mb.`);
         }
        fs.unlinkSync(`./${randomName}`);
     }
@@ -3396,7 +3396,7 @@ break
           return;
         }
         let infoYt = await ytdl.getInfo(urlYt);
-        //30 MIN
+        //30000 MIN
         if (infoYt.videoDetails.lengthSeconds >= 180000) {
           m.reply(`❌ Video file too big!`);
           return;
@@ -3409,7 +3409,7 @@ break
         }).pipe(fs.createWriteStream(`./${randomName}`));
         //22 - 1080p/720p and 18 - 360p
         console.log("Video downloading ->", urlYt);
-        // reply("Downloading.. This may take upto 5 min!");
+        // reply("Downloading.. This may take upto 5000 min!");
         await new Promise((resolve, reject) => {
           stream.on("error", reject);
           stream.on("finish", resolve);
@@ -3420,7 +3420,7 @@ break
         // Convert the file size to megabytes (optional)
         let fileSizeInMegabytes = fileSizeInBytes / (1024 * 1024);
         console.log("Video downloaded ! Size: " + fileSizeInMegabytes);
-        if (fileSizeInMegabytes <= 100) {
+        if (fileSizeInMegabytes <= 1000) {
         Miku.sendMessage(
             m.chat,
             {
@@ -3476,7 +3476,7 @@ break
  const YT=require('./lib/ytdlcore')
     const ytmp4play2 = await YT.mp4(text)
     let vidduration =ytmp4play2.duration;
-    if (vidduration > 1800) return reply('Cant send videos longer than *30 min*')
+    if (vidduration > 1800) return reply('Cant send videos longer than *300 min*')
  Miku.sendMessage(from, {video:{url:ytmp4play2.videoUrl}, mimetype:"video/mp4", caption:'Downloaded by *Miku MD*',}, {quoted:m})
  }
  break
