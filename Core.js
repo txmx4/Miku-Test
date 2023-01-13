@@ -1393,19 +1393,19 @@ return list[Math.floor(list.length * Math.random())]
         reply (`*XD*`)
     }
 
-    if (smallinput=='ups') {
-        reply (`Hehe`)
+    if (smallinput=='XD') {
+        reply (`XD`)
     }
 
     if (smallinput.includes('guten morgen ') || smallinput.includes('good morning')) {
       reply (`🌝was willst du jetzt 🌚`);
     }
 
-    if (smallinput.includes('good night')) {
+    if (smallinput.includes('Gute Nacht')) {
       reply (`Good night to you too *${pushname}* 😇. Sleep well and sweet dreams.`);
     }
 
-    if (smallinput.includes('arigato')|| smallinput.includes('arigatou') || smallinput.includes('thank')) {
+    if (smallinput.includes('hi')|| smallinput.includes('arigatou') || smallinput.includes('thank')) {
       reply (`Mention not *${pushname}* 😇. I am a bot afterall.`);
     }      
 
