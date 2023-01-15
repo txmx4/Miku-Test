@@ -1334,7 +1334,7 @@ const ftroli = {
 
 
     const menulist = `
-    Konichiwa ${pushname} dear 👋. I am ${global.BotName}, a bot developed by: Sebastian to take your WhatsApp usage into next level.
+    Konichiwa ${pushname} hallo👋. Ich bin ${global.BotName}, ein Bot entwickelt von : Sebastian um Ihre WhatsApp-Nutzung auf die nächste Stufe zu bringen.
         
        「 System Info 」
     
@@ -1402,11 +1402,11 @@ return list[Math.floor(list.length * Math.random())]
     }
 
     if (smallinput.includes('Gute Nacht')) {
-      reply (`Good night to you too *${pushname}* 😇. Sleep well and sweet dreams.`);
+      reply (`warum schon so früh 🥲 oder willst du noch etwas machen 😏 *${pushname}* 😇. Sleep well and sweet dreams.`);
     }
 
     if (smallinput.includes('hi')|| smallinput.includes('arigatou') || smallinput.includes('thank')) {
-      reply (`Mention not *${pushname}* 😇. I am a bot afterall.`);
+      reply (`yai endlich wider da *${pushname}*`);
     }      
 
 switch(command) {
@@ -1487,7 +1487,7 @@ case 'nsfwmenu':
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
     if (!AntiNsfw) return reply(mess.nonsfw)
-        reply(` *━━━〈  📛 NSFW Menu 📛  〉━━━*\n\nahegao, ass, bdsm, cuckold, cum, ero, femdom, gangbang, foot, glasses, hentai, masturbation, orgy, panties, pussy, tentacles, things, yuri ,nsfwloli, blowjobgif, hentaivideo, trap, hneko, hwaifu`)
+        reply(` *━━━〈  📛 NSFW Menu 📛  〉━━━*\n\nahegao	(leider def.), ass (leider def.), bdsm (leider def.), cuckold (leider def.), cum (leider def.), ero (leider def.), femdom (leider def.), gangbang (leider def.), foot (leider def.), glasses (leider def.), hentai (leider def.), masturbation (leider def.), orgy (leider def.), panties (leider def.) , pussy (leider def.), tentacles (leider def.), things (leider def.), yuri (leider def.),nsfwloli (leider def.), blowjobgif, hentaivideo, trap, hneko, hwaifu, versuche den befehl mal mit (!gig (befehl) )`)
     break
 
 case 'reaction': case 'react': case 'reactions': case 'r':
@@ -1552,7 +1552,7 @@ const random=pages[Math.floor(Math.random() * pages.length)]
         const i = Math.floor(Math.random() * wallpaper.length);
 		
 let buttons = [
-            {buttonId: `${prefix}wallpaper ${args.join(" ")}`, buttonText: {displayText: 'Mehr❤'}, type: 1}
+            {buttonId: `${prefix}wallpaper ${args.join(" ")}`, buttonText: {displayText: 'gib Mehr !!!'}, type: 1}
         ]
         let buttonMessage = {
             image: {url:wallpaper[i].image},
@@ -1600,7 +1600,7 @@ case 'quotesanime': case 'quoteanime': case 'animequote': case 'animequotes':{
         let anu = await quotesAnime()
         hasil = anu[Math.floor(Math.random() * anu.length)]
         let buttons = [
-            {buttonId: `${prefix}quotesanime`, buttonText: {displayText: '>>'}, type: 1}
+            {buttonId: `${prefix}quotesanime`, buttonText: {displayText: 'NOCH EINS bitte'}, type: 1}
         ]
         let buttonMessage = {
             text: `_${hasil.quotes}_\n\nBy '${hasil.karakter}', ${hasil.anime}\n\n- ${hasil.up_at}`,
@@ -1747,10 +1747,11 @@ break
  case 'emoji': {
     if (isBan) return reply(mess.banned)	 			
 if (isBanChat) return reply(mess.bangc)
-if (!args.join(" ")) return reply('Where is the emoji?')
+if (!args.join(" ")) return reply('
+Wo ist das Emoji?')
 emoji.get(args.join(" ")).then(async(emoji) => {
-let mese = await Miku.sendMessage(m.chat, {image:{url:emoji.images[4].url}, caption: `Here it is...`}, {quoted:m})
-await Miku.sendMessage(from, {text:"reply -s to this image to make sticker"}, {quoted:mese})
+let mese = await Miku.sendMessage(m.chat, {image:{url:emoji.images[4].url}, caption: `Hier ist es ...`}, {quoted:m})
+await Miku.sendMessage(from, {text:"Antworten Sie mit -s auf dieses Bild, um einen Aufkleber zu erstellen"}, {quoted:mese})
 })
 }
 break
@@ -3699,15 +3700,15 @@ case 'charactercheck':
     if (isBan) return reply(mess.banned)
     if (isBanChat) return reply(mess.bangc)
                    const dare =[
-         "eat 2 tablespoons of rice without any side dishes, if it's dragging you can drink",
-         "spill people who make you pause",
-         "call crush/pickle now and send ss",
-         "drop only emote every time you type on gc/pc for 1 day.",
-         "say Welcome to Who Wants To Be a Millionaire! to all the groups you have",
-         "call ex saying miss",
-         "sing the chorus of the last song you played",
-         "vn your ex/crush/girlfriend, says hi (name), wants to call, just a moment. I miss🥺👉🏼👈🏼",
-         "Bang on the table (which is at home) until you get scolded for being noisy",
+         "Essen Sie 2 Esslöffel Reis ohne Beilagen, wenn es schleppend ist, können Sie trinken",
+         "verschütte Leute, die dich innehalten lassen",
+         "Jetzt Crush/Pickle anrufen und ss senden",
+         "Drop-Only-Emote jedes Mal, wenn Sie 1 Tag lang auf gc/pc tippen.",
+         "Sagen Sie Willkommen zu Wer wird Millionär! an alle Gruppen, die Sie haben",
+         "Ex anrufen und vermissen sagen",
+         "Singen Sie den Refrain des letzten Liedes, das Sie gespielt haben",
+         "vn dein/e Ex/Crush/Freundin, sagt hallo (Name), will anrufen, einen Moment. ich vermisse🥺👉🏼👈🏼",
+         "Schlagen Sie auf den Tisch (der zu Hause ist), bis Sie wegen Lärms gescholten werden",
          "Tell random people - I was just told I was your twin first, we separated, then I had plastic surgery. And this is the most ciyusss_ thing",
          "mention ex's name",
          "make 1 rhyme for the members!",
@@ -4758,7 +4759,7 @@ case 'help': case 'h': case 'menu': case 'allmenu': case 'listmenu':{
       
  const helpmenu = `Konichiwa *${pushname}* Senpai,
 
-I am *Miku Nakano*, a bot developed by *✨️MAGIC✨️*.
+I am *Miku Nakano*, a bot developed by *Sebastian*.
 
 🔰 My prefix is:  ${prefix}
 
@@ -4776,7 +4777,7 @@ self, public, ban, bangroup, bye, join, bye, block, unblock, broadcast
 
  *━━━〈  ⭕ Group ⭕  〉━━━*
  
-promote, demote, revoke, remove, tagall, hidetag, groupsetting, grouplink, setgcpp, setname, setdesc, group, nsfw 
+promote, demote, revoke, remove, tagall, hidetag, groupsetting, grouplink, setgcpp, setname, setdesc, group, nsfw,remove 
 
  *━━━〈  ➰ Anti Link ➰  〉━━━*
  
@@ -4832,7 +4833,7 @@ reaction, truth, dare, couple, soulmate, handsomecheck, beautifulcheck, awesomec
 
 
  『  *${global.BotName}*  』
- Powered by: *✨️MAGIC✨️*
+ Powered by: *Sebastian*
 
  🔰 To use any of these commands type 
  " *${prefix}<Command name>* ".
@@ -4942,7 +4943,7 @@ const mikuarray= [
         ? m.quoted.text
         : m.text;
       const SpeakEngine = require("google-tts-api"); 
-      const texttospeechurl = SpeakEngine.getAudioUrl(texttosay, {lang: "en", slow: false, host: "https://translate.google.com",});
+      const texttospeechurl = SpeakEngine.getAudioUrl(texttosay, {lang: "de", slow: false, host: "https://translate.google.com",});
       Miku.sendMessage(m.chat,{audio: {url: texttospeechurl,},mimetype: "audio/mpeg",fileName: `MikuSpeechEngine.mp3`,},{quoted: m,});
     }
     break;
