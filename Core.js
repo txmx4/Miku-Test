@@ -1747,8 +1747,7 @@ break
  case 'emoji': {
     if (isBan) return reply(mess.banned)	 			
 if (isBanChat) return reply(mess.bangc)
-if (!args.join(" ")) return reply('
-Wo ist das Emoji?')
+if (!args.join(" ")) return reply('Wo ist das Emoji?')
 emoji.get(args.join(" ")).then(async(emoji) => {
 let mese = await Miku.sendMessage(m.chat, {image:{url:emoji.images[4].url}, caption: `Hier ist es ...`}, {quoted:m})
 await Miku.sendMessage(from, {text:"Antworten Sie mit -s auf dieses Bild, um einen Aufkleber zu erstellen"}, {quoted:mese})
