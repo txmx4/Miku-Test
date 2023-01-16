@@ -1405,8 +1405,8 @@ return list[Math.floor(list.length * Math.random())]
       reply (`warum schon so früh 🥲 oder willst du noch etwas machen 😏 *${pushname}* 😇. Sleep well and sweet dreams.`);
     }
 
-    if (smallinput.includes('hi')|| smallinput.includes('arigatou') || smallinput.includes('thank')) {
-      reply (`yai endlich wider da *${pushname}*`);
+    if (smallinput.includes('Ohio')|| smallinput.includes('arigatou') || smallinput.includes('thank')) {
+      reply (`Yai endlich wider da *${pushname}*`);
     }      
 
 switch(command) {
@@ -1756,7 +1756,7 @@ await Miku.sendMessage(from, {text:"Antworten Sie mit -s auf dieses Bild, um ein
 break
 
 /*
-case 'delete': case 'del': {
+case 'delete': case 'del': case 'd':{
     if (isBan) return reply(mess.banned)	 			
  if (isBanChat) return reply(mess.bangc)
  if (!m.quoted) return
@@ -2643,6 +2643,16 @@ let mentioned = participants.map(v => v.jid)
      await Miku.groupParticipantsUpdate(m.chat, [users], 'remove')
      }
      break
+		
+		
+     case 'add':{     			
+     if (!m.isGroup) return replay(mess.grouponly)
+     if (!isBotAdmins) return replay(mess.botadmin)
+     let users = m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@s.whatsapp.net'
+     if (users.length == 0) return replay(`Please write the number of the person you want to add to thhis group`)
+     await Miku.groupParticipantsUpdate(m.chat, [users], 'add').then((res) => replay(`User Added Successfully!`)).catch((err) => replay(`Cannot add that user to this group!`))
+     }
+     break
 
 
      case 'join': {
@@ -3377,7 +3387,7 @@ case 'music': case 'play': case 'song': case 'ytplay': {
             { quoted:m }
           );
         } else {
-          m.reply(`❌ File size bigger 🌚than 40mb.`);
+          m.reply(`❌ File size bigger 🌚than 4000mb.`);
         }
        fs.unlinkSync(`./${randomName}`);
     }
@@ -3957,7 +3967,7 @@ let bjif = await GIFBufferToVideoBuffer(bjf)
                                     })
 break
 
-case 'hentaivid': case 'hentaivideo': {
+case 'hentaivid': case 'hentaivideo': case 'hn': {
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
     if (!m.isGroup) return replay(mess.grouponly)
