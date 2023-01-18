@@ -826,19 +826,6 @@ if (antiVirtex) {
         Miku.sendMessage(from, {text:`\`\`\`「  Antilink System  」\`\`\`\n\n@${kice.split("@")[0]} Baka has been removed for sending Instagram link in this group! No promotion is allowed!`, contextInfo:{mentionedJid:[kice]}}, {quoted:m})
         } else {
         }
-	
-	if (AntiLinkWhatsapp)
-           if (budy.includes("https://chat.whatsapp.com/")){
-        if (!isBotAdmins) return
-        bvl = `\`\`\`「  Antilink System  」\`\`\`\n\nLink sent by Admin so no action will be taken!`
-        if (isAdmins) return reply(bvl)
-        if (m.key.fromMe) return reply(bvl)
-        if (isCreator) return reply(bvl)
-        kice = m.sender
-        await Miku.groupParticipantsUpdate(m.chat, [kice], 'remove')
-        Miku.sendMessage(from, {text:`\`\`\`「  Antilink System  」\`\`\`\n\n@${kice.split("@")[0]} Baka has been removed for sending Whatsapp link in this group!`, contextInfo:{mentionedJid:[kice]}}, {quoted:m})
-        } else {
-        }
         
         if (AntiLinkFacebook)
            if (budy.includes("https://facebook.com/")){
@@ -868,7 +855,7 @@ if (antiVirtex) {
         }
         
         if (AntiLinkTiktok)
-           if (budy.includes("https://www.tiktok.com/")){
+           if (budy.includes("https://chat.whatsapp.com/${linkgce}")){
         if (!isBotAdmins) return
         bvl = `\`\`\`「  Antilink System  」\`\`\`\n\nLink sent by Admin so no action will be taken!`
         if (isAdmins) return reply(bvl)
