@@ -27,7 +27,7 @@ console.log(color(figlet.textSync('Miku Bot MD', {
 		whitespaceBreak: true
         }), 'yellow'))
 
-console.log(color('\nHello, I am Sebastian, the main developer of this bot.\n\nThanks for using: Miku Bot','aqua'))
+console.log(color('\nHallo, I am Sebastian, the main developer of this bot.\n\nThanks for using: Miku Bot','aqua'))
 console.log(color('\nYou can follow me on GitHub: Sebi127391','aqua'))
 
     let { version, isLatest } = await fetchLatestBaileysVersion()
@@ -73,7 +73,7 @@ Miku.ev.on('groups.update', async pea => {
        try {
        ppgc = await Miku.profilePictureUrl(pea[0].id, 'image')
        } catch {
-       ppgc = 'https://wallpapercave.com/wp/wp5171607.jpg'
+       ppgc = 'https://wallpapercave.com/wp/wp4124926.jpg'
        }
        let wm_fatih = { url : ppgc }
        if (pea[0].announce == true) {
