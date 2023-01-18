@@ -1,6 +1,6 @@
 {
  "name": "miku-md",
- "description": "Multi Device Whatsapp Bot By ✨️MAGIC✨️",
+ "description": "Multi Device Whatsapp Bot By Sebastian",
  "version": "3.0.0",
  "main": "index.js",
  "type": "commonjs",
@@ -18,7 +18,7 @@
   "bot-md",
   "multi-device"
  ],
- "author": "MAGIC (✨️MAGIC✨️)",
+ "author": "Sebastian (Sebastian)",
  "license": "MIT",
  "dependencies": {
   "@adiwajshing/baileys": "^4.4.0",
