@@ -826,6 +826,19 @@ if (antiVirtex) {
         Miku.sendMessage(from, {text:`\`\`\`「  Antilink System  」\`\`\`\n\n@${kice.split("@")[0]} Baka has been removed for sending Instagram link in this group! No promotion is allowed!`, contextInfo:{mentionedJid:[kice]}}, {quoted:m})
         } else {
         }
+	
+	if (AntiLinkWhatsapp)
+           if (budy.includes("https://chat.whatsapp.com/")){
+        if (!isBotAdmins) return
+        bvl = `\`\`\`「  Antilink System  」\`\`\`\n\nLink sent by Admin so no action will be taken!`
+        if (isAdmins) return reply(bvl)
+        if (m.key.fromMe) return reply(bvl)
+        if (isCreator) return reply(bvl)
+        kice = m.sender
+        await Miku.groupParticipantsUpdate(m.chat, [kice], 'remove')
+        Miku.sendMessage(from, {text:`\`\`\`「  Antilink System  」\`\`\`\n\n@${kice.split("@")[0]} Baka has been removed for sending Whatsapp link in this group!`, contextInfo:{mentionedJid:[kice]}}, {quoted:m})
+        } else {
+        }
         
         if (AntiLinkFacebook)
            if (budy.includes("https://facebook.com/")){
@@ -917,7 +930,7 @@ setInterval(() => {
 fs.writeFileSync('./src/database.json', JSON.stringify(global.db, null, 2))
 }, 60 * 1000)
 
-// reset limit every 12 hours
+// reset limit every 24 hours
 let cron = require('node-cron')
     cron.schedule('00 12 * * *', () => {
     let user = Object.keys(global.db.users)
@@ -1386,7 +1399,7 @@ return list[Math.floor(list.length * Math.random())]
     }
    
     if (smallinput=='bot') {
-      reply (`Hello *${pushname}*, I am *${BotName}*, a WhatsApp bot made by *Fantox* and currently being hosted by *${OwnerName}*.  type  *${prefix}help* to get my full command list.`);
+      reply (`Hello *${pushname}*, I am *${BotName}*, a WhatsApp bot made by *Sebastian* and curbarently being hosted by *${OwnerName}*.  type  *${prefix}help* to get my full command list.`);
     }
 
     if (smallinput=='lol') {
@@ -1397,7 +1410,7 @@ return list[Math.floor(list.length * Math.random())]
         reply (`XD`)
     }
 
-    if (smallinput.includes('guten morgen ') || smallinput.includes('good morning')) {
+    if (smallinput.includes('Guten Morgen') || smallinput.includes('good morning')) {
       reply (`🌝was willst du jetzt 🌚`);
     }
 
@@ -1540,7 +1553,7 @@ xfarrapi.Film(q)
 break
 
 
-case 'wallpaper': case 'animewallpaper': case 'animewall': {
+case 'wallpaper': case 'animewallpaper': case 'animewall': case 'wal': {
 if (isBan) return reply(mess.banned)	 			
 if (isBanChat) return reply(mess.bangc)
 if (!args.join(" ")) return reply("Please enter a term to search!")
@@ -2633,7 +2646,7 @@ let mentioned = participants.map(v => v.jid)
      }
      break
 
-     case 'remove':{
+     case 'remove': case 'geh':{
         if (isBan) return reply(mess.banned)	 			
      if (isBanChat) return reply(mess.bangc)
      if (!m.isGroup) return replay(mess.grouponly)
