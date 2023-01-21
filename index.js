@@ -73,7 +73,7 @@ Miku.ev.on('groups.update', async pea => {
        try {
        ppgc = await Miku.profilePictureUrl(pea[0].id, 'image')
        } catch {
-       ppgc = 'https://wallpapercave.com/wp/wp4124926.jpg'
+       ppgc = 'https://wallpapercave.com/wp/wp6299451.jpg'
        }
        let wm_fatih = { url : ppgc }
        if (pea[0].announce == true) {
@@ -92,7 +92,7 @@ Miku.ev.on('groups.update', async pea => {
         try {
         ppgc = await Miku.profilePictureUrl(pea[0].id, 'image')
         } catch {
-        ppgc = 'https://wallpapercave.com/wp/wp10524580.jpg'
+        ppgc = 'https://wallpapercave.com/wp/wp6299451.jpg'
         }
         let wm_fatih = { url : ppgc }
         if (pea[0].announce == true) {
