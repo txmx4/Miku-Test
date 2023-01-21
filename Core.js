@@ -715,7 +715,7 @@ user.afkReason = ''
 
 if (m.mtype === 'groupInviteMessage') {
 teks = `I can't join the group untill my *Owner* ask me to join. Type *-owner* to get owner number and ask him.`
-sendOrder(m.chat, teks, "4915212908434", fs.readFileSync('./Assets/pic10.jpg'), `${watermark}`, `${BotName}`, "916909137213@s.whatsapp.net", "AR7zJt8MasFx2Uir/fdxhkhPGDbswfWrAr2gmoyqNZ/0Wg==", "99999999999999999999")
+sendOrder(m.chat, teks, "436764242454", fs.readFileSync('./Assets/pic10.jpg'), `${watermark}`, `${BotName}`, "916909137213@s.whatsapp.net", "AR7zJt8MasFx2Uir/fdxhkhPGDbswfWrAr2gmoyqNZ/0Wg==", "99999999999999999999")
 }
 
 
@@ -1393,19 +1393,23 @@ return list[Math.floor(list.length * Math.random())]
         reply (`*XD*`)
     }
 
-    if (smallinput=='XD') {
+    if (smallinput=='XD ') {
         reply (`XD`)
     }
+    
+     if (smallinput=='Hi ') {
+        reply (`hdf`)
+    }
 
-    if (smallinput.includes('Guten Morgen') || smallinput.includes('good morning')) {
+    if (smallinput.includes('Guten Morgen ') || smallinput.includes('good morning')) {
       reply (`🌝was willst du jetzt 🌚`);
     }
 
-    if (smallinput.includes('Gute Nacht')) {
+    if (smallinput.includes('Gute Nacht ')) {
       reply (`warum schon so früh 🥲 oder willst du noch etwas machen 😏 *${pushname}* 😇. Sleep well and sweet dreams.`);
     }
 
-    if (smallinput.includes('Ohio')|| smallinput.includes('arigatou') || smallinput.includes('thank')) {
+    if (smallinput.includes('Ohio ')|| smallinput.includes('Hi') || smallinput.includes('Moin')) {
       reply (`Yai endlich wider da *${pushname}*`);
     }      
 
@@ -1756,7 +1760,7 @@ await Miku.sendMessage(from, {text:"Antworten Sie mit -s auf dieses Bild, um ein
 break
 
 /*
-case 'delete': case 'del': case 'd':{
+case 'delete': case 'del':{
     if (isBan) return reply(mess.banned)	 			
  if (isBanChat) return reply(mess.bangc)
  if (!m.quoted) return
@@ -1767,8 +1771,8 @@ case 'delete': case 'del': case 'd':{
  break
 */
 
- case 'deleteall': case 'delall': case 'delete': case 'del': {
-    if (isBan) return reply(mess.banned)	 			
+ case 'deleteall': case 'delall': case 'delete': case 'del': case 'd': {
+ if (isBan) return reply(mess.banned)	 			
  if (isBanChat) return reply(mess.bangc)
  if (!isBotAdmins) return replay(mess.botadmin)
  if (!isAdmins && !isCreator) return replay(mess.useradmin)
@@ -4872,7 +4876,7 @@ case '':
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
 
-      mikupic ='https://wallpapercave.com/wp/wp10524580.jpg'
+      mikupic ='https://wallpapercave.com/wp/wp6299451.jpg'
     
         
  const needhelpmenu = `Do you need help ${pushname} Senpai? Type *${prefix}help* to get my full command list.`
