@@ -2249,8 +2249,7 @@ orgnye = m.quoted.sender
 }
 const isBane = banUser.includes(orgnye)
 if (args[0] === "add") {
-if (isBane) return ads('Benutzer ist bereits gesperrt
-.')
+if (isBane) return ads('Benutzer ist bereits gesperrt.')
 banUser.push(orgnye)
 replay(`Der Benutzer wurde erfolgreich gesperrt.`)
 } else if (args[0] === "del") {
@@ -3500,7 +3499,7 @@ break
 
 
 
-case 'couplepp':  case 'ppcouple': {
+case 'couplepp':  case 'ppcouple': case 'pb': case 'paarbild': {
 if (isBan) return reply(mess.banned)
 if (isBanChat) return reply(mess.bangc)
          reply(mess.waiting)https
