@@ -1828,7 +1828,7 @@ await Miku.sendMessage(m.chat, { delete: key })
  let user = global.db.users[m.sender]
  user.afkTime = + new Date
  user.afkReason = args.join(" ")
- replay(`${m.pushName} is now Away From Keyboard.\nAFK Reason : ${args.join(" ") ? args.join(" ") : ''}`)
+ replay(`${m.pushName} ist jetzt weg von whatsApp.\nAFK Reason : ${args.join(" ") ? args.join(" ") : ''}`)
  }
  break
 
@@ -2211,16 +2211,16 @@ await Miku.sendMessage(m.chat, { delete: key })
  if (!isBotAdmins) return replay(mess.botadmin)
  if (!isAdmins && !isCreator) return replay(mess.useradmin)
  if (args[0] === "on") {
- if (AntiNsfw) return replay('Already activated')
+ if (AntiNsfw) return replay('Bereits aktiviert')
  ntnsfw.push(from)
- replay('Enabled NSFW Commands!')
+ replay('Aktivierte NSFW-Befehle!')
  var groupe = await Miku.groupMetadata(from)
  var members = groupe['participants']
  var mems = []
  members.map(async adm => {
  mems.push(adm.id.replace('c.us', 's.whatsapp.net'))
  })
- Miku.sendMessage(from, {text: `\`\`\`「 Notice 」\`\`\`\n\nNSFW(not safe for work) feature has been enabled in this group, which means anyone here can accesss Adult commands!`, contextInfo: { mentionedJid : mems }}, {quoted:m})
+ Miku.sendMessage(from, {text: `\`\`\`「 Notice 」\`\`\`\n\Die NSFW-Funktion (not safe for work) wurde in dieser Gruppe aktiviert, was bedeutet, dass jeder hier auf die Befehle für Erwachsene zugreifen kann!`, contextInfo: { mentionedJid : mems }}, {quoted:m})
  } else if (args[0] === "off") {
  if (!AntiNsfw) return replay('Already deactivated')
  let off = ntnsfw.indexOf(from)
@@ -2231,7 +2231,7 @@ await Miku.sendMessage(m.chat, { delete: key })
    { buttonId: `${prefix}nsfw on`, buttonText: { displayText: 'On' }, type: 1 },
    { buttonId: `${prefix}nsfw off`, buttonText: { displayText: 'Off' }, type: 1 }
    ]
-   await Miku.sendButtonText(m.chat, buttonsntnsfw, `Please click the button below\n\nOn to enable\nOff to disable`, `${global.BotName}`, m)
+   await Miku.sendButtonText(m.chat, buttonsntnsfw, `Bitte klicken Sie auf die Schaltfläche unten\n\nOn to enable\nOff to disable`, `${global.BotName}`, m)
    }
    }
    break
@@ -2241,7 +2241,7 @@ await Miku.sendMessage(m.chat, { delete: key })
     if (isBan) return reply(mess.banned)	 			
 if (isBanChat) return reply(mess.bangc)
 if (!isCreator) return replay(mess.botowner)
-if (!args[0]) return replay(`Select add or del (add to ban, del to unban), For Example: Reply *${prefix}ban add* to the user you want to ban.`)
+if (!args[0]) return replay(`Wählen Sie „Hinzufügen“ oder „Entfernen“ (zum Sperren hinzufügen, zum Entsperren löschen). Zum Beispiel: Antworten Sie mit *${prefix}ban add* auf den Benutzer, den Sie sperren möchten.`)
 if (args[1]) {
 orgnye = args[1] + "@s.whatsapp.net"
 } else if (m.quoted) {
@@ -2249,14 +2249,15 @@ orgnye = m.quoted.sender
 }
 const isBane = banUser.includes(orgnye)
 if (args[0] === "add") {
-if (isBane) return ads('User is already banned.')
+if (isBane) return ads('Benutzer ist bereits gesperrt
+.')
 banUser.push(orgnye)
-replay(`Successfully Banned the user.`)
+replay(`Der Benutzer wurde erfolgreich gesperrt.`)
 } else if (args[0] === "del") {
-if (!isBane) return ads('User is already unbanned.')
+if (!isBane) return ads('Benutzer wurde bereits entbannt.')
 let delbans = banUser.indexOf(orgnye)
 banUser.splice(delbans, 1)
-replay(`Successfully Unbanned the user.`)
+replay(`Der Benutzer wurde erfolgreich entbannt.`)
 } else {
 replay("Error")
 }
@@ -2287,14 +2288,14 @@ orgnye = m.quoted.sender
 }
 const isBane = banUser.includes(orgnye)
 if (args[0] === "add") {
-if (isBane) return ads('User was already banned.')
+if (isBane) return ads('Benutzer wurde bereits gesperrt.')
 banUser.push(orgnye)
-replay(`Successfully banned the user`)
+replay(`Der Benutzer wurde erfolgreich gesperrt`)
 } else if (args[0] === "del") {
-if (!isBane) return ads('User was already unbanned.')
+if (!isBane) return ads('Benutzer wurde bereits entbannt.')
 let delbans = banUser.indexOf(orgnye)
 banUser.splice(delbans, 1)
-replay(`Successfully unbanned the user.`)
+replay(`Der Benutzer wurde erfolgreich entbannt.`)
 } else {
 replay("Error")
 }
@@ -2328,6 +2329,7 @@ case 'happymod': {
  }
  break
 
+
  case 'yts': case 'ytsearch': {
     if (isBan) return reply(mess.banned)	 			
  if (isBanChat) return reply(mess.bangc)
@@ -2349,7 +2351,7 @@ case 'happymod': {
  if (!m.isGroup) return replay(mess.grouponly)
  if (!isBotAdmins) return replay(mess.botadmin)
  if (!isAdmins && !isCreator) return replay(mess.useradmin)
- if (!text) return replay('Pls enter -setname <New Group Name>  to change this Group Name')
+ if (!text) return replay('Bitte geben Sie -setname <Neuer Gruppenname> ein, um diesen Gruppennamen zu ändern')
  await Miku.groupUpdateSubject(m.chat, text).then((res) => replay(mess.jobdone)).catch((err) => replay(jsonformat(err)))
  }
  break
@@ -2398,7 +2400,7 @@ if (isBanChat) return reply(mess.bangc)
  }
  break
 
- case 'tag': case 'tagall': case 'all':{
+ case 'tag': case 'tagall': case 'all': case 'Guten Morgen':{
     if (isBan) return reply(mess.banned)	 			
  if (isBanChat) return reply(mess.bangc)
  if (!m.isGroup) return replay(mess.grouponly)
@@ -2480,11 +2482,11 @@ let mentioned = participants.map(v => v.jid)
 
     case 'nowa':  case 'stalk': case 'stalknumber':{
         if (isBan) return reply(mess.banned)
-        if (!args[0]) return reply(`Use command like: ${prefix}stalk <number>xxx`)
+        if (!args[0]) return reply(`Verwenden Sie den Befehl like : ${prefix}stalk <number>xxx`)
         var inputnumber = args[0]
-        if (!inputnumber.includes('x')) return reply('You didnot added x')
-        reply(`Searching for WhatsApp account in given range...`)
-        reply(`Please wait while i fetch details...`)
+        if (!inputnumber.includes('x')) return reply('Sie haben x nicht hinzugefügt')
+        reply(`Suche nach WhatsApp-Konto im angegebenen Bereich...`)
+        reply(`Bitte warten Sie, während ich Details abrufe...`)
         function countInstances(string, word) {
         return string.split(word).length - 1;
         }
@@ -2499,9 +2501,9 @@ let mentioned = participants.map(v => v.jid)
         } else if (random_length == 3) {
             randomxx = 1000
         }
-        var nomerny = `*『 List of Whatsapp Numbers 』*\n\n`
+        var nomerny = `*『 Liste der WhatsApp-Nummern 』*\n\n`
         var nobio = `\n*Bio:* || \nHey there! I am using WhatsApp.\n`
-        var nowhatsapp = `\n*Numbers with no WhatsApp account within the range you provided*\n`
+        var nowhatsapp = `\n*Nummern ohne WhatsApp-Konto innerhalb des von Ihnen angegebenen Bereichs*\n`
         for (let i = 0; i < randomxx; i++) {
         var nu = ['1', '2', '3', '4', '5', '6', '7', '8', '9']
         var status1 = nu[Math.floor(Math.random() * nu.length)]
@@ -2594,9 +2596,9 @@ let mentioned = participants.map(v => v.jid)
      if (!isBotAdmins) return replay(mess.botadmin)
      if (!isAdmins && !isCreator) return replay(mess.useradmin)
      if (args[0] === 'close'){
-     await Miku.groupSettingUpdate(m.chat, 'announcement').then((res) => replay(`Group has been closed!`)).catch((err) => replay(jsonformat(err)))
+     await Miku.groupSettingUpdate(m.chat, 'announcement').then((res) => replay(`Gruppe wurde geschlossen!`)).catch((err) => replay(jsonformat(err)))
      } else if (args[0] === 'open'){
-     await Miku.groupSettingUpdate(m.chat, 'not_announcement').then((res) => replay(`Group has been opened!`)).catch((err) => replay(jsonformat(err)))
+     await Miku.groupSettingUpdate(m.chat, 'not_announcement').then((res) => replay(`Gruppe wurde geöffnet!`)).catch((err) => replay(jsonformat(err)))
      } else {
      let buttons = [
      { buttonId: `${prefix}group open`, buttonText: { displayText: 'Open' }, type: 1 },
@@ -2637,7 +2639,7 @@ let mentioned = participants.map(v => v.jid)
      }
      break
 
-     case 'remove': case 'geh':{
+     case 'remove': case 'geh': case 'disrespectet': case 'tschüß': case 'hinfort': case 'flieg': case 'tschüss':{
         if (isBan) return reply(mess.banned)	 			
      if (isBanChat) return reply(mess.bangc)
      if (!m.isGroup) return replay(mess.grouponly)
@@ -2653,8 +2655,8 @@ let mentioned = participants.map(v => v.jid)
      if (!m.isGroup) return replay(mess.grouponly)
      if (!isBotAdmins) return replay(mess.botadmin)
      let users = m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@s.whatsapp.net'
-     if (users.length == 0) return replay(`Please write the number of the person you want to add to thhis group`)
-     await Miku.groupParticipantsUpdate(m.chat, [users], 'add').then((res) => replay(`User Added Successfully!`)).catch((err) => replay(`Cannot add that user to this group!`))
+     if (users.length == 0) return replay(`Bitte geben Sie die Nummer der Person ein, die Sie zu dieser Gruppe hinzufügen möchten`)
+     await Miku.groupParticipantsUpdate(m.chat, [users], 'add').then((res) => replay(`Benutzer erfolgreich hinzugefügt!`)).catch((err) => replay(`Cannot add that user to this group!`))
      }
      break
 
@@ -2682,7 +2684,7 @@ let mentioned = participants.map(v => v.jid)
      }).then(async(res) => {
      sizny = res.content[0].attrs.size
      if (sizny < 20) {
-     teks = `Sorry, munimun 20 members are required in a group to add bot!`
+     teks = `Tut mir leid, munimun 20 Mitglieder sind in einer Gruppe erforderlich, um einen Bot hinzuzufügen!`
      sendOrder(m.chat, teks, "667140254502463", fs.readFileSync('./Assets/pic7.jpg'), `${global.packname}`, `${global.BotName}`, "4915212908434@s.whatsapp.net", "AR6NCY8euY5cbS8Ybg5Ca55R8HFSuLO3qZqrIYCT7hQp0g==", "99999999999999999999")
      } else if (sizny > 20) {
      await Miku.groupAcceptInvite(vcc).then(async(res) => replay(jsonformat(res))).catch(_ => _)
@@ -2720,7 +2722,7 @@ let mentioned = participants.map(v => v.jid)
      fs.unlinkSync(rname)
      })
      } else {
-     reply("Please send video/audio file only!")
+     reply("Bitte senden Sie nur Video-/Audiodatei!")
      }
      }
      break
@@ -2750,7 +2752,7 @@ let mentioned = participants.map(v => v.jid)
         fs.unlinkSync(ran)
         })
         } else {
-        reply("Please send video/audio file only!")
+        reply("Bitte senden Sie nur Video-/Audiodatei!")
         }
         }
         break
@@ -2806,7 +2808,7 @@ case 'public': {
  if (isBanChat) return reply(mess.bangc)
  if (!isCreator) return reply(mess.owner)
  Miku.public = true
- reply('I am now Publicly accessable!')
+ reply('Ich bin jetzt öffentlich zugänglich!')
  Miku.setStatus(`Mode : Public`)
  }
  break
@@ -2816,7 +2818,7 @@ case 'public': {
  if (isBanChat) return reply(mess.bangc)
  if (!isCreator) return reply(mess.botowner)
  Miku.public = false
- reply('Only Owner can use me now!')
+ reply('Nur der Besitzer kann mich jetzt benutzen!')
  Miku.setStatus(`Mode : Self`)
  }
  break
@@ -2826,7 +2828,7 @@ case 'toimage': case 'toimg': {
    if (isBan) return reply(mess.banned)	 			
 if (isBanChat) return reply(mess.bangc)
 if (!m.quoted) return reply('Reply Image')
-if (!/webp/.test(mime)) return reply(`Reply sticker with caption *${prefix + command}*`)
+if (!/webp/.test(mime)) return reply(`Antwortaufkleber mit Bildunterschrift *${prefix + command}*`)
 reply(mess.waiting)
 let media = await Miku.downloadAndSaveMediaMessage(quoted)
 let ran = await getRandom('.png')
@@ -2844,7 +2846,7 @@ case 'tomp4': case 'tovideo': {
     if (isBan) return reply(mess.banned)	 			
  if (isBanChat) return reply(mess.bangc)
  if (!m.quoted) return reply('Reply Image')
- if (!/webp/.test(mime)) return reply(`Reply sticker with caption *${prefix + command}*`)
+ if (!/webp/.test(mime)) return reply(`Antwortaufkleber mit Bildunterschrift *${prefix + command}*`)
  reply(mess.waiting)
  let { webp2mp4File } = require('./lib/uploader')
  let media = await Miku.downloadAndSaveMediaMessage(quoted)
@@ -2857,8 +2859,8 @@ case 'tomp4': case 'tovideo': {
 case 'toaud': case 'toaudio': {
     if (isBan) return reply(mess.banned)	 			
  if (isBanChat) return reply(mess.bangc)
- if (!/video/.test(mime) && !/audio/.test(mime)) return reply(`Send/Reply Video/Audio You Want To Use As Audio With Caption ${prefix + command}`)
- if (!m.quoted) return reply(`Send/Reply Video/Audio You Want To Use As Audio With Caption ${prefix + command}`)
+ if (!/video/.test(mime) && !/audio/.test(mime)) return reply(`Senden/Antworten von Video/Audio, das Sie in MP3 konvertieren möchten, mit Untertitel ${prefix + command}`)
+ if (!m.quoted) return reply(`Senden/Antworten von Video/Audio, das Sie in MP3 konvertieren möchten, mit Untertitel ${prefix + command}`)
  reply(mess.waiting)
  let media = await quoted.download()
  let { toAudio } = require('./lib/converter')
@@ -2870,9 +2872,9 @@ break
 case 'tomp3': {
     if (isBan) return reply(mess.banned)	 			
  if (isBanChat) return reply(mess.bangc)
- if (/document/.test(mime)) return reply(`Send/Reply Video/Audio You Want To Convert Into MP3 With Caption ${prefix + command}`)
- if (!/video/.test(mime) && !/audio/.test(mime)) return reply(`Send/Reply Video/Audio You Want To Convert Into MP3 With Caption ${prefix + command}`)
- if (!m.quoted) return reply(`Send/Reply Video/Audio You Want To Convert Into MP3 With Caption ${prefix + command}`)
+ if (/document/.test(mime)) return reply(`Senden/Antworten von Video/Audio, das Sie in MP3 konvertieren möchten, mit Untertitel ${prefix + command}`)
+ if (!/video/.test(mime) && !/audio/.test(mime)) return reply(`Senden/Antworten von Video/Audio, das Sie in MP3 konvertieren möchten, mit Untertitel ${prefix + command}`)
+ if (!m.quoted) return reply(`Senden/Antworten von Video/Audio, das Sie in MP3 konvertieren möchten, mit Untertitel ${prefix + command}`)
  reply(mess.waiting)
  let media = await quoted.download()
  let { toAudio } = require('./lib/converter')
@@ -2886,12 +2888,13 @@ case 'togif': case 'getgif':{
     if (isBan) return reply(mess.banned)	 			
  if (isBanChat) return reply(mess.bangc)
  if (!m.quoted) return reply('Reply Image')
- if (!/webp/.test(mime)) return reply(`Reply sticker with caption *${prefix + command}*`)
+ if (!/webp/.test(mime)) return reply(`Antwortaufkleber mit Bildunterschrift *${prefix + command}*`)
  reply(mess.wait)
  let { webp2mp4File } = require('./lib/uploader')
  let media = await Miku.downloadAndSaveMediaMessage(quoted)
  let webpToMp4 = await webp2mp4File(media)
- await Miku.sendMessage(m.chat, { video: { url: webpToMp4.result, caption: 'Converted From Webp To Gif' }, gifPlayback: true }, { quoted: m })
+ await Miku.sendMessage(m.chat, { video: { url: webpToMp4.result, caption: 'Konvertiert von Webp zu Gif
+' }, gifPlayback: true }, { quoted: m })
  await fs.unlinkSync(media)
  }
  break
@@ -2940,7 +2943,7 @@ gis(args.join(" "), async (error, result) => {
 n = result
 images = n[Math.floor(Math.random() * n.length)].url
 let buttons = [
-{buttonId: `${prefix}gimage ${args.join(" ")}`, buttonText: {displayText: '>>'}, type: 1}
+{buttonId: `${prefix}gimage ${args.join(" ")}`, buttonText: {displayText: 'uii'}, type: 1}
 ]
 let buttonMessage = {
 image: { url: images },
@@ -3231,7 +3234,7 @@ case 'fbddlxx': {
     if (isBan) return reply(mess.banned)	 			
  if (isBanChat) return reply(mess.bangc)
  let buttons = [
- {buttonId: `${prefix}menu`, buttonText: {displayText: '✨Menu✨'}, type: 1}
+ {buttonId: `${prefix}menu`, buttonText: {displayText: 'Menu'}, type: 1}
  ]
  let buttonMessage = {
  video: {url:args[0]},
@@ -3245,12 +3248,12 @@ case 'fbddlxx': {
  }
  break
 
- case 'tiktok':{
+ case 'tiktok': case 'tt':{
     if (isBan) return reply(mess.banned)
   if (isBanChat) return reply(mess.bangc)
-if (!q) return reply('Please provide the link !')
+if (!q) return reply('Bitte geben Sie den Link an !')
 reply(mess.wait)
-if (!q.includes('tiktok')) return reply(`Invalid tiktok link!`)
+if (!q.includes('tiktok')) return reply(`Ungültiger Tiktok-Link!`)
  const musim_rambutan = await MikuTiktok(`${q}`).catch(e => {
 reply(mess.error) 
 } )
@@ -3258,7 +3261,7 @@ reply(mess.error)
  const mikutiktokop = musim_rambutan.result.watermark
 texttk = `_Please choose the button below_`
 let buttons = [
-{buttonId: `${prefix}ttnowm ${q}`, buttonText: {displayText: 'Watermark Free'}, type: 1},
+{buttonId: `${prefix}ttnowm ${q}`, buttonText: {displayText: 'Wasserzeichenfrei'}, type: 1},
 {buttonId: `${prefix}ttaud ${q}`, buttonText: {displayText: 'Audio '}, type: 1}
 ]
 let buttonMessage = {
@@ -3273,18 +3276,18 @@ Miku.sendMessage(from, buttonMessage, {quoted:m})
 }
 break
 
-case 'tiktoknowm': case 'ttnowm':{
+case 'tiktoknowm': case 'ttnowm': case 'ttv':{
     if (isBan) return reply(mess.banned)
   if (isBanChat) return reply(mess.bangc)
-if (!q) return reply('Please provide the link !')
+if (!q) return reply('Bitte geben Sie den Link an !')
 reply(mess.wait)
-if (!q.includes('tiktok')) return reply(`That's not a tiktok link!`)
+if (!q.includes('tiktok')) return reply(`Das ist kein Tiktok-Link!`)
  const musim_rambutan = await MikuTiktok(`${q}`).catch(e => {
 reply(mess.error) 
 } )
  console.log(musim_rambutan)
  const mikutiktoknowm = musim_rambutan.result.nowatermark
-  Miku.sendMessage(from, { video: { url: mikutiktoknowm }, caption: "Here it is..." }, { quoted: m })
+  Miku.sendMessage(from, { video: { url: mikutiktoknowm }, caption: "Hier ist es..." }, { quoted: m })
  }
 break
 
@@ -3294,7 +3297,7 @@ case 'ttaud':{
     if (isBan) return reply(mess.banned)
     if (isBanChat) return reply(mess.bangc)
 if (!q) return reply('Where is the audio?')
-if (!q.includes('tiktok')) return reply(`That's not a tiktok link!`)
+if (!q.includes('tiktok')) return reply(`Das ist kein Tiktok-Link!`)
  const musim_rambutan = await MikuTiktok(`${q}`).catch(e => {
 reply(mess.error) 
 } )
@@ -3314,7 +3317,7 @@ case 'music': case 'play': case 'song': case 'ytplay': {
  const YT=require('./lib/ytdlcore')
  const { isUrl, fetchBuffer } = require('./lib/Function')
 
- if(!text) return Miku.sendMessage(from,{text:"Pls enter song name to play!"},{quoted:m})
+ if(!text) return Miku.sendMessage(from,{text:"Bitte geben Sie den zu spielenden Songnamen ein!"},{quoted:m})
  let yts = require("yt-search")
  let search = await yts(text)
  let anu = search.videos[0]
@@ -3327,14 +3330,14 @@ case 'music': case 'play': case 'song': case 'ytplay': {
  image: { url: anu.thumbnail },
  caption: `「  _Miku Youtube Player 2.0_  」
 
-*Title :* ${anu.title}
+*Titel :* ${anu.title}
 
-*Duration :* ${anu.timestamp}
-*Viewers :* ${anu.views}
-*Uploaded :* ${anu.ago}
-*Channel :* ${anu.author.name}
+*Dauer :* ${anu.timestamp}
+*Zuschauer :* ${anu.views}
+*Hochgeladen :* ${anu.ago}
+*Kanal :* ${anu.author.name}
 *Url :* ${anu.url}`,
- footer: `${global.BotName}`,
+ Fusszeile: `${global.BotName}`,
  buttons: buttons,
  headerType: 4,
 
@@ -3456,7 +3459,7 @@ break
  if (!args[0]) return reply(mess.nolink)
 
  const YT=require('./lib/ytdlcore')
- if(!text) return Miku.sendMessage(from,{text:"Please provide a valid youtube link!"},{quoted:m})
+ if(!text) return Miku.sendMessage(from,{text:"Bitte geben Sie einen gültigen YouTube-Link an!"},{quoted:m})
  let yts = require("yt-search")
  let search = await yts(text)
  let anu = search.videos[0]
@@ -3500,11 +3503,11 @@ break
 case 'couplepp':  case 'ppcouple': {
 if (isBan) return reply(mess.banned)
 if (isBanChat) return reply(mess.bangc)
-         reply(mess.waiting)
+         reply(mess.waiting)https
          let anu = await fetchJson('https://raw.githubusercontent.com/iamriz7/kopel_/main/kopel.json')
          let random = anu[Math.floor(Math.random() * anu.length)]
-         Miku.sendMessage(m.chat, { image: { url: random.male }, caption: `For him...` }, { quoted: m })
-         Miku.sendMessage(m.chat, { image: { url: random.female }, caption: `For her...` }, { quoted: m })
+         Miku.sendMessage(m.chat, { image: { url: random.male }, caption: `Für ihm...` }, { quoted: m })
+         Miku.sendMessage(m.chat, { image: { url: random.female }, caption: `Für sie...` }, { quoted: m })
      }
  break
 
@@ -3513,7 +3516,7 @@ if (isBanChat) return reply(mess.bangc)
 case 'pinterest': case 'pin': {
     if (isBan) return reply(mess.banned)
     if (isBanChat) return reply(mess.bangc)
- if (!args.join(" ")) return reply("Pls providea search term!")
+ if (!args.join(" ")) return reply("Bitte geben Sie einen Suchbegriff ein!")
  try {
  hx.pinterest(args.join(" ")).then(async(res) => {
  imgnyee = res[Math.floor(Math.random() * res.length)]
