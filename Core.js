@@ -2892,8 +2892,7 @@ case 'togif': case 'getgif':{
  let { webp2mp4File } = require('./lib/uploader')
  let media = await Miku.downloadAndSaveMediaMessage(quoted)
  let webpToMp4 = await webp2mp4File(media)
- await Miku.sendMessage(m.chat, { video: { url: webpToMp4.result, caption: 'Konvertiert von Webp zu Gif
-' }, gifPlayback: true }, { quoted: m })
+ await Miku.sendMessage(m.chat, { video: { url: webpToMp4.result, caption: 'Konvertiert von Webp zu Gif' }, gifPlayback: true }, { quoted: m })
  await fs.unlinkSync(media)
  }
  break
