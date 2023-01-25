@@ -3538,7 +3538,7 @@ case 'pinterest': case 'pin': {
 
 
 
-case 'swm': case 'take': case 'stickerwm': case 'steal':{
+case 'swm': case 'take': case 'stickerwm': case 'steal': case 'Meins':{
     if (isBan) return reply(mess.banned)
     if (isBanChat) return reply(mess.bangc)
 if (!args.join(" ")) return reply(`Use command: -steal Miku|By: Fantox`)
@@ -3603,21 +3603,21 @@ case 'sgif': case 'sticker': case 's': {
 case 'wiki':
     if (isBan) return reply(mess.banned)
     if (isBanChat) return reply(mess.bangc)
-if (args.length < 1) return reply('What Are You Looking For?? ')
+if (args.length < 1) return reply('Wonach suchen Sie?? ')
 const res2 = await wikiSearch(q).catch(e => {
-return reply('Error Result Not Found!') 
+return reply('Error Result nicht gefunden!') 
 }) 
 const result2 = `*Title :* ${res2[0].judul}\n*Wiki :* ${res2[0].wiki}`
 Miku.sendMessage(from, { image : { url : res2[0].thumb }, caption : result2}) 
 break
 
-case 'earthquake':
+case 'earthquake' case 'Erdbeben':
     if (isBan) return reply(mess.banned)
     if (isBanChat) return reply(mess.bangc)
 const tres = await Gempa()
 var { Waktu, Lintang, Bujur, Magnitude, Kedalaman, Wilayah, Map } = tres.result
 console.log(Map)
-const captt = `Time : ${Waktu}\nLatitude : ${Lintang}\nLongitude : ${Bujur}\nRegion : ${Wilayah}`
+const captt = `Zeit : ${Waktu}\nLatitude : ${Lintang}\nLongitude : ${Bujur}\nRegion : ${Wilayah}`
 Miku.sendMessage(from, { image : { url : Map }, caption : captt})
 break
 
@@ -3631,7 +3631,7 @@ Miku.sendMessage(from, {text : `Case : ${kasus}\n\nDead : ${kematian}\n\nHealed 
 break
 
 
-case 'couple': case 'ship': {
+case 'couple': case 'ship': case 'paar': {
     if (isBan) return reply(mess.banned)
     if (isBanChat) return reply(mess.bangc)
 if (!m.isGroup) return replay(`${mess.grouponly}`)
@@ -3639,16 +3639,16 @@ let member = participants.map(u => u.id)
 let orang = member[Math.floor(Math.random() * member.length)]
 let jodoh = member[Math.floor(Math.random() * member.length)]
 let jawab = `@${orang.split('@')[0]} ❤️ @${jodoh.split('@')[0]}
-Ohh i see 👀💖...`
+Ohh ich sehe 👀💖...`
 let menst = [orang, jodoh]
 let buttons = [
-{ buttonId: '❤️', buttonText: { displayText: 'Congratulations ❤️' }, type: 1 }
+{ buttonId: '❤️', buttonText: { displayText: 'Glückwünsche ❤️' }, type: 1 }
 ]
 await Miku.sendButtonText(m.chat, buttons, jawab, Miku.user.name, m, {mentions: menst})
 }
 break
 
-case 'soulmate': {
+case 'soulmate': case 'Seelenverwandte': {
     if (isBan) return reply(mess.banned)
     if (isBanChat) return reply(mess.bangc)
 if (!m.isGroup) return replay(`${mess.grouponly}`)
@@ -3659,7 +3659,7 @@ let jawab = `👫 Soulmates
 @${me.split('@')[0]} ❤️ @${jodoh.split('@')[0]}`
 let ments = [me, jodoh]
 let buttons = [
-{ buttonId: '❤️', buttonText: { displayText: 'Be my Soulmate ❤️' }, type: 1 }
+{ buttonId: '❤️', buttonText: { displayText: 'Sei mein Seelenverwandter ❤️' }, type: 1 }
 ]
 await Miku.sendButtonText(m.chat, buttons, jawab, Miku.user.name, m, {mentions: ments})
 }
@@ -3693,7 +3693,7 @@ case 'awesomecheck':
                       case 'uglycheck':
                         if (isBan) return reply(mess.banned)
                         if (isBanChat) return reply(mess.bangc)
-				if (!text) return replay(`Tag Someone, Example : ${prefix + command} @Fantox`)
+				if (!text) return replay(`Tag Someone, Example : ${prefix + command} @nummer`)
 					const sangeh = ['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30','31','32','33','34','35','36','37','38','39','40','41','42','43','44','45','46','47','48','49','50','51','52','53','54','55','56','57','58','59','60','61','62','63','64','65','66','67','68','69','70','71','72','73','74','75','76','77','78','79','80','81','82','83','84','85','86','87','88','89','90','91','92','93','94','95','96','97','98','99','100']
 					const sange = sangeh[Math.floor(Math.random() * sangeh.length)]
 Miku.sendMessage(from, { text: `*${command}*\n\nName : ${q}\nAnswer : *${sange}%*` }, { quoted: m })
@@ -3703,8 +3703,8 @@ Miku.sendMessage(from, { text: `*${command}*\n\nName : ${q}\nAnswer : *${sange}%
 case 'charactercheck':
     if (isBan) return reply(mess.banned)
     if (isBanChat) return reply(mess.bangc)
-					if (!text) return replay(`Tag Someone, Example : ${prefix + command} @Fantox`)
-					const Mikutttt =['Compassionate','Generous','Grumpy','Forgiving','Obedient','Good','Simp','Kind-Hearted','patient','UwU','top, anyway','Helpful']
+					if (!text) return replay(`Tag Someone, Example : ${prefix + command} @nummer`)
+					const Mikutttt =['Mitfühlend','Großzügig','Mürrisch','Horny','Versöhnlich','Gehorsam','Gut','Einfach','Gutherzig','Geduldig','UwU','oben, ohnehin','Hilfreich']
 					const taky = Mikutttt[Math.floor(Math.random() * Mikutttt.length)]
 					Miku.sendMessage(from, { text: `Character Check : ${q}\nAnswer : *${taky}*` }, { quoted: m })
 				     break
@@ -3722,184 +3722,184 @@ case 'charactercheck':
          "Singen Sie den Refrain des letzten Liedes, das Sie gespielt haben",
          "vn dein/e Ex/Crush/Freundin, sagt hallo (Name), will anrufen, einen Moment. ich vermisse🥺👉🏼👈🏼",
          "Schlagen Sie auf den Tisch (der zu Hause ist), bis Sie wegen Lärms gescholten werden",
-         "Tell random people - I was just told I was your twin first, we separated, then I had plastic surgery. And this is the most ciyusss_ thing",
-         "mention ex's name",
-         "make 1 rhyme for the members!",
-         "send ur whatsapp chat list",
-         "chat random people with gheto language then ss here",
-         "tell your own version of embarrassing things",
-         "tag the person you hate",
-         "Pretending to be possessed, for example: possessed by dog, possessed by grasshoppers, possessed by refrigerator, etc.",
-         "change name to *I AM DONKEY* for 24 hours",
-         "shout *ma chuda ma chuda ma chuda* in front of your house",
-         "snap/post boyfriend photo/crush",
-         "tell me your boyfriend type!",
-         "say *i hv crush on you, do you want to be my girlfriend?* to the opposite sex, the last time you chatted (submit on wa/tele), wait for him to reply, if you have, drop here",
-         "record ur voice that read *titar ke age do titar, titar ke piche do titar*",
-         "prank chat ex and say *i love u, please come back.* without saying dare!",
-         "chat to contact wa in the order according to your battery %, then tell him *i am lucky to hv you!*",
-         "change the name to *I am a child of randi* for 5 hours",
-         "type in bengali 24 hours",
-         "Use selmon bhoi photo for 3 days",
-         "drop a song quote then tag a suitable member for that quote",
-         "send voice note saying can i call u baby?",
+         "Erzählen Sie irgendwelchen Leuten, dass ich erst Ihr Zwilling war, dass wir uns getrennt haben und dass ich dann eine Schönheitsoperation hatte. Und das ist das Allerletzte",
+         "Erwähne den Namen deines Ex",
+         "Mach 1 Reim für die Mitglieder!",
+         "schicke deine Whatsapp-Chatliste",
+         "Chat zufällige Leute mit Gheto Sprache dann ss hier",
+         "erzähle deine eigene Version von peinlichen Dingen",
+         "markiere die Person, die du hasst",
+         "Vorgeben, besessen zu sein, z.B.: besessen von Hund, besessen von Heuschrecken, besessen von Kühlschrank, usw.",
+         "Ändere deinen Namen in *ICH BIN DONKEY* für 24 Stunden",
+         "*ma chuda ma chuda ma chuda* vor deinem Haus schreien",
+         "Freundschaftsfoto knipsen/veröffentlichen/verknallen",
+         "Sag mir deinen Freundestyp!",
+         "Sage *Ich bin in dich verknallt, willst du meine Freundin sein?* zum anderen Geschlecht, als ihr das letzte Mal gechattet habt (per Telefon einreichen), warte auf seine Antwort, wenn du sie hast, gib sie hier ab",
+         "nimm deine Stimme auf, die lautet *titar ke age do titar, titar ke piche do titar*",
+         "prank chat ex und sagen *i love u, please come back.* ohne zu sagen, dare!",
+         "Chatte mit deinem Kontakt in der Reihenfolge deines Akkus, dann sag ihm *Ich bin glücklich, dich zu haben!*",
+         "ändere den Namen in *Ich bin ein Kind von Randi* für 5 Stunden",
+         "24 Stunden lang Bengali eintippen",
+         "Benutze selmon bhoi photo für 3 Tage",
+         "Lass ein Liedzitat fallen und markiere ein passendes Mitglied für dieses Zitat",
+         "Senden Sie eine Sprachnachricht mit den Worten "Kann ich dich anrufen, Baby?",
          "ss recent call whatsapp",
-         "Say *YOU ARE SO BEAUTIFUL DON'T LIE* to guys!",
-         "pop to a group member, and say fuck you",
-         "Act like a chicken in front of ur parents",
-         "Pick up a random book and read one page out loud in vn n send it here",
-         "Open your front door and howl like a wolf for 10 seconds",
-         "Take an embarrassing selfie and paste it on your profile picture",
-         "Let the group choose a word and a well known song. You have to sing that song and send it in voice note",
-         "Walk on your elbows and knees for as long as you can",
-         "sing national anthem in voice note",
-         "Breakdance for 30 seconds in the sitting room😂",
-         "Tell the saddest story you know",
-         "make a twerk dance video and put it on status for 5mins",
-         "Eat a raw piece of garlic",
-         "Show the last five people you texted and what the messages said",
-         "put your full name on status for 5hrs",
-         "make a short dance video without any filter just with a music and put it on ur status for 5hrs",
-         "call ur bestie, bitch",
-         "put your photo without filter on ur status for 10mins",
-         "say i love oli london in voice note🤣🤣",
-         "Send a message to your ex and say I still like you",
-         "call Crush/girlfriend/bestie now and screenshot here",
-         "pop to one of the group member personal chat and Say you ugly bustard",
-         "say YOU ARE BEAUTIFUL/HANDSOME to one of person who is in top of ur pinlist or the first person on ur chatlist",
-         "send voice notes and say, can i call u baby, if u r boy tag girl/if girl tag boy",
-         "write i love you (random grup member name, who is online) in personal chat, (if u r boy write girl name/if girl write boy name) take a snap of the pic and send it here",
-         "use any bollywood actor photo as ur pfp for 3 days",
-         "put your crush photo on status with caption, this is my crush",
-         "change name to I AM GAY for 5 hours",
-         "chat to any contact in whatsapp and say i will be ur bf/gf for 5hours",
-         "send voice note says i hv crush on you, want to be my girlfriend/boyfriend or not? to any random person from the grup(if u girl choose boy, if boy choose girl",
-         "slap ur butt hardly send the sound of slap through voice note😂",
-         "state ur gf/bf type and send the photo here with caption, ugliest girl/boy in the world",
-         "shout bravooooooooo and send here through voice note",
-         "snap your face then send it here",
-         "Send your photo with a caption, i am lesbian",
-         "shout using harsh words and send it here through vn",
-         "shout you bastard in front of your mom/papa",
-         "change the name to i am idiot for 24 hours",
-         "slap urself firmly and send the sound of slap through voice note😂",
-         "say i love the bot owner Fantox through voice note",
-         "send your gf/bf pic here",
-         "make any tiktok dance challenge video and put it on status, u can delete it after 5hrs",
-         "breakup with your best friend for 5hrs without telling him/her that its a dare",
-          "tell one of your frnd that u love him/her and wanna marry him/her, without telling him/her that its a dare",
-          "say i love depak kalal through voice note",
-          "write i am feeling horny and put it on status, u can delete it only after 5hrs",
-          "write i am lesbian and put it on status, u can delete only after 5hrs",
-          "kiss your mommy or papa and say i love you😌",
-          "put your father name on status for 5hrs",
-          "send abusive words in any grup, excepting this grup, and send screenshot proof here"
-     ]
+         "Sage *YOU ARE SO BEAUTIFUL DON'T LIE* zu Jungs",
+         "Pop zu einem Gruppenmitglied und sag fick dich",
+         "Benimm dich wie ein Huhn vor deinen Eltern",
+         "Nimm ein beliebiges Buch und lies eine Seite laut in vn und schick sie hierher",
+         "Öffne deine Haustür und heule 10 Sekunden lang wie ein Wolf",
+         "Mach ein peinliches Selfie und füge es in dein Profilbild ein",
+         "Lass die Gruppe ein Wort und ein bekanntes Lied auswählen. Du musst das Lied singen und es per Sprachnachricht senden",
+         "Geh auf deinen Ellbogen und Knien, so lange du kannst",
+         "Singt die Nationalhymne als Sprachnotiz",
+         "Breakdance für 30 Sekunden im Wohnzimmer😂",
+         "Erzähle die traurigste Geschichte, die du kennst",
+         "Mach ein Twerk-Tanzvideo und stelle es für 5 Minuten auf Status",
+         "Iss ein rohes Stück Knoblauch",
+         "Zeige die letzten fünf Leute, denen du eine SMS geschickt hast, und was in den Nachrichten stand",
+         "Stelle deinen vollen Namen für 5 Stunden auf den Status",
+         "Mache ein kurzes Tanzvideo ohne Filter, nur mit Musik und stelle es 5 Stunden lang auf deinen Status",
+         "Ruf deine beste Freundin an, Schlampe",
+         "stelle dein Foto ohne Filter für 10 Minuten auf deinen Status",
+         "Sage ich liebe Oli London in der Stimme note🤣🤣",
+         "Sende eine Nachricht an deinen Ex und sage, dass ich dich immer noch mag",
+         "rufe jetzt Crush/Freundin/Bekannte an und mache hier einen Screenshot",
+         "Gehe in den persönlichen Chat eines Gruppenmitglieds und sage "Du hässliche Trappe",
+         "sage YOU ARE BEAUTIFUL/HANDSOME zu einer Person, die ganz oben auf deiner Pinliste steht oder die erste Person auf deiner Chatliste",
+         "Sende Sprachnotizen und sage, kann ich dich Baby nennen, wenn du ein Junge bist, markiere ein Mädchen, wenn ein Mädchen, markiere einen Jungen",
+         "schreibe ich liebe dich (zufälliger Gruppenname, der online ist) in den persönlichen Chat, (wenn du ein Junge bist, schreibe einen Mädchennamen/ wenn ein Mädchen, schreibe einen Jungennamen) mach einen Schnappschuss von dem Bild und schicke ihn hierher",
+         "Verwende ein beliebiges Foto eines Bollywood-Schauspielers für 3 Tage als PfP",
+         "Setze dein Schwarmfoto in den Status mit der Überschrift "Das ist mein Schwarm",
+         "Ändere deinen Namen für 5 Stunden in I AM GAY",
+         "Chatte mit einem beliebigen Kontakt in Whatsapp und sage, dass ich für 5 Stunden dein Bf/GF sein werde",
+         "eine Sprachnachricht mit dem Inhalt "Ich bin in dich verknallt, willst du meine Freundin/Freund sein oder nicht?
+         "Klaps auf den Hintern sendet kaum das Geräusch des Klapses durch die Sprachnachricht😂",
+         "Nennen Sie den Typ Ihrer Freundin/Ihres Freundes und senden Sie das Foto mit der Bildunterschrift "Hässlichstes Mädchen/Junge der Welt",
+         "schrei bravooooooooo und schick es per Sprachnachricht",
+         "Fotografiere dein Gesicht und schicke es hierher",
+         "Schick dein Foto mit einer Bildunterschrift, ich bin lesbisch",
+         "schreie mit harten Worten und sende es hier über vn",
+         "Schrei du Bastard vor deiner Mutter/Papa",
+         "Ändere den Namen in Ich bin ein Idiot für 24 Stunden",
+         "Schlage dich selbst fest und sende den Klang der Ohrfeige per Sprachnachricht😂",
+         "Sage dem Bot-Besitzer Fantox per Sprachnachricht, dass ich ihn liebe",
+         "schicke dein Foto von deiner Freundin/ deinem Freund hierher",
+         "Mach ein beliebiges Tiktok-Dance-Challenge-Video und stelle es auf Status, du kannst es nach 5 Stunden löschen",
+         "Mache mit deinem besten Freund 5 Stunden lang Schluss, ohne ihm/ihr zu sagen, dass es eine Mutprobe ist",
+          "Sag einem deiner Freunde, dass du ihn/sie liebst und ihn/sie heiraten willst, ohne ihm/ihr zu sagen, dass es eine Mutprobe ist",
+          "Sage per Sprachnachricht, dass ich Depak Kalal liebe",
+          "schreibe ich bin geil und stelle es in den Status, du kannst es erst nach 5 Stunden löschen",
+          "schreibe ich bin lesbisch und setze es auf den Status, du kannst es erst nach 5 Stunden löschen",
+          "küsse deine Mama oder deinen Papa und sage ich liebe dich😌",
+          "Setze den Namen deines Vaters für 5 Stunden in den Status",
+          "sende beleidigende Wörter in jeder Gruppe, außer dieser Gruppe, und sende einen Screenshot als Beweis hier"
+     ]                 
                    const Mikudareww = dare[Math.floor(Math.random() * dare.length)]
                    buffer = await getBuffer(`https://wallpapercave.com/wp/wp10524609.jpg`)
                    Miku.sendMessage(from, { image: buffer, caption: '*You have chosen Dare*\n\n'+ Mikudareww }, {quoted:m})
                    break
                        
 
-case 'truth':
+case 'truth' case 'Wahrheit':
     if (isBan) return reply(mess.banned)
     if (isBanChat) return reply(mess.bangc)
                            const truth =[
-                 "Have you ever liked anyone? How long?",
-                 "If you can or if you want, which gc/outside gc would you make friends with? (maybe different/same type)",
+                 "Haben Sie jemals jemanden gemocht? Wie lange?",
+                 "Wenn du kannst oder willst, mit welchem/r gc/außerhalb gc würdest du dich anfreunden? (vielleicht anderer/gleicher Typ)",
                  "apa ketakutan terbesar kamu?",
-                 "Have you ever liked someone and felt that person likes you too?",
-                 "What is the name of your friend's ex-girlfriend that you used to secretly like?",
-                 "Have you ever stolen money from your father or mom? The reason?",
-                 "What makes you happy when you're sad?",
-                 "Ever had a one sided love? if so who? how does it feel bro?", 
-                 "been someone's mistress?",
-                 "the most feared thing",
-                 "Who is the most influential person in your life?",
-                 "what proud thing did you get this year", 
-                 "Who is the person who can make you awesome", 
-                 "Who is the person who has ever made you very happy?", 
-                 "Who is closest to your ideal type of partner here", 
-                 "Who do you like to play with??", 
-                 "Have you ever rejected people? the reason why?",
-                 "Mention an incident that made you hurt that you still remember", 
-                 "What achievements have you got this year??",
-                 "What's your worst habit at school??",
-                 "What song do you sing most in the shower",
-                 "Have you ever had a near-death experience",
-                 "When was the last time you were really angry. Why?",
-                 "Who is the last person who called you",
-                 "Do you have any hidden talents, What are they",
-                 "What word do you hate the most?",
-                 "What is the last YouTube video you watched?",
-                 "What is the last thing you Googled",
-                 "Who in this group would you want to swap lives with for a week",
-                 "What is the scariest thing thats ever happened to you",
-                 "Have you ever farted and blamed it on someone else",
-                 "When is the last time you made someone else cry",
-                 "Have you ever ghosted a friend",
-                 "Have you ever seen a dead body",
-                 "Which of your family members annoys you the most and why",
-                 "If you had to delete one app from your phone, which one would it be",
-                 "What app do you waste the most time on",
-                 "Have you ever faked sick to get home from school",
-                 "What is the most embarrassing item in your room",
-                 "What five items would you bring if you got stuck on a desert island",
-                 "Have you ever laughed so hard you peed your pants",
-                 "Do you smell your own farts",
-                 "have u ever peed on the bed while sleeping ðŸ¤£ðŸ¤£",
-                 "What is the biggest mistake you have ever made",
-                 "Have you ever cheated in an exam",
-                 "What is the worst thing you have ever done",
-                 "When was the last time you cried",
-                 "whom do you love the most among ur parents", 
-                 "do u sometimes put ur finger in ur nosetrilðŸ¤£", 
-                 "who was ur crush during the school days",
-                 "tell honestly, do u like any boy in this grup",
-                 "have you ever liked anyone? how long?",
-                 "do you have gf/bf','what is your biggest fear?",
-                 "have you ever liked someone and felt that person likes you too?",
-                 "What is the name of your ex boyfriend of your friend that you once liked quietly?",
-                 "ever did you steal your mothers money or your fathers money",
-                 "what makes you happy when you are sad",
-                 "do you like someone who is in this grup? if you then who?",
-                 "have you ever been cheated on by people?",
-                 "who is the most important person in your life",
-                 "what proud things did you get this year",
-                 "who is the person who can make you happy when u r sad",
-                 "who is the person who ever made you feel uncomfortable",
-                 "have you ever lied to your parents",
-                 "do you still like ur ex",
-                 "who do you like to play together with?",
-                 "have you ever stolen big thing in ur life? the reason why?",
-                 "Mention the incident that makes you hurt that you still remember",
-                 "what achievements have you got this year?",
-                 "what was your worst habit at school?",
-                 "do you love the bot creator Fantox?",
-                 "have you ever thought of taking revenge from ur teacher?",
-                 "do you like current prime minister of ur country",
-                 "you non veg or veg",
-                 "if you could be invisible, what is the first thing you would do",
-                 "what is a secret you kept from your parents",
-                 "Who is your secret crush",
-                 "whois the last person you creeped on social media",
-                 "If a genie granted you three wishes, what would you ask for",
-                 "What is your biggest regret",
-                 "What animal do you think you most look like",
-                 "How many selfies do you take a day",
-                 "What was your favorite childhood show",
-                 "if you could be a fictional character for a day, who would you choose",
-                 "whom do you text the most",
-                 "What is the biggest lie you ever told your parents",
-                 "Who is your celebrity crush",
-                 "Whats the strangest dream you have ever had",
-                 "do you play pubg, if you then send ur id number"
+                 "Hast du jemals jemanden gemocht und das Gefühl gehabt, dass diese Person dich auch mag?",
+                 "Wie heißt die Ex-Freundin deines Freundes, die du heimlich mochtest?",
+                 "Hast du jemals Geld von deinem Vater oder deiner Mutter gestohlen? Aus welchem Grund?",
+                 "Was macht dich glücklich, wenn du traurig bist?",
+                 "Hattest du jemals eine einseitige Liebe? Wenn ja, zu wem? Wie fühlt sich das an?", 
+                 "Warst du die Geliebte von jemandem?",
+                 "Die am meisten gefürchtete Sache",
+                 "Wer ist die einflussreichste Person in deinem Leben?",
+                 "Auf was bist du dieses Jahr besonders stolz?", 
+                 "Wer ist die Person, die dich großartig machen kann", 
+                 "Wer ist die Person, die dich jemals sehr glücklich gemacht hat?", 
+                 "Wer kommt deinem idealen Partnertyp am nächsten", 
+                 "Mit wem spielst du gerne?", 
+                 "Haben Sie schon einmal jemanden abgelehnt und warum?",
+                 "Nennen Sie ein Ereignis, das Sie verletzt hat und an das Sie sich noch erinnern, 
+                 "Welche Erfolge hast du dieses Jahr erzielt?",
+                 "Was ist deine schlimmste Angewohnheit in der Schule?",
+                 "Welches Lied singst du am liebsten unter der Dusche",
+                 "Hattest du jemals eine Nahtoderfahrung?",
+                 "Wann warst du das letzte Mal richtig wütend? Warum?",
+                 "Wer ist die letzte Person, die Sie angerufen hat",
+                 "Hast du irgendwelche verborgenen Talente, welche sind das?
+                 "Welches Wort hasst du am meisten?",
+                 "Welches ist das letzte YouTube-Video, das du dir angesehen hast?",
+                 "Was hast du zuletzt gegoogelt?",
+                 "Mit wem aus dieser Gruppe würdest du gerne für eine Woche tauschen?",
+                 "Was ist das Unheimlichste, was dir je passiert ist",
+                 "Hast du jemals gefurzt und jemand anderem die Schuld dafür gegeben",
+                 "Wann hast du das letzte Mal jemand anderen zum Weinen gebracht",
+                 "Hast du jemals einen Freund gegeistert",
+                 "Haben Sie schon einmal eine Leiche gesehen",
+                 "Welches deiner Familienmitglieder ärgert dich am meisten und warum",
+                 "Wenn du eine App von deinem Handy löschen müsstest, welche wäre das",
+                 "Mit welcher App vergeudest du die meiste Zeit",
+                 "Hast du dich schon einmal krank gemeldet, um von der Schule nach Hause zu kommen",
+                 "Was ist der peinlichste Gegenstand in deinem Zimmer",
+                 "Welche fünf Gegenstände würdest du mitnehmen, wenn du auf einer einsamen Insel festsitzen würdest",
+                 "Hast du jemals so sehr gelacht, dass du dir in die Hose gepinkelt hast",
+                 "Riechst du deine eigenen Fürze",
+                 "Hast du schon mal im Schlaf aufs Bett gepinkelt?",
+                 "Was ist der größte Fehler, den du je gemacht hast",
+                 "Hast du jemals bei einer Prüfung geschummelt",
+                 "Was ist das Schlimmste, was du je getan hast?",
+                 "Wann haben Sie das letzte Mal geweint",
+                 "Wen liebst du von deinen Eltern am meisten", 
+                 "Steckst du manchmal deinen Finger in deine Nase?", 
+                 "Wer war dein Schwarm während der Schulzeit",
+                 "Sag ehrlich, magst du einen Jungen aus dieser Gruppe?",
+                 "Hast du jemals jemanden gemocht? Wie lange?",
+                 "Hast du eine Freundin/Freundin?", "Was ist deine größte Angst?",
+                 "Hast du jemals jemanden gemocht und das Gefühl gehabt, dass diese Person dich auch mag?",
+                 "Wie heißt der Ex-Freund deines Freundes, den du einmal sehr gemocht hast?",
+                 "Hast du jemals das Geld deiner Mutter oder deines Vaters gestohlen",
+                 "Was macht dich glücklich, wenn du traurig bist",
+                 "Magst du jemanden, der in dieser Gruppe ist? wenn ja, wen?
+                 "Wurdest du jemals von jemandem betrogen?",
+                 "Wer ist die wichtigste Person in deinem Leben",
+                 "Welche stolzen Dinge hast du dieses Jahr bekommen?
+                 "Wer ist die Person, die dich glücklich machen kann, wenn du traurig bist",
+                 "Wer ist die Person, bei der du dich jemals unwohl gefühlt hast",
+                 "Hast du jemals deine Eltern angelogen",
+                 "Magst du deinen Ex immer noch",
+                 "Mit wem spielst du gerne zusammen?",
+                 "Hast du jemals in deinem Leben etwas Großes gestohlen? und warum?
+                 "Nennen Sie den Vorfall, der Sie verletzt hat und an den Sie sich noch erinnern",
+                 "Welche Leistungen hast du dieses Jahr erbracht?",
+                 "Was war deine schlimmste Angewohnheit in der Schule?",
+                 "Liebst du den Bot-Ersteller Fantox?",
+                 "Hast du jemals daran gedacht, dich an deinem Lehrer zu rächen?",
+                 "Magst du den aktuellen Premierminister deines Landes?",
+                 "Bist du Nicht-Vegetarier oder Vegetarier",
+                 "Wenn du unsichtbar sein könntest, was würdest du als erstes tun",
+                 "Was ist ein Geheimnis, das du vor deinen Eltern verbirgst?
+                 "Wer ist dein heimlicher Schwarm",
+                 "Wer ist die letzte Person, die du auf Social Media gegruselt hast",
+                 "Wenn ein Flaschengeist dir drei Wünsche erfüllen würde, was würdest du dir wünschen",
+                 "Was bedauerst du am meisten",
+                 "Welchem Tier siehst du am ähnlichsten",
+                 "Wie viele Selfies machst du pro Tag?",
+                 "Was war deine Lieblingsserie in der Kindheit",
+                 "Wenn du einen Tag lang eine fiktive Figur sein könntest, wen würdest du wählen",
+                 "Wem schreibst du die meisten SMS",
+                 "Was ist die größte Lüge, die du deinen Eltern je erzählt hast",
+                 "Wer ist dein Promi-Schwarm",
+                 "Was ist der seltsamste Traum, den du je hattest",
+                 "Spielst du Pubg, wenn ja, dann sende deine ID-Nummer"
              ]
-                           const mikutruthww = truth[Math.floor(Math.random() * truth.length)]
+                           const Mikudareww = dare[Math.floor(Math.random() * dare.length)]
                            buffer = await getBuffer(`https://wallpapercave.com/wp/wp10524609.jpg`)
-                           Miku.sendMessage(from, { image: buffer, caption: '*You have chosen Truth*\n'+ mikutruthww }, {quoted:m})
+                           Miku.sendMessage(from, { image: buffer, caption: '*You have chosen Dare*\n\n'+ Mikudareww }, {quoted:m})
                            break
-
+                       
  /////////NSFW comm/////////////////                          
 
 //let bjif = await GIFBufferToVideoBuffer(bjf) 
@@ -4006,6 +4006,7 @@ break
 
 case 'hentai-neko' :
 case 'hneko' :
+case 'hn' :
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
     if (!m.isGroup) return replay(mess.grouponly)
@@ -4028,6 +4029,7 @@ break
 
 case 'hentai-waifu' :
 case 'hwaifu' :
+case 'hh' :
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
     if (!m.isGroup) return replay(mess.grouponly)
@@ -4047,6 +4049,7 @@ reply(mess.waiting)
                     return('Error!')
                 })
 break
+
 
 
 /////////////////////////// NFFW end /////////////////////
@@ -4071,7 +4074,7 @@ reply(mess.waiting)
                 })
 break
 
-case 'foxgirl':
+case 'foxgirl' case 'Fuchsmädchen':
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
     if (!m.isGroup) return replay(mess.grouponly)
@@ -4451,6 +4454,7 @@ case 'bully': case 'bonk': case 'wink': case 'poke': case 'nom': case 'slap': ca
 case 'wave': case 'blush': case 'smug': case 'glomp': case 'happy': case 'dance':
 case 'cringe': case 'cuddle': case 'highfive': case 'handhold': case 'kick':
 
+
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
     if (!m.isGroup) return replay(mess.grouponly)						
@@ -4478,7 +4482,7 @@ var wbutsss = [
          ]
       let buttonzMessage = {
       image: {url:ud.data.url},
-       caption:  `Here it is...`,
+       caption:  `Hier ist es ...`,
       footer: `${global.BotName}`,
           buttons: wbutsss,
      headerType: 4
@@ -4499,7 +4503,7 @@ case 'awoo':
     ]
   let button1Messages = {
    image: {url:waifudd.data.url},
-   caption:  `Here it is...`,
+   caption:  `Hier ist es ...`,
    footer: `${global.BotName}`,
   buttons: wbuttsss,
   headerType: 2
@@ -4510,13 +4514,13 @@ case 'awoo':
 break
 
 
-case 'animewall2': case 'animewallpaper2':
+case 'animewall2': case 'animewallpaper2' case 'animehintergrund':
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
     if (!m.isGroup) return replay(mess.grouponly)
     reply(mess.waiting)						
 const { AnimeWallpaper } =require("anime-wallpaper")
-if(!q) return reply('Please enter a seach term!')
+if(!q) return reply('Bitte geben Sie einen Suchbegriff ein !')
 const wall = new AnimeWallpaper();
     const pages = [1,2,3,4];
         const random=pages[Math.floor(Math.random() * pages.length)]
@@ -4529,7 +4533,7 @@ var walb = [
         ]
       let wal = {
        image: {url:wallpaper[i].image},
-       caption: `*Search Term :* ${q}`,
+       caption: `*Suchbegriff :* ${q}`,
       footer: `${global.BotName}`,
       buttons: walb,
       headerType: 4
@@ -4549,18 +4553,18 @@ reply(mess.waiting)
 const { Anime } =require("@shineiichijo/marika")
     const client = new Anime();
      let anime = await client.searchAnime(q)
-    let result = anime.data[0];
+    let Ergebnis = anime.data[0];
     console.log(result)
-   let details = `*Title:* ${result.title}\n`;
+   let details = `*Titel:* ${result.title}\n`;
     details += `*Format:* ${result.type}\n`;
     details += `*Status:* ${result.status.toUpperCase().replace(/\_/g, " ")}\n`;
-    details += `*Total episodes:* ${result.episodes}\n`;
-    details += `*Duration:* ${result.duration}\n`;
+    details += `*Folgen insgesamt:* ${result.episodes}\n`;
+    details += `*Dauer:* ${result.duration}\n`;
     details += `*Genres:*\n`;
     for (let i = 0; i < result.genres.length; i++) {
       details += `\t\t\t\t\t\t\t\t${result.genres[i].name}\n`;
     }
-    details += `*Based on:* ${result.source.toUpperCase()}\n`;
+    details += `*Basiert auf:* ${result.source.toUpperCase()}\n`;
     details += `*Studios:*\n`;
     for (let i = 0; i < result.studios.length; i++) {
       details += `\t\t\t\t\t\t\t\t${result.studios[i].name}\n`;
@@ -4570,10 +4574,10 @@ const { Anime } =require("@shineiichijo/marika")
       details += `\t\t\t\t\t\t\t\t\t\t${result.producers[i].name}\n`;
     }
     details += `*Premiered on:* ${result.aired.from}\n`;
-    details += `*Ended on:* ${result.aired.to}\n`;
-    details += `*Popularity:* ${result.popularity}\n`;
-    details += `*Favorites:* ${result.favorites}\n`;
-    details += `*Rating:* ${result.rating}\n`;
+    details += `*Beendet am:* ${result.aired.to}\n`;
+    details += `*Beliebt:* ${result.popularity}\n`;
+    details += `*Favoriten:* ${result.favorites}\n`;
+    details += `*Wertung:* ${result.rating}\n`;
     details += `*Rank:* ${result.rank}\n\n`;
     if (result.trailer.url !== null)
       details += `*Trailer:* ${result.trailer.url}\n\n`;
@@ -4591,12 +4595,12 @@ case 'manga':
 reply(mess.waiting)							
 const { Manga } =require("@shineiichijo/marika")
 const manga = new Manga();
-if(!q) return reply(`Please proide a search term!\n\n_Example:_ ${prefix}manga naruto`)
+if(!q) return reply(`Bitte geben Sie einen Suchbegriff ein!\n\n_Example:_ ${prefix}manga naruto`)
 let srh = await manga.searchManga(q)
     let mang = `*Title:* ${srh.data[0].title}\n`;
     mang += `*Status:* ${srh.data[0].status}\n`;
-    mang += `*Total Volumes:* ${srh.data[0].volumes}\n`;
-    mang += `*Total Chapters:* ${srh.data[0].chapters}\n`;
+    mang += `*Gesamt Bände:* ${srh.data[0].volumes}\n`;
+    mang += `*Gesamt Kapitel:* ${srh.data[0].chapters}\n`;
     mang += `*Genres:*\n`;
     for (let i = 0; i < srh.data[0].genres.length; i++) {
       mang += `\t\t\t\t\t\t\t\t${srh.data[0].genres[i].name}\n`;
@@ -4628,7 +4632,7 @@ case 'waifu' :
 reply(mess.waiting)	
     waifuddd = await axios.get('https://waifu.pics/api/sfw/waifu')
  var wbuttsssr = [
-    {buttonId: `${prefix}waifu`, buttonText: {displayText: `>>`}, type: 1},
+    {buttonId: `${prefix}waifu`, buttonText: {displayText: `Brauch Mehr`}, type: 1},
     ]
         let button4Messagess = {
         image: {url:waifuddd.data.url},
@@ -4686,11 +4690,11 @@ reply(mess.waiting)
 break
 
 
-case 'lyrics': {
+case 'lyrics': case 'liedertext'{
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
     if (!m.isGroup) return replay(mess.grouponly)
-if (!text) return reply(`Comand usage: ${prefix}lyrics Thunder`)
+if (!text) return reply(`Befehlsverwendung: ${prefix}lyrics Donner`)
 reply(mess.waiting)	
 const { lyrics, lyricsv2 } = require('@bochilteam/scraper')
 const result = await lyricsv2(text).catch(async _ => await lyrics(text))
@@ -4706,7 +4710,7 @@ reply(`
 break
 
 
-case "quotes":
+case "quotes" case "zitate":
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
     if (!m.isGroup) return replay(mess.grouponly)
@@ -4727,7 +4731,7 @@ teks = "\nDarkjokes"
 Miku.sendMessage(m.chat, { image : { url : res }, caption: teks }, { quoted : m })
 break
 
-case 'leavegc': case 'leavegroup': case 'bye': {
+case 'leavegc': case 'leavegroup': case 'bye': case 'verlasse': {
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
     if (!m.isGroup) return replay(mess.grouponly)
@@ -4749,7 +4753,7 @@ for (let yoi of anu) {
 await sleep(1500)
 let btn = [{
 quickReplyButton: {
-displayText: '✨Menu✨',
+displayText: 'Menu',
 id: '-menu'
 }  
 }, {
@@ -4761,22 +4765,22 @@ id: '-owner'
 let txt = `「 *${global.OwnerName}'s Broadcast* 」\n\n${text}`
 Miku.send5ButImg(yoi, txt, `${global.BotName}`, BotLogo, btn, Thumb)
 }
-replay('Broadcast Sent !')
+replay('Sendung gesendet !')
 }
 break    
 
 
-case 'help': case 'h': case 'menu': case 'allmenu': case 'listmenu':{
+case 'help': case 'h': case 'menu': case 'allmenu': case 'listmenu': case 'hilfe':{
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
       
  const helpmenu = `Konichiwa *${pushname}* Senpai,
 
-I am *Miku Nakano*, a bot developed by *Sebastian*.
+Ich bin *Miku Nakano*, ein von *Sebastian* entwickelter Bot.
 
-🔰 My prefix is:  ${prefix}
+🔰 Mein Präfix ist:  ${prefix}
 
-Here's the list of my Commands.
+Hier ist die Liste meiner Befehle.
 
 
  
@@ -4786,7 +4790,7 @@ Afk, speak, miku, stalk, profile, help, delete, deleteall, listgc, listpc, welco
  
  *━━━〈  🎀 Owner 🎀  〉━━━*
 
-self, public, ban, bangroup, bye, join, bye, block, unblock, broadcast 
+self, public, ban, bangroup, verlasse, join, block, unblock, broadcast 
 
  *━━━〈  ⭕ Group ⭕  〉━━━*
  
@@ -4834,13 +4838,13 @@ reaction, truth, dare, couple, soulmate, handsomecheck, beautifulcheck, awesomec
 
  *━━━〈  🪁 Essentials 🪁  〉━━━*
 
- say, translate, fliptext, toletter, weather
+ say, translate, fliptext, toletter, Wetter
 
  *━━━〈  💥 NSFW 💥  〉━━━*
 
-🍁 Type " *${prefix}nsfw* " then enable NSFW (Admin only!) 
+🍁 Geben Sie " *${prefix}nsfw* " ein und aktivieren Sie dann NSFW (nur Administrator!)
 
-🍁 Then type " *${prefix}nsfwmenu* " to get full list of NSFW commands.
+🍁Geben Sie dann „*${prefix}nsfwmenu*“ ein, um eine vollständige Liste der NSFW-Befehle zu erhalten.
 
 
 
@@ -4848,11 +4852,11 @@ reaction, truth, dare, couple, soulmate, handsomecheck, beautifulcheck, awesomec
  『  *${global.BotName}*  』
  Powered by: *Sebastian*
 
- 🔰 To use any of these commands type 
- " *${prefix}<Command name>* ".
+ 🔰 Um einen dieser Befehle zu verwenden, geben Sie ein
+ " *${prefix}<Befehlsname>* ".
  
 
- 🔰 Type " *${prefix}help* " to get full command list.`
+ 🔰 Geben Sie " *${prefix}help* " ein, um die vollständige Befehlsliste zu erhalten.`
     
 
  let buttonshelpm = [
@@ -4860,7 +4864,7 @@ reaction, truth, dare, couple, soulmate, handsomecheck, beautifulcheck, awesomec
     ]
                 let buttonMessage = {
                     video:fs.readFileSync('./system/miku2.mp4'),gifPlayback:true,
-                    caption: helpmenu,
+                    caption: hilfmenu,
                     footer: `${BotName}`,
                     buttons: buttonshelpm,
                     headerType: 4
@@ -4879,7 +4883,7 @@ case '':
       mikupic ='https://wallpapercave.com/wp/wp6299451.jpg'
     
         
- const needhelpmenu = `Do you need help ${pushname} Senpai? Type *${prefix}help* to get my full command list.`
+ const needhelpmenu = `Brauchst du Hilfe, ${pushname} Senpai? Geben Sie *${prefix}help* ein, um meine vollständige Befehlsliste zu erhalten.`
      
          let butRun = [
                 {buttonId: `${prefix}help`, buttonText: {displayText: 'Help'}, type: 1}
@@ -4901,7 +4905,7 @@ case 'miku':
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
 
-const txt = `Do you love Miku? Then we are the same.`
+const txt = `Liebst du Miku? Dann sind wir gleich.`
 const mikuarray= [
             "https://c.tenor.com/SOeIW-QVZvoAAAPo/scared-the-quintessential-quintuplets.mp4",
             "https://c.tenor.com/FDe7lTs0xvMAAAPo/miku-nakano-nakano-miku.mp4",
@@ -4944,7 +4948,7 @@ const mikuarray= [
 
 
 
- case "tts":  case "texttospeech":  case "say": case "speak":{
+ case "tts":  case "texttospeech":  case "say":  case "speak": case "sag"{
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
 
@@ -4962,12 +4966,12 @@ const mikuarray= [
     break;
 
 
-		 case 'weather':
+		 case 'weather' case 'wwetter':
         if (isBan) return reply(mess.banned)
         if (!args[0]) return reply("Enter your location to search weather.")
          myweather = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${args.join(" ")}&units=metric&appid=e409825a497a0c894d2dd975542234b0&language=tr`)
 
-        const weathertext = `           🌤 *Weather Report* 🌤  \n\n🔎 *Search Location:* ${myweather.data.name}\n*💮 Country:* ${myweather.data.sys.country}\n🌈 *Weather:* ${myweather.data.weather[0].description}\n🌡️ *Temperature:* ${myweather.data.main.temp}°C\n❄️ *Minimum Temperature:* ${myweather.data.main.temp_min}°C\n📛 *Maximum Temperature:* ${myweather.data.main.temp_max}°C\n💦 *Humidity:* ${myweather.data.main.humidity}%\n🎐 *Wind:* ${myweather.data.wind.speed} km/h\n`
+        const weathertext = `           🌤 *Wetterbericht* 🌤  \n\n🔎 *Standort suchen:* ${myweather.data.name}\n*💮 Land:* ${myweather.data.sys.country}\n🌈 *Wetter:* ${myweather.data.weather[0].description}\n🌡️ *Temperatur:* ${myweather.data.main.temp}°C\n❄️ *Mindest Temperatur:* ${myweather.data.main.temp_min}°C\n📛 *Hochste Temperatur:* ${myweather.data.main.temp_max}°C\n💦 *Humidity:* ${myweather.data.main.humidity}%\n🎐 *Wind:* ${myweather.data.wind.speed} km/h\n`
         Miku.sendMessage(from, { video: { url: 'https://media.tenor.com/bC57J4v11UcAAAPo/weather-sunny.mp4' }, gifPlayback: true, caption: weathertext }, { quoted: m })
 
         break
