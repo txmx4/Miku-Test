@@ -1405,7 +1405,7 @@ return list[Math.floor(list.length * Math.random())]
       reply (`🌝was willst du jetzt 🌚`);
     }
 
-    if (smallinput.includes('Gute Nacht ')) {
+    if (smallinput.includes('gute nacht')) {
       reply (`warum schon so früh 🥲 oder willst du noch etwas machen 😏 *${pushname}* 😇. Sleep well and sweet dreams.`);
     }
 
@@ -3612,7 +3612,7 @@ const result2 = `*Title :* ${res2[0].judul}\n*Wiki :* ${res2[0].wiki}`
 Miku.sendMessage(from, { image : { url : res2[0].thumb }, caption : result2}) 
 break
 
-case 'earthquake' case 'Erdbeben':
+case 'earthquake':
     if (isBan) return reply(mess.banned)
     if (isBanChat) return reply(mess.bangc)
 const tres = await Gempa()
