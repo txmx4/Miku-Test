@@ -3501,7 +3501,7 @@ break
 case 'couplepp':  case 'ppcouple': case 'pb': case 'paarbild': {
 if (isBan) return reply(mess.banned)
 if (isBanChat) return reply(mess.bangc)
-         reply(mess.waiting)https
+         reply(mess.waiting)
          let anu = await fetchJson('https://raw.githubusercontent.com/iamriz7/kopel_/main/kopel.json')
          let random = anu[Math.floor(Math.random() * anu.length)]
          Miku.sendMessage(m.chat, { image: { url: random.male }, caption: `Für ihm...` }, { quoted: m })
