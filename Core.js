@@ -3753,8 +3753,7 @@ case 'charactercheck':
          "Mach ein peinliches Selfie und füge es in dein Profilbild ein",
          "Lass die Gruppe ein Wort und ein bekanntes Lied auswählen. Du musst das Lied singen und es per Sprachnachricht senden",
          "Geh auf deinen Ellbogen und Knien, so lange du kannst",
-         "Singt die Nationalhymne als Sprachnotiz",
-         "Breakdance für 30 Sekunden im Wohnzimmer😂",
+         "Singt die Nationalhymne als Sprachnotiz"!
          "Erzähle die traurigste Geschichte, die du kennst",
          "Mach ein Twerk-Tanzvideo und stelle es für 5 Minuten auf Status",
          "Iss ein rohes Stück Knoblauch",
