@@ -3753,7 +3753,7 @@ case 'charactercheck':
          "Mach ein peinliches Selfie und füge es in dein Profilbild ein",
          "Lass die Gruppe ein Wort und ein bekanntes Lied auswählen. Du musst das Lied singen und es per Sprachnachricht senden",
          "Geh auf deinen Ellbogen und Knien, so lange du kannst",
-         "Singt die Nationalhymne als Sprachnotiz"!
+         "Singt die Nationalhymne als Sprachnotiz",
          "Erzähle die traurigste Geschichte, die du kennst",
          "Mach ein Twerk-Tanzvideo und stelle es für 5 Minuten auf Status",
          "Iss ein rohes Stück Knoblauch",
@@ -3773,7 +3773,7 @@ case 'charactercheck':
          "Setze dein Schwarmfoto in den Status mit der Überschrift  Das ist mein Schwarm",
          "Ändere deinen Namen für 5 Stunden in I AM GAY",
          "Chatte mit einem beliebigen Kontakt in Whatsapp und sage, dass ich für 5 Stunden dein Bf/GF sein werde",
-         "eine Sprachnachricht mit dem Inhalt Ich bin in dich verknallt, willst du meine Freundin/Freund sein oder nicht"?
+         "eine Sprachnachricht mit dem Inhalt Ich bin in dich verknallt, willst du meine Freundin/Freund sein oder nicht",
          "Klaps auf den Hintern sendet kaum das Geräusch des Klapses durch die Sprachnachricht😂",
          "Breakdance for 30 seconds in the sitting room😂",
          "schrei bravooooooooo und schick es per Sprachnachricht",
