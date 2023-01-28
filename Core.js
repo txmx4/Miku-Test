@@ -3774,7 +3774,7 @@ case 'charactercheck':
          "Ändere deinen Namen für 5 Stunden in I AM GAY",
          "Chatte mit einem beliebigen Kontakt in Whatsapp und sage, dass ich für 5 Stunden dein Bf/GF sein werde",
          "eine Sprachnachricht mit dem Inhalt Ich bin in dich verknallt, willst du meine Freundin/Freund sein oder nicht"?
-         "Klaps auf den Hintern sendet kaum das Geräusch des Klapses durch die Sprachnachricht😂"
+         "Klaps auf den Hintern sendet kaum das Geräusch des Klapses durch die Sprachnachricht😂",
          "Breakdance for 30 seconds in the sitting room😂",
          "schrei bravooooooooo und schick es per Sprachnachricht",
          "Fotografiere dein Gesicht und schicke es hierher",
