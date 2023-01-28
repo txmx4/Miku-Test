@@ -171,7 +171,7 @@ Miku.sendMessage(anu.id, buttonMessage)
                     mikutext = `
 Sayonara 👋, @${WAuserName.split("@")[0]},
 
-I hope you will come back soon, but we are not going to miss you though!
+Ich hoffe, Sie kommen bald wieder, aber wir werden Sie trotzdem nicht vermissen!
 `
 
     let buttonMessage = {
@@ -445,8 +445,8 @@ I hope you will come back soon, but we are not going to miss you though!
         mimetype = 'image/webp'
         }
        else if (/image/.test(mime)) type = 'image'
-       else if (/video/.test(mime)) type = 'video'
-       else if (/audio/.test(mime)) type = 'audio'
+       else if (/video/.test(mime)) type = 'document'
+       else if (/audio/.test(mime)) type = 'document'
        else type = 'document'
        await Miku.sendMessage(jid, { [type]: { url: pathFile }, caption, mimetype, fileName, ...options }, { quoted, ...options })
        return fs.promises.unlink(pathFile)
@@ -648,8 +648,8 @@ I hope you will come back soon, but we are not going to miss you though!
             mimetype = 'image/webp'
         }
         else if (/image/.test(mime)) type = 'image'
-        else if (/video/.test(mime)) type = 'video'
-        else if (/audio/.test(mime)) type = 'audio'
+        else if (/video/.test(mime)) type = 'document'
+        else if (/audio/.test(mime)) type = 'document'
         else type = 'document'
         await Miku.sendMessage(jid, { [type]: { url: pathFile }, mimetype, fileName, ...options }, { quoted, ...options })
         return fs.promises.unlink(pathFile)
