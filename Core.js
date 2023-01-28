@@ -3822,14 +3822,14 @@ case 'truth':
                  "Wer kommt deinem idealen Partnertyp am nächsten", 
                  "Mit wem spielst du gerne?", 
                  "Haben Sie schon einmal jemanden abgelehnt und warum?",
-                 "Nennen Sie ein Ereignis, das Sie verletzt hat und an das Sie sich noch erinnern, 
+                 "Nennen Sie ein Ereignis, das Sie verletzt hat und an das Sie sich noch erinnern", 
                  "Welche Erfolge hast du dieses Jahr erzielt?",
                  "Was ist deine schlimmste Angewohnheit in der Schule?",
                  "Welches Lied singst du am liebsten unter der Dusche",
                  "Hattest du jemals eine Nahtoderfahrung?",
                  "Wann warst du das letzte Mal richtig wütend? Warum?",
                  "Wer ist die letzte Person, die Sie angerufen hat",
-                 "Hast du irgendwelche verborgenen Talente, welche sind das?
+                 "Hast du irgendwelche verborgenen Talente, welche sind das"?
                  "Welches Wort hasst du am meisten?",
                  "Welches ist das letzte YouTube-Video, das du dir angesehen hast?",
                  "Was hast du zuletzt gegoogelt?",
@@ -3862,16 +3862,16 @@ case 'truth':
                  "Wie heißt der Ex-Freund deines Freundes, den du einmal sehr gemocht hast?",
                  "Hast du jemals das Geld deiner Mutter oder deines Vaters gestohlen",
                  "Was macht dich glücklich, wenn du traurig bist",
-                 "Magst du jemanden, der in dieser Gruppe ist? wenn ja, wen?
+                 "Magst du jemanden, der in dieser Gruppe ist? wenn ja, wen"?
                  "Wurdest du jemals von jemandem betrogen?",
                  "Wer ist die wichtigste Person in deinem Leben",
-                 "Welche stolzen Dinge hast du dieses Jahr bekommen?
+                 "Welche stolzen Dinge hast du dieses Jahr bekommen"?
                  "Wer ist die Person, die dich glücklich machen kann, wenn du traurig bist",
                  "Wer ist die Person, bei der du dich jemals unwohl gefühlt hast",
                  "Hast du jemals deine Eltern angelogen",
                  "Magst du deinen Ex immer noch",
                  "Mit wem spielst du gerne zusammen?",
-                 "Hast du jemals in deinem Leben etwas Großes gestohlen? und warum?
+                 "Hast du jemals in deinem Leben etwas Großes gestohlen? und warum"?
                  "Nennen Sie den Vorfall, der Sie verletzt hat und an den Sie sich noch erinnern",
                  "Welche Leistungen hast du dieses Jahr erbracht?",
                  "Was war deine schlimmste Angewohnheit in der Schule?",
@@ -3880,7 +3880,7 @@ case 'truth':
                  "Magst du den aktuellen Premierminister deines Landes?",
                  "Bist du Nicht-Vegetarier oder Vegetarier",
                  "Wenn du unsichtbar sein könntest, was würdest du als erstes tun",
-                 "Was ist ein Geheimnis, das du vor deinen Eltern verbirgst?
+                 "Was ist ein Geheimnis, das du vor deinen Eltern verbirgst"?
                  "Wer ist dein heimlicher Schwarm",
                  "Wer ist die letzte Person, die du auf Social Media gegruselt hast",
                  "Wenn ein Flaschengeist dir drei Wünsche erfüllen würde, was würdest du dir wünschen",
