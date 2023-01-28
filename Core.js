@@ -3795,7 +3795,7 @@ case 'charactercheck':
           "kiss your mommy or papa and say i love you😌",
           "put your father name on status for 5hrs",
           "send abusive words in any grup, excepting this grup, and send screenshot proof here"
-     ]           
+     ]
                    const Mikudareww = dare[Math.floor(Math.random() * dare.length)]
                    buffer = await getBuffer(`https://wallpapercave.com/wp/wp10524609.jpg`)
                    Miku.sendMessage(from, { image: buffer, caption: '*You have chosen Dare*\n\n'+ Mikudareww }, {quoted:m})
@@ -3896,9 +3896,9 @@ case 'truth':
                  "Whats the strangest dream you have ever had",
                  "do you play pubg, if you then send ur id number"
              ]
-                           const Mikudareww = dare[Math.floor(Math.random() * dare.length)]
+                           const mikutruthww = truth[Math.floor(Math.random() * truth.length)]
                            buffer = await getBuffer(`https://wallpapercave.com/wp/wp10524609.jpg`)
-                           Miku.sendMessage(from, { image: buffer, caption: '*You have chosen Dare*\n\n'+ Mikudareww }, {quoted:m})
+                           Miku.sendMessage(from, { image: buffer, caption: '*You have chosen Truth*\n'+ mikutruthww }, {quoted:m})
                            break
                        
  /////////NSFW comm/////////////////                          
