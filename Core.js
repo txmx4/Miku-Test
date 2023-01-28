@@ -4075,7 +4075,7 @@ reply(mess.waiting)
                 })
 break
 
-case 'foxgirl' case 'Fuchsmädchen':
+case 'foxgirl' :
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
     if (!m.isGroup) return replay(mess.grouponly)
