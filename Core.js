@@ -4949,7 +4949,7 @@ const mikuarray= [
 
 
 
- case "tts":  case "texttospeech":  case "say":  case "speak": case "sag"{
+ case "tts":  case "texttospeech":  case "say":  case "speak": case "sag": {
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
 
