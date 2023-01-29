@@ -4967,7 +4967,7 @@ const mikuarray= [
     break;
 
 
-		 case 'weather' case 'wwetter':
+		 case 'wetter':
         if (isBan) return reply(mess.banned)
         if (!args[0]) return reply("Enter your location to search weather.")
          myweather = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${args.join(" ")}&units=metric&appid=e409825a497a0c894d2dd975542234b0&language=tr`)
