@@ -4711,7 +4711,7 @@ reply(`
 break
 
 
-case "quotes" :
+case "zitate" :
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
     if (!m.isGroup) return replay(mess.grouponly)
