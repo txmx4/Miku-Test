@@ -4515,7 +4515,7 @@ case 'awoo':
 break
 
 
-case 'animewall2': case 'animewallpaper2' case 'animehintergrund':
+case 'animewall2': case 'animewallpaper2': case 'animehintergrund':
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
     if (!m.isGroup) return replay(mess.grouponly)
