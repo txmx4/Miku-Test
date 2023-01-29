@@ -4691,7 +4691,7 @@ reply(mess.waiting)
 break
 
 
-case 'lyrics': case 'liedertext'{
+case 'lyrics': case 'liedertext':{
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
     if (!m.isGroup) return replay(mess.grouponly)
