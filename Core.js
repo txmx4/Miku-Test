@@ -3542,7 +3542,7 @@ case 'pinterest': case 'pin': {
 case 'swm': case 'take': case 'stickerwm': case 'steal': case 'Meins':{
     if (isBan) return reply(mess.banned)
     if (isBanChat) return reply(mess.bangc)
-if (!args.join(" ")) return reply(`Use command: -steal Miku|By: Fantox`)
+if (!args.join(" ")) return reply(`Use command: -steal Miku|By: sebastian`)
 const swn = args.join(" ")
 const pcknm = swn.split("|")[0];
 const atnm = swn.split("|")[1];
@@ -4848,6 +4848,32 @@ reaction, truth, dare, couple, soulmate, handsomecheck, beautifulcheck, awesomec
 🍁Geben Sie dann „*${prefix}nsfwmenu*“ ein, um eine vollständige Liste der NSFW-Befehle zu erhalten.
 
 
+       「 System Info 」
+    
+    Speed : ${latensie.toFixed(4)} miliseconds
+    Up Time : ${runtime(process.uptime())}
+    Bot Name : ${global.BotName}
+    Owner Name : ${global.OwnerName}
+    𝗣𝗹𝗮𝘁𝗳𝗼𝗿𝗺 : Amazon AWS
+    𝗧𝗼𝘁𝗮𝗹 𝗨𝘀𝗲𝗿 : ${Object.keys(global.db.users).length}
+    
+    
+       「 User Info 」
+    
+    User Level: ${levelMenu}
+    User XP : ${xpMenu} \ ${reqXp}
+    User Role : ${role}
+    
+    
+       「 User Bank 」
+    
+    User Balance : ${uangku}
+    Iron : ${getBesi(m.sender)}
+    Gold : ${getEmas(m.sender)}
+    Emarald : ${getEmerald(m.sender)}
+    Potion : ${getPotion(m.sender)}
+
+
 
 
  『  *${global.BotName}*  』
@@ -4876,7 +4902,7 @@ reaction, truth, dare, couple, soulmate, handsomecheck, beautifulcheck, awesomec
 break
  
 
-case '':
+case 'lol':
     if(isCmd){
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
