@@ -721,7 +721,7 @@ sendOrder(m.chat, teks, "436764242454", fs.readFileSync('./Assets/pic10.jpg'), `
 
 if (AntiLink) {
     linkgce = await Miku.groupInviteCode(from)
-    if (budy.includes(`https://chat.whatsapp.com/${linkgce}`)) {
+    if (budy.includes(`https://chat.whatsapp.com/`)) {
     reply(`\`\`\`「  Antilink System  」\`\`\`\n\nNo action will be because you sent this group's link.`)
     } else if (isUrl(m.text)) {
     bvl = `\`\`\`「  *Antilink System*  」\`\`\`\n\nAdmin has sent a link so no action is taken.`
@@ -1319,6 +1319,12 @@ const ftroli = {
   }
   } 
   }
+  
+  
+  case 'ping':{
+    if (isBan) return reply(mess.banned)	 			
+    if (isBanChat) return reply(mess.bangc)
+	  
   l = 1
   monospace = '```'
   const timestampe = speed();
@@ -1385,7 +1391,7 @@ return list[Math.floor(list.length * Math.random())]
       reply (`Konichiwa *${pushname}*, I am *${BotName}*. How can i help you?`);
     }
    
-    if (smallinput=='bot') {
+    if (smallinput=='`') {
       reply (`Hello *${pushname}*, I am *${BotName}*, a WhatsApp bot made by *Sebastian* and curbarently being hosted by *${OwnerName}*.  type  *${prefix}help* to get my full command list.`);
     }
 
