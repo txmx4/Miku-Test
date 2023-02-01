@@ -20,7 +20,7 @@ global.sessionName = "session"  // -- Don't change otherwise bot will not work -
 
 
 
-global.prefa = ['!'] // Prefix ---  change it to anythong you want except '@' //
+global.prefa = ['!','*'] // Prefix ---  change it to anythong you want except '@' //
 
 
 global.location = "West-Berlin"
