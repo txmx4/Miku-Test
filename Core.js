@@ -1512,6 +1512,25 @@ case 'limituser': case 'userlimit': case 'limit':
                 reply(txt)       
               }
              break
+		
+		
+		
+		
+case 'ping': case 'a2': case 'info':
+	    if (isBan) return reply(mess.banned)	 			
+            if (isBanChat) return reply(mess.bangc)
+            {      
+               let txt = `Pong`
+                 for (let i of _limit){
+                 txt += `    「 System Info 」    
+		  Speed : ${latensie.toFixed(4)} miliseconds
+		  Up Time : ${runtime(process.uptime())}
+		  Bot Name : ${global.BotName}
+		  Owner Name : ${global.OwnerName}`
+                 }
+                reply(txt)       
+              }
+             break
     
 
 
