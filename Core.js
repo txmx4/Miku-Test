@@ -1319,12 +1319,6 @@ const ftroli = {
   }
   } 
   }
-  
-  
-  case 'ping':{
-    if (isBan) return reply(mess.banned)	 			
-    if (isBanChat) return reply(mess.bangc)
-	  
   l = 1
   monospace = '```'
   const timestampe = speed();
