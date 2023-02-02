@@ -3991,7 +3991,7 @@ let bjif = await GIFBufferToVideoBuffer(bjf)
                                     })
 break
 
-case 'hentaivid': case 'hentaivideo': case 'hn': {
+case 'hentaivid': case 'hentaivideo': case 'hv': {
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
     if (!m.isGroup) return replay(mess.grouponly)
@@ -5029,7 +5029,7 @@ default:
     if(isCmd){
         if (isBan) return reply(mess.banned)	 			
         if (isBanChat) return reply(mess.bangc)
-        reply (`No such command programmed *${pushname}* senpai! Type *${prefix}help* to get my full command list!`)
+        reply (`Kein solcher Befehl programmiert*${pushname}* senpai! mach *${prefix}help*um meine vollständige Befehlsliste zu erhalten!`)
 
     }	 			
 
