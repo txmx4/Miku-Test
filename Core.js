@@ -4891,7 +4891,7 @@ reaction, truth, dare, couple, soulmate, handsomecheck, beautifulcheck, awesomec
     ]
                 let buttonMessage = {
                     video:fs.readFileSync('./system/miku2.mp4'),gifPlayback:true,
-                    caption: hilfmenu,
+                    caption: helpmenu,
                     footer: `${BotName}`,
                     buttons: buttonshelpm,
                     headerType: 4
@@ -4902,7 +4902,7 @@ reaction, truth, dare, couple, soulmate, handsomecheck, beautifulcheck, awesomec
 break
  
 
-case 'lol':
+case '*':
     if(isCmd){
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
