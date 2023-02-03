@@ -1522,7 +1522,7 @@ case 'ping': case 'a2': case 'info':
             {      
                let txt = `Pong`
                  for (let i of _limit){
-                 txt += `「 System Info 」       Speed : ${latensie.toFixed(4)}     miliseconds Up Time : ${runtime(process.uptime())}    Bot Name : ${global.BotName} Owner Name : ${global.OwnerName} `
+                 txt += `「 System Info 」       Speed : ${latensie.toFixed(4)}     miliseconds Up Time : ${runtime(process.uptime())}      Bot Name : ${global.BotName} Owner Name : ${global.OwnerName}\n `
                  }
                 reply(txt)       
               }
@@ -1534,9 +1534,9 @@ case 'support': case 'sup': case 'frage':
 	    if (isBan) return reply(mess.banned)	 			
             if (isBanChat) return reply(mess.bangc)
             {      
-               let txt = `support`
+               let txt = `support         `
                  for (let i of _limit){
-                 txt += `Hallo, ${pushname} danke für deine Support Anfrage, derzeit ist es uns nicht möglich eine Weiterleitung an die Supportgruppe zu stellen, bitte schreibe deine Anfrage in dieser Gruppe erneut.                        https://chat.whatsapp.com/DOnXPARAhdg3qptwUlPuye`
+                 txt += `Hallo, ${pushname} danke für deine Support Anfrage, derzeit ist es uns nicht möglich eine Weiterleitung an die Supportgruppe zu stellen, bitte schreibe deine Anfrage in dieser Gruppe erneut\n.                        https://chat.whatsapp.com/DOnXPARAhdg3qptwUlPuye`
                  }
                 reply(txt)       
               }
