@@ -1500,6 +1500,11 @@ case 'reaction': case 'react': case 'reactions': case 'r':
             reply(` *━━━〈  📍 Reactions 📍  〉━━━*\n\nbonk, cry, bully, cuddle, hug, kiss, lick, pat, smug, yeet, blush, smile, wave, highfive, handhold, nom, glomp, bite, slap, kill, happy, wink, poke, dance, cringe`)
         break   
     
+case 'ping': case 'a2': case 'p': case 'a':
+        if (isBan) return reply(mess.banned)	 			
+        if (isBanChat) return reply(mess.bangc)
+            reply(` *「 System Info 」*\n\nbonk, Speed : ${latensie.toFixed(4)} ,miliseconds Up Time : ${runtime(process.uptime())} ,Bot Name : ${global.BotName} Owner Name : ${global.OwnerName}`)
+        break
 
 case 'limituser': case 'userlimit': case 'limit':
             if (isBan) return reply(mess.banned)	 			
@@ -1514,39 +1519,17 @@ case 'limituser': case 'userlimit': case 'limit':
              break
 		
 		
-		
-		
-case 'ping': case 'a2': case 'info':
-	    if (isBan) return reply(mess.banned)	 			
-            if (isBanChat) return reply(mess.bangc)
-            {      
-               let txt = `Pong`
-                 for (let i of _limit){
-                 txt += `「 System Info 」       Speed : ${latensie.toFixed(4)}     miliseconds Up Time : ${runtime(process.uptime())}      Bot Name : ${global.BotName} Owner Name : ${global.OwnerName}\n `
-                 }
-                reply(txt)       
-              }
-             break
-    
 
-
-case 'support': case 'sup': case 'frage':
-	    if (isBan) return reply(mess.banned)	 			
-            if (isBanChat) return reply(mess.bangc)
-            {      
-               let txt = `support         `
-                 for (let i of _limit){
-                 txt += `Hallo, ${pushname} danke für deine Support Anfrage, derzeit ist es uns nicht möglich eine Weiterleitung an die Supportgruppe zu stellen, bitte schreibe deine Anfrage in dieser Gruppe erneut\n.                        https://chat.whatsapp.com/DOnXPARAhdg3qptwUlPuye`
-                 }
-                reply(txt)       
-              }
-             break
-
+case 'sup': case 'support': case 'frage': case '!':
+        if (isBan) return reply(mess.banned)	 			
+        if (isBanChat) return reply(mess.bangc)
+            reply(` *support* \n\nbonk, Hallo, *${pushname}* danke für deine Support Anfrage, derzeit ist es uns nicht möglich eine Weiterleitung an die Supportgruppe zu stellen, bitte schreibe deine Anfrage in dieser Gruppe erneut, https://chat.whatsapp.com/DOnXPARAhdg3qptwUlPuye`)
+        break
 
 
 case 'ringtone': {
     if (isBan) return reply(mess.banned)	 			
-    if (isBanChat) return reply(mess.bangc)
+    if (isBanChat) return reply(mess.banned)
             if (!args.join(" ")) return reply(`Example: ${prefix}ringtone black over`)
         let { ringtone } = require('./lib/scraper')
 		let anu = await ringtone(text)
