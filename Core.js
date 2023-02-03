@@ -215,7 +215,7 @@ const isQuotedAudio = m.mtype === 'extendedTextMessage' && content.includes('aud
 const mongoose = require("mongoose");
 
 
-/*
+/
 
 /////////// -  DM chatbot (Delete this part to turn off DM Chat Bot) - //////////////////
 
@@ -227,7 +227,7 @@ if (!isCmd && !m.isGroup){
 
 //////////////////////////////////////////////////////////////////////////////////////
 
-*/
+/
 _sewa.expiredCheck(Miku, sewa)
 
 const reply = (teks) => {
@@ -1813,6 +1813,7 @@ await Miku.sendMessage(m.chat, { delete: key })
  case 'listpc': {
     if (isBan) return reply(mess.banned)	 			
  if (isBanChat) return reply(mess.bangc)
+ if (!isCreator) return replay(mess.botowner)
  let anu = await store.chats.all().filter(v => v.id.endsWith('.net')).map(v => v)
  let teks = ` 「  Miku's pm user list  」\n\nTotal ${anu.length} users are using Miku in personal chat.`
  for (let i of anu) {
