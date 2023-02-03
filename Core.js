@@ -4801,7 +4801,7 @@ Ich bin *Miku Nakano*, ein von *Sebastian* entwickelter Bot.
 
 Hier ist die Liste meiner Befehle.
 
-
+ 
  
  *━━━〈  🎆 Core 🎆  〉━━━*
 
@@ -4822,6 +4822,9 @@ antilinkgc, antilinktg, antilinktt, antilinkytch, antilinkytvid, antilinkig, ant
  *━━━〈  🔍 Search 🔍  〉━━━*
 
 play, ytmp3, ytmp4, yts, lyrics, google, gimage, pinterest, image, weather, movie, wallpaper, searchgc, happymod, wikimedia, ringtone, anime, animestory, manga, ringtone  
+
+ *━━━〈   support   〉━━━*
+sup,support,frage
 
  *━━━〈  🔰 Convert 🔰  〉━━━*
 
