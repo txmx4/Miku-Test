@@ -4305,7 +4305,7 @@ console.log(musers)
 }
 break
 
-case 'umarmen':{
+case 'hug':{
 
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
