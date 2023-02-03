@@ -1526,12 +1526,25 @@ case 'ping': case 'a2': case 'info':
 		  Speed : ${latensie.toFixed(4)} miliseconds
 		  Up Time : ${runtime(process.uptime())}
 		  Bot Name : ${global.BotName}
-		  Owner Name : ${global.OwnerName}`
+		  Owner Name : ${global.OwnerName} `
                  }
                 reply(txt)       
               }
              break
     
+
+
+case 'support': case 'sup': case 'frage':
+	    if (isBan) return reply(mess.banned)	 			
+            if (isBanChat) return reply(mess.bangc)
+            {      
+               let txt = `support`
+                 for (let i of _limit){
+                 txt += ``
+                 }
+                reply(txt)       
+              }
+             break
 
 
 
@@ -1545,6 +1558,7 @@ case 'ringtone': {
 		Miku.sendMessage(m.chat, { audio: { url: result.audio }, fileName: result.title+'.mp3', mimetype: 'audio/mpeg' }, { quoted: m })
 	    }
 	    break
+
 
 
 case 'film': case 'movie': case 'moviesearch':
