@@ -1540,7 +1540,7 @@ case 'support': case 'sup': case 'frage':
             {      
                let txt = `support`
                  for (let i of _limit){
-                 txt += ``
+                 txt += `Hallo, (username) danke für deine Support Anfrage, derzeit ist es uns nicht möglich eine Weiterleitung an die Supportgruppe zu stellen, bitte schreibe deine Anfrage in dieser Gruppe erneut.                        https://chat.whatsapp.com/DOnXPARAhdg3qptwUlPuye`
                  }
                 reply(txt)       
               }
