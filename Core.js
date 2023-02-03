@@ -1503,7 +1503,7 @@ case 'reaction': case 'react': case 'reactions': case 'r':
 case 'ping': case 'a2': case 'p': case 'a':
         if (isBan) return reply(mess.banned)	 			
         if (isBanChat) return reply(mess.bangc)
-            reply(` *「 System Info 」*\n\nbonk, Speed : ${latensie.toFixed(4)} ,miliseconds Up Time : ${runtime(process.uptime())} ,Bot Name : ${global.BotName} Owner Name : ${global.OwnerName}`)
+            reply(` *「 System Info 」*\n, Speed : ${latensie.toFixed(4)} , miliseconds Up Time : ${runtime(process.uptime())} , Bot Name : ${global.BotName}, Owner Name : ${global.OwnerName}`)
         break
 
 case 'limituser': case 'userlimit': case 'limit':
@@ -1523,7 +1523,7 @@ case 'limituser': case 'userlimit': case 'limit':
 case 'sup': case 'support': case 'frage': case '!':
         if (isBan) return reply(mess.banned)	 			
         if (isBanChat) return reply(mess.bangc)
-            reply(` *support* \n\nbonk, Hallo, *${pushname}* danke für deine Support Anfrage, derzeit ist es uns nicht möglich eine Weiterleitung an die Supportgruppe zu stellen, bitte schreibe deine Anfrage in dieser Gruppe erneut, https://chat.whatsapp.com/DOnXPARAhdg3qptwUlPuye`)
+            reply(` *support* \n, Hallo, *${pushname}* danke für deine Support Anfrage, derzeit ist es uns nicht möglich eine Weiterleitung an die Supportgruppe zu stellen, bitte schreibe deine Anfrage in dieser Gruppe erneut, Link: https://chat.whatsapp.com/DOnXPARAhdg3qptwUlPuye`)
         break
 
 
