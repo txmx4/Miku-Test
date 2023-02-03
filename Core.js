@@ -1385,7 +1385,7 @@ return list[Math.floor(list.length * Math.random())]
       reply (`Konichiwa *${pushname}*, I am *${BotName}*. How can i help you?`);
     }
    
-    if (smallinput=='`') {
+    if (smallinput=='!') {
       reply (`Hello *${pushname}*, I am *${BotName}*, a WhatsApp bot made by *Sebastian* and curbarently being hosted by *${OwnerName}*.  type  *${prefix}help* to get my full command list.`);
     }
 
@@ -1416,7 +1416,7 @@ return list[Math.floor(list.length * Math.random())]
 switch(command) {
 
 
-case 'me': case 'profile': case 'p':
+case 'me': case 'profile': case 'p': case 'xp':
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
   if (!isDarah){ addInventoriDarah(m.sender, DarahAwal) }
@@ -1522,7 +1522,7 @@ case 'ping': case 'a2': case 'info':
             {      
                let txt = `Pong`
                  for (let i of _limit){
-                 txt += `    「 System Info 」    
+                 txt += `「 System Info 」    
 		  Speed : ${latensie.toFixed(4)} miliseconds
 		  Up Time : ${runtime(process.uptime())}
 		  Bot Name : ${global.BotName}
