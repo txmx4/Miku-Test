@@ -2453,21 +2453,22 @@ if (isBanChat) return reply(mess.bangc)
 	var pat = await fetchJson(`https://api.waifu.pics/sfw/${command}`)
 	try {
 		let messsender = m.sender
- let musers=``
- try {
- users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@s.whatsapp.net'
+let musers=``
+try {
+users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@s.whatsapp.net'
 
-  ment=[messsender,users]
- } catch {
+ ment=[messsender,users]
+} catch {
 	users == "none"
 	 ment=[messsender,m.sender]
 
- } else {
- const rcpp =`@${users.split("@"[0])}`
+
+} else {
+const rcpp =`@${users.split("@"[0])}`
  musers= `@${m.sender.split("@")[0]} hugged @${mem.id.split('@')[0]}\n} `
 
- console.log(musers)
- }
+console.log(musers)
+}
         const response = await axios.get(pat.url,  { responseType: 'arraybuffer' })
         const buffer = Buffer.from(response.data, "utf-8")
 		var fetchedgif = await GIFBufferToVideoBuffer(buffer)
@@ -2475,25 +2476,9 @@ if (isBanChat) return reply(mess.bangc)
     } catch (error) {
         console.log(error);
     }
- }
- break	
-
-
-case'admin': {
-    if (isBan) return reply(mess.banned)	 			
- if (isBanChat) return reply(mess.bangc)
- if (!m.isGroup) return replay(mess.grouponly)
- if (!text) return replay(`*Please quote or write a meaningful message to tag admins to*`)
- let teks = `*「 Tag Admins 」*
-  
- *Message : ${text}*\n\n`
- for (let mem of groupAdmins) {
- teks += `🤴 @${mem.split('@')[0]}\n`
- }
- Miku.sendMessage(m.chat, { text: teks, mentions: groupAdmins}, { quoted: m })
- }
- break
-
+}
+break
+		
 
  case 'hidetag': {
     if (isBan) return reply(mess.banned)	 			
