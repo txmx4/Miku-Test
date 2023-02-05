@@ -2444,11 +2444,12 @@ if (isBanChat) return reply(mess.bangc)
  }
  break
 		
- case 'hug':{
+ case 'hugall':{
 
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
-    if (!m.isGroup) return replay(mess.grouponly)	
+    if (!m.isGroup) return replay(mess.grouponly)
+    if (!isAdmins && !isCreator) return replay(mess.useradmin)
 	var pat = await fetchJson(`https://api.waifu.pics/sfw/${command}`)
 	try {
 		let messsender = m.sender
