@@ -4339,12 +4339,12 @@ case 'hugall':{
 	var pat = await fetchJson(`https://api.waifu.pics/sfw/${command}`)
 	try {
 		
-		
+		let mem of participants
 		let messsender = m.sender
  let musers=``
  try {
-	 let teks = `「 _Tag All_ 」
-	 
+	 let teks = `「 _hugall_ 」
+	
 
  *Message : {args.join(" ") ? args.join(" ") : 'no message'}*\n\n`
  for (let mem of participants) {
