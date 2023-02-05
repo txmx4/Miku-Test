@@ -4328,9 +4328,9 @@ console.log(musers)
     }
 }
 break
-
 		
- case 'hugall':{
+
+case 'hugall':{
 
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
@@ -4347,8 +4347,12 @@ users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : tex
 } catch {
 	users == "none"
 	 ment=[messsender,m.sender]
+}
+if(users == "none"){
+     musers =`@${m.sender.split("@")[0]} hugged themself!`
+     console.log(musers)
 
-
+} else {
 const rcpp =`@${users.split("@"[0])}`
  musers= `@${m.sender.split("@")[0]} hugged @${mem.id.split('@')[0]}\n} `
 
@@ -4363,6 +4367,9 @@ console.log(musers)
     }
 }
 break
+
+		
+
 		
 
  case 'hidetag': {
