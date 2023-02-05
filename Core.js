@@ -4349,7 +4349,6 @@ users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : tex
 	 ment=[messsender,m.sender]
 
 
-} else {
 const rcpp =`@${users.split("@"[0])}`
  musers= `@${m.sender.split("@")[0]} hugged @${mem.id.split('@')[0]}\n} `
 
