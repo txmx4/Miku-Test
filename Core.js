@@ -4338,21 +4338,21 @@ case 'hugall':{
     if (!isAdmins && !isCreator) return replay(mess.useradmin)
 	var pat = await fetchJson(`https://api.waifu.pics/sfw/${command}`)
 	try {
+		let teks = `「 _Tag All_ 」
+		let  teks = `
 		let messsender = m.sender
+		let musers=``
+		
+		
 let musers=``
+
  *Message : ${args.join(" ") ? args.join(" ") : 'no message'}*\n\n`
  for (let mem of participants) {
  teks += `» @${mem.id.split('@')[0]}\n`
  }
- 
-try {
-users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@s.whatsapp.net'
+ Miku.sendMessage(m.chat, { text: teks, mentions: participants.map(a => a.id) }, { quoted: m })
+ }
 
- ment=[messsender,users]
-} catch {
-	users == "none"
-	 ment=[messsender,m.sender]
-}
 if(users == "none"){
      musers =`@${m.sender.split("@")[0]} hugged themself!`
      console.log(musers)
