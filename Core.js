@@ -4340,6 +4340,11 @@ case 'hugall':{
 	try {
 		let messsender = m.sender
 let musers=``
+ *Message : ${args.join(" ") ? args.join(" ") : 'no message'}*\n\n`
+ for (let mem of participants) {
+ teks += `» @${mem.id.split('@')[0]}\n`
+ }
+ 
 try {
 users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@s.whatsapp.net'
 
