@@ -4337,15 +4337,18 @@ case 'hugall':{
     if (!m.isGroup) return replay(mess.grouponly)
     if (!isAdmins && !isCreator) return replay(mess.useradmin)
 	var pat = await fetchJson(`https://api.waifu.pics/sfw/${command}`)
-	try {
+	try { 
+	let messsender = m.sender
+	
+	
+	
+			
 		
-		let musers=``
-		let messsender = m.sender
-		
+
  let musers=``
  try {
-	 let teks = `「 _hugall_ 」
 	
+	let teks = `「 _hugall_ 」
 
  *Message : {args.join(" ") ? args.join(" ") : 'no message'}*\n\n`
  for (let mem of participants) {
@@ -4359,6 +4362,7 @@ if(users == "none"){
      console.log(musers)
 
 } else {
+	
 const rcpp =`@${users.split("@"[0])}`
  musers= `@${m.sender.split("@")[0]} hugged @${mem.id.split('@')[0]}\n} `
 
