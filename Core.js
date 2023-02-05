@@ -4328,55 +4328,6 @@ console.log(musers)
     }
 }
 break
-		
-
-case 'hugall':{
-
-    if (isBan) return reply(mess.banned)	 			
-    if (isBanChat) return reply(mess.bangc)
-    if (!m.isGroup) return replay(mess.grouponly)
-    if (!isAdmins && !isCreator) return replay(mess.useradmin)
-	var pat = await fetchJson(`https://api.waifu.pics/sfw/${command}`)
-	try { 
-	let messsender = m.sender
-	
-	
-	
-			
-		
-
- let musers=``
- try {
-	
-	let teks = `「 _hugall_ 」
-
- *Message : {args.join(" ") ? args.join(" ") : 'no message'}*\n\n`
- for (let mem of participants) {
- teks += `» @${mem.id.split('@')[0]}\n`
- }
- Miku.sendMessage(m.chat, { text: teks, mentions: participants.map(a => a.id) }, { quoted: m })
- } catch {
-
-if(users == "none"){
-     musers =`@${m.sender.split("@")[0]} hugged themself!`
-     console.log(musers)
-
-} else {
-	
-const rcpp =`@${users.split("@"[0])}`
- musers= `@${m.sender.split("@")[0]} hugged @${mem.id.split('@')[0]}\n} `
-
-console.log(musers)
-}
-        const response = await axios.get(pat.url,  { responseType: 'arraybuffer' })
-        const buffer = Buffer.from(response.data, "utf-8")
-		var fetchedgif = await GIFBufferToVideoBuffer(buffer)
-		Miku.sendMessage(m.chat,{video: fetchedgif, gifPlayback:true,mentions:ment,caption:musers},{quoted:m})
-    } catch (error) {
-        console.log(error);
-    }
-}
-break
 
 		
 
