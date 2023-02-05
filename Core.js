@@ -4342,9 +4342,6 @@ case 'hugall':{
 		let  teks = `
 		let messsender = m.sender
 		let musers=``
-		
-		
-let musers=``
 
  *Message : ${args.join(" ") ? args.join(" ") : 'no message'}*\n\n`
  for (let mem of participants) {
