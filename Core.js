@@ -215,7 +215,7 @@ const isQuotedAudio = m.mtype === 'extendedTextMessage' && content.includes('aud
 const mongoose = require("mongoose");
 
 	
-
+/*
 
 /////////// -  DM chatbot (Delete this part to turn off DM Chat Bot) - //////////////////
 
@@ -227,7 +227,7 @@ if (!isCmd && !m.isGroup){
 
 //////////////////////////////////////////////////////////////////////////////////////
 
-
+*/
 _sewa.expiredCheck(Miku, sewa)
 
 const reply = (teks) => {
@@ -1378,12 +1378,12 @@ return list[Math.floor(list.length * Math.random())]
 	
  let smallinput = budy.toLowerCase()
     if (smallinput.includes('hello')) {
-      reply (`Hello *${pushname}*, I am *${BotName}*. How can i help you?`);
+      reply (`Hello *${pushname}*, Ich bin *${BotName}*. Kann ich dir iirgendwie helfen ?`);
     } 
 
-    if( smallinput.includes('konichiwa') || smallinput.includes('konochiwa') || smallinput.includes('konichiba') || smallinput.includes('salute')){
-      reply (`Konichiwa *${pushname}*, I am *${BotName}*. How can i help you?`);
-    }
+    if( smallinput.includes('hi') || smallinput.includes('moin') || smallinput.includes('bot') || smallinput.includes('salute')){
+      reply (`Konichiwa *${pushname}* naa was machst du soo.`);
+    } 
    
     if (smallinput=='!') {
       reply (`Hello *${pushname}*, I am *${BotName}*, a WhatsApp bot made by *Sebastian* and curbarently being hosted by *${OwnerName}*.  type  *${prefix}help* to get my full command list.`);
@@ -1409,7 +1409,7 @@ return list[Math.floor(list.length * Math.random())]
       reply (`warum schon so früh 🥲 oder willst du noch etwas machen 😏 *${pushname}* 😇. Sleep well and sweet dreams.`);
     }
 
-    if (smallinput.includes('Ohio ')|| smallinput.includes('Hi') || smallinput.includes('Moin')) {
+    if (smallinput.includes('Ohio')|| smallinput.includes('Hi') || smallinput.includes('Moin')) {
       reply (`Yai endlich wider da *${pushname}*`);
     }      
 
@@ -1528,8 +1528,19 @@ case 'limituser': case 'userlimit': case 'limit':
 case 'sup': case 'support': case 'frage': case '!':
         if (isBan) return reply(mess.banned)	 			
         if (isBanChat) return reply(mess.bangc)
-            reply(` *support* \n, Hallo, *${pushname}* danke für deine Support Anfrage, derzeit ist es uns nicht möglich eine Weiterleitung an die Supportgruppe zu stellen, bitte schreibe deine Anfrage in dieser Gruppe erneut, 
-                Link: https://chat.whatsapp.com/DOnXPARAhdg3qptwUlPuye`)
+            reply(` *Support* \n Hallo, *${pushname}* danke für deine Support Anfrage, derzeit ist es uns nicht möglich eine Weiterleitung an die Supportgruppe zu stellen, bitte schreibe deine Anfrage in dieser Gruppe erneut, 
+         Link: https://chat.whatsapp.com/DOnXPARAhdg3qptwUlPuye`)
+        break
+		
+		
+case 'ow': case 'ownergruppen': case 'og': case 'gruppen':
+        if (isBan) return reply(mess.banned)	 			
+        if (isBanChat) return reply(mess.bangc)
+	if (!isBotAdmins) return replay(mess.botadmin)
+            reply(`*MkM Gruppen*
+		Chatt: https://chat.whatsapp.com/HaH0LDojg3MC5Lgz17BDSS 
+		Werbe: https://chat.whatsapp.com/JlO7hNBJcsX2qOhMjpKul8
+ 		Support: https://chat.whatsapp.com/DOnXPARAhdg3qptwUlPuye`)
         break
 
 
@@ -2432,6 +2443,39 @@ if (isBanChat) return reply(mess.bangc)
  Miku.sendMessage(m.chat, { text: teks, mentions: participants.map(a => a.id) }, { quoted: m })
  }
  break
+		
+ case 'hug':{
+
+    if (isBan) return reply(mess.banned)	 			
+    if (isBanChat) return reply(mess.bangc)
+    if (!m.isGroup) return replay(mess.grouponly)	
+	var pat = await fetchJson(`https://api.waifu.pics/sfw/${command}`)
+	try {
+		let messsender = m.sender
+ let musers=``
+ try {
+ users = m.mentionedJid[0] ? m.mentionedJid[0] : m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@s.whatsapp.net'
+
+  ment=[messsender,users]
+ } catch {
+	users == "none"
+	 ment=[messsender,m.sender]
+
+ } else {
+ const rcpp =`@${users.split("@"[0])}`
+ musers= `@${m.sender.split("@")[0]} hugged @${mem.id.split('@')[0]}\n} `
+
+ console.log(musers)
+ }
+        const response = await axios.get(pat.url,  { responseType: 'arraybuffer' })
+        const buffer = Buffer.from(response.data, "utf-8")
+		var fetchedgif = await GIFBufferToVideoBuffer(buffer)
+		Miku.sendMessage(m.chat,{video: fetchedgif, gifPlayback:true,mentions:ment,caption:musers},{quoted:m})
+    } catch (error) {
+        console.log(error);
+    }
+ }
+ break	
 
 
 case'admin': {
@@ -4885,27 +4929,13 @@ reaction, truth, dare, couple, soulmate, handsomecheck, beautifulcheck, awesomec
     User Level: ${levelMenu}
     User XP : ${xpMenu} \ ${reqXp}
     User Role : ${role}
-    
-    
-       「 User Bank 」
-    
-    User Balance : ${uangku}
-    Iron : ${getBesi(m.sender)}
-    Gold : ${getEmas(m.sender)}
-    Emarald : ${getEmerald(m.sender)}
-    Potion : ${getPotion(m.sender)}
-
-
 
 
  『  *${global.BotName}*  』
  Powered by: *Sebastian*
 
  🔰 Um einen dieser Befehle zu verwenden, geben Sie ein
- " *${prefix}<Befehlsname>* ".
- 
-
- 🔰 Geben Sie " *${prefix}help* " ein, um die vollständige Befehlsliste zu erhalten.`
+ " *${prefix}<Befehlsname>* ".`
     
 
  let buttonshelpm = [
