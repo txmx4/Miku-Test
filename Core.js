@@ -4343,13 +4343,15 @@ case 'hugall':{
 		let messsender = m.sender
  let musers=``
  try {
-	 let teks = `「 _Tag All_ 」 
+	 let teks = `「 _Tag All_ 」
+	 
+
  *Message : {args.join(" ") ? args.join(" ") : 'no message'}*\n\n`
  for (let mem of participants) {
  teks += `» @${mem.id.split('@')[0]}\n`
  }
  Miku.sendMessage(m.chat, { text: teks, mentions: participants.map(a => a.id) }, { quoted: m })
- }
+ } catch {
 
 if(users == "none"){
      musers =`@${m.sender.split("@")[0]} hugged themself!`
