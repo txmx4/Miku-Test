@@ -1381,7 +1381,7 @@ return list[Math.floor(list.length * Math.random())]
       reply (`Hello *${pushname}*, Ich bin *${BotName}*. Kann ich dir iirgendwie helfen ?`);
     } 
 
-    if( smallinput.includes('speed') || smallinput.includes('a2') || smallinput.includes('ping') || smallinput.includes('a')){
+    if( smallinput.includes('speed') || smallinput.includes('a2') || smallinput.includes('ping') || smallinput.includes('+')){
       reply (`PONG Speed : ${latensie.toFixed(3)} miliseconds.`);
     } 
    
