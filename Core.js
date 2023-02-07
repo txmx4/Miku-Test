@@ -1393,12 +1393,12 @@ return list[Math.floor(list.length * Math.random())]
         reply (`*XD*`)
     }
 
-    if (smallinput=='XD ') {
-        reply (`XD`)
+    if (smallinput=='user') {
+        reply (`Alle User von diesem bot 𝗧𝗼𝘁𝗮𝗹 𝗨𝘀𝗲𝗿 : ${Object.keys(global.db.users).length}`)
     }
     
-     if (smallinput=='Hi ') {
-        reply (`hdf`)
+     if (smallinput=='Ping') {
+        reply (`PONG Speed : ${latensie.toFixed(3)} miliseconds`)
     }
 
     if (smallinput.includes('Guten Morgen ') || smallinput.includes('good morning')) {
@@ -1409,7 +1409,7 @@ return list[Math.floor(list.length * Math.random())]
       reply (`warum schon so früh 🥲 oder willst du noch etwas machen 😏 *${pushname}* 😇. Sleep well and sweet dreams.`);
     }
 
-    if (smallinput.includes('Ohio')|| smallinput.includes('Hi') || smallinput.includes('Moin')) {
+    if (smallinput.includes('&')|| smallinput.includes('#') || smallinput.includes('@')) {
       reply (`Yai endlich wider da *${pushname}*`);
     }      
 
