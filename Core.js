@@ -1381,8 +1381,8 @@ return list[Math.floor(list.length * Math.random())]
       reply (`Hello *${pushname}*, Ich bin *${BotName}*. Kann ich dir iirgendwie helfen ?`);
     } 
 
-    if( smallinput.includes('hi') || smallinput.includes('moin') || smallinput.includes('bot') || smallinput.includes('salute')){
-      reply (`Konichiwa *${pushname}* naa was machst du soo.`);
+    if( smallinput.includes('speed') || smallinput.includes('a2') || smallinput.includes('ping') || smallinput.includes('a')){
+      reply (`PONG Speed : ${latensie.toFixed(3)} miliseconds.`);
     } 
    
     if (smallinput=='!') {
