@@ -6,6 +6,8 @@ const ytdl = require('ytdl-core')
 const { BufferJSON, WA_DEFAULT_EPHEMERAL, generateWAMessageFromContent, proto, generateWAMessageContent, generateWAMessage, prepareWAMessageMedia, areJidsSameUser, getContentType, WAFlag } = require('@adiwajshing/baileys')
 const zMiku = require("@adiwajshing/baileys")
 const fs = require('fs')
+const { smsg, formatp, tanggal, formatDate, getTime, isUrl, sleep, clockString, runtime, fetchJson, getBuffer, jsonformat, format, parseMention, getRandom, getGroupAdmins } = require('./lib/myfunc')
+const ini_mark = `0@s.whatsapp.net`
 const util = require('util')
 const chalk = require('chalk')
 const { exec, spawn, execSync } = require("child_process")
@@ -13,11 +15,13 @@ const axios = require('axios')
 const { Sticker, createSticker, StickerTypes } = require('wa-sticker-formatter')
 const path = require('path')
 const os = require('os')
+const isCreator = [botNumber, ...global.owner].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
 const { AnimeWallpaper } = require("anime-wallpaper")
  const { TiktokDownloader } = require('./lib/tiktokdl') 
 const moment = require('moment-timezone')
 const { JSDOM } = require('jsdom')
 const speed = require('performance-now')
+const { performance } = require('perf_hooks')
 const hx = require("hxz-api")
 const hxz = require('./lib/hxz-api')
 const bdr = require('rumus-bdr')
@@ -29,6 +33,7 @@ const mathjs = require('mathjs')
 const { performance } = require('perf_hooks')
 const { Primbon } = require('scrape-primbon')
 const { EmojiAPI } = require("emoji-api")
+const ownernya = ownernomer + '@s.whatsapp.net'
 const imgbbUploader = require('imgbb-uploader')
 const primbon = new Primbon()
 const { isLimit, limitAdd, getLimit, giveLimit, addBalance, kurangBalance, getBalance, isGame, gameAdd, givegame, cekGLimit } = require('./lib/limit.js');
@@ -1510,6 +1515,50 @@ case 'ping': case 'a2': case 'p': case 'a':
                 Owner Name : ${global.OwnerName}
 		𝗧𝗼𝘁𝗮𝗹 𝗨𝘀𝗲𝗿 : ${Object.keys(global.db.users).length}`)
         break
+            case 'ping': case 'botstatus': case 'statusbot': case 'p': {
+                const used = process.memoryUsage()
+                const cpus = os.cpus().map(cpu => {
+                    cpu.total = Object.keys(cpu.times).reduce((last, type) => last + cpu.times[type], 0)
+			        return cpu
+                })
+                const cpu = cpus.reduce((last, cpu, _, { length }) => {
+                    last.total += cpu.total
+                    last.speed += cpu.speed / length
+                    last.times.user += cpu.times.user
+                    last.times.nice += cpu.times.nice
+                    last.times.sys += cpu.times.sys
+                    last.times.idle += cpu.times.idle
+                    last.times.irq += cpu.times.irq
+                    return last
+                }, {
+                    speed: 0,
+                    total: 0,
+                    times: {
+			            user: 0,
+			            nice: 0,
+			            sys: 0,
+			            idle: 0,
+			            irq: 0
+                }
+                })
+                let timestamp = speed()
+                let latensi = speed() - timestamp
+                neww = performance.now()
+                oldd = performance.now()
+                respon = `
+Response Speed ${latensi.toFixed(4)} _Second_ \n ${oldd - neww} _miliseconds_\n\nRuntime : ${runtime(process.uptime())}
+💻 Info Server
+RAM: ${formatp(os.totalmem() - os.freemem())} / ${formatp(os.totalmem())}
+_NodeJS Memory Usaage_
+${Object.keys(used).map((key, _, arr) => `${key.padEnd(Math.max(...arr.map(v=>v.length)),' ')}: ${formatp(used[key])}`).join('\n')}
+${cpus[0] ? `_Total CPU Usage_
+${cpus[0].model.trim()} (${cpu.speed} MHZ)\n${Object.keys(cpu.times).map(type => `- *${(type + '*').padEnd(6)}: ${(100 * cpu.times[type] / cpu.total).toFixed(2)}%`).join('\n')}
+_CPU Core(s) Usage (${cpus.length} Core CPU)_
+${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Object.keys(cpu.times).map(type => `- *${(type + '*').padEnd(6)}: ${(100 * cpu.times[type] / cpu.total).toFixed(2)}%`).join('\n')}`).join('\n\n')}` : ''}
+                `.trim()
+                m.reply(respon)
+            }
+            break
 
 case 'limituser': case 'userlimit': case 'limit':
             if (isBan) return reply(mess.banned)	 			
@@ -3063,6 +3112,16 @@ if (isBanChat) return reply(mess.bangc)
  }
  }
  break
+	
+            case 'bctext2': case 'broadcasttext2': case 'bc2':
+			    if (!isCreator) throw mess.owner
+		            if (!text) throw `Enter text`
+		                            var data = await store.chats.all()
+                            for (let i of data) {
+                               XeonBotInc.sendMessage(i.id, {text: `${ownername}'s Broadcast\n\nMessage : ${q}` })
+                               await sleep(1000)
+                            }
+                            break
 
  case 'igtv': {	            
     if (isBan) return reply(mess.banned)	 			
