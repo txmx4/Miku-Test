@@ -7,6 +7,7 @@ global.autoReadAll = false
 global.antitags = true
 
 
+global.ownernomer = "436764242454" 
 global.Owner = ['436764242454']  // -- Add multiple numbers like  ['918101967835','919357940276','917896587453']
 global.OwnerNumber = ['436764242454']  // -- Add multiple numbers like  ['918101967835','919357940276','917896587453']
 global.ownertag = ['436764242454']  // -- Add multiple numbers like  ['918101967835','919357940276','917896587453']
