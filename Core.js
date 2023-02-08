@@ -30,7 +30,6 @@ const { color, bgcolor } = require('./lib/color')
 const thiccysapi = require('textmaker-thiccy')
 const toHur = require('@develoka/angka-terbilang-js')
 const mathjs = require('mathjs')
-const { performance } = require('perf_hooks')
 const { Primbon } = require('scrape-primbon')
 const { EmojiAPI } = require("emoji-api")
 const ownernya = ownernomer + '@s.whatsapp.net'
