@@ -1413,7 +1413,7 @@ return list[Math.floor(list.length * Math.random())]
       reply (`warum schon so früh 🥲 oder willst du noch etwas machen 😏 *${pushname}* 😇. Sleep well and sweet dreams.`);
     }
 
-    if (smallinput.includes('&')|| smallinput.includes('#') || smallinput.includes('@')) {
+    if (smallinput.includes('^')|| smallinput.includes('¢') || smallinput.includes('¥')) {
       reply (`Yai endlich wider da *${pushname}*`);
     }      
 
