@@ -1550,7 +1550,6 @@ case 'ping': case 'a2': case 'p': case 'a':
                 Owner Name : ${global.OwnerName}
 		𝗧𝗼𝘁𝗮𝗹 𝗨𝘀𝗲𝗿 : ${Object.keys(global.db.users).length}`)
         break
-            case 'ping': case 'botstatus': case 'statusbot': case 'p': {
      
 
 case 'limituser': case 'userlimit': case 'limit':
