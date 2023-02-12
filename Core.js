@@ -4379,19 +4379,6 @@ console.log(musers)
 }
 break
 
-		
-
-		
-
- case 'hidetag': {
-    if (isBan) return reply(mess.banned)	 			
- if (isBanChat) return reply(mess.bangc)
- if (!m.isGroup) return replay(mess.grouponly)
- if (!isAdmins && !isCreator) return replay(mess.useradmin)
- Miku.sendMessage(m.chat, { text : args.join(" ") ? args.join(" ") : '' , mentions: participants.map(a => a.id)}, { quoted: m })
- }
- break
-
 
 case 'dance':{
 
