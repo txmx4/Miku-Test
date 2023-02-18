@@ -4890,7 +4890,7 @@ reaction, truth, dare, couple, soulmate, handsomecheck, beautifulcheck, awesomec
     {buttonId: `${prefix}owner`, buttonText: {displayText: '😍Bot Owner😍'}, type: 1}
     ]
                 let buttonMessage = {
-                    picture:readFileSync('./system/miku2.jpg'),gifPlayback:true,
+                    video:fs.readFileSync('./system/miku2.jpg'),gifPlayback:false,
                     caption: helpmenu,
                     footer: `${BotName}`,
                     buttons: buttonshelpm,
