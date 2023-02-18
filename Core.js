@@ -100,46 +100,6 @@ global.loadDatabase = async function loadDatabase() {
     sticker: {},
     ...(global.db.data || {})
   }
-const { Low, JSONFile } = low
-const mongoDB = require('./lib/mongoDB')
-const { 
-  yta, 
-  ytv, 
-  searchResult 
- } = require('./lib/ytdl')
-
-let banUser = JSON.parse(fs.readFileSync('./database/banUser.json'));
-let banchat = JSON.parse(fs.readFileSync('./database/banChat.json'));
-
- let _limit = JSON.parse(fs.readFileSync('./storage/user/limit.json'));
- let _buruan = JSON.parse(fs.readFileSync('./storage/user/bounty.json'));
- let _darahOrg = JSON.parse(fs.readFileSync('./storage/user/blood.json'))
-
-
-global.opts = new Object(yargs(process.argv.slice(2)).exitProcess(false).parse())
-global.db = new Low(
-  /https?:\/\//.test(opts['db'] || '') ?
-    new cloudDBAdapter(opts['db']) : /mongodb/.test(opts['db']) ?
-      new mongoDB(opts['db']) :
-      new JSONFile(`src/database.json`)
-)
-global.DATABASE = global.db // Backwards Compatibility
-global.loadDatabase = async function loadDatabase() {
-  if (global.db.READ) return new Promise((resolve) => setInterval(function () { (!global.db.READ ? (clearInterval(this), resolve(global.db.data == null ? global.loadDatabase() : global.db.data)) : null) }, 1 * 1000))
-  if (global.db.data !== null) return
-  global.db.READ = true
-  await global.db.read()
-  global.db.READ = false
-  global.db.data = {
-    users: {},
-    chats: {},
-    database: {},
-    game: {},
-    settings: {},
-    others: {},
-    sticker: {},
-    ...(global.db.data || {})
-  }
   global.db.chain = _.chain(global.db.data)
 }
 loadDatabase()
@@ -237,7 +197,7 @@ const AntiLinkFacebook = m.isGroup ? ntilinkfb.includes(from) : false
 const AntiLinkTiktok = m.isGroup ? ntilinktt.includes(from) : false
 const AntiLinkTelegram = m.isGroup ? ntilinktg.includes(from) : false
 const AntiLinkTwitter = m.isGroup ? ntilinktwt.includes(from) : false
-const AntiLinkAll = m.isGroup ? ntilinkall.includes(from) : true
+const AntiLinkAll = m.isGroup ? ntilinkall.includes(from) : false
 const antiWame = m.isGroup ? ntwame.includes(from) : false
 const antiVirtex = m.isGroup ? ntvirtex.includes(from) : false
 const AntiNsfw = m.isGroup ? ntnsfw.includes(from) : false
@@ -254,19 +214,15 @@ const isQuotedAudio = m.mtype === 'extendedTextMessage' && content.includes('aud
 
 const mongoose = require("mongoose");
 
-	
+
 /*
-
 /////////// -  DM chatbot (Delete this part to turn off DM Chat Bot) - //////////////////
-
 if (!isCmd && !m.isGroup){
     const botreply = await axios.get(`http://api.brainshop.ai/get?bid=168758&key=Ci7eNhtxpxxDB5FQ&uid=[uid]&msg=[${budy}]`)
     txt = `${botreply.data.cnt}`
     m.reply(txt)
     }
-
 //////////////////////////////////////////////////////////////////////////////////////
-
 */
 _sewa.expiredCheck(Miku, sewa)
 
