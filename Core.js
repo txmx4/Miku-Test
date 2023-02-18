@@ -1483,11 +1483,13 @@ replay('This Group has been *unbanned* from using me!')
   break
 
 
+
+
 case 'nsfwmenu':
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
     if (!AntiNsfw) return reply(mess.nonsfw)
-        reply(` *━━━〈  📛 NSFW Menu 📛  〉━━━*\n\nahegao	(leider def.), ass (leider def.), bdsm (leider def.), cuckold (leider def.), cum (leider def.), ero (leider def.), femdom (leider def.), gangbang (leider def.), foot (leider def.), glasses (leider def.), hentai (leider def.), masturbation (leider def.), orgy (leider def.), panties (leider def.) , pussy (leider def.), tentacles (leider def.), things (leider def.), yuri (leider def.),nsfwloli (leider def.), blowjobgif, hentaivideo, trap, hneko, hwaifu, versuche den befehl mal mit (!gig (befehl) )`)
+        reply(` *━━━〈  📛 NSFW Menu 📛  〉━━━*\n\nahegao	(leider def.), ass , bdsm (leider def.), cuckold (leider def.), cum (leider def.), ero (leider def.), femdom (leider def.), gangbang (leider def.), foot (leider def.), glasses (leider def.), hentai (leider def.), masturbation (leider def.), orgy (leider def.), panties (leider def.) , pussy (leider def.), tentacles (leider def.), things (leider def.), yuri (leider def.),nsfwloli (leider def.), blowjobgif, hentaivideo, trap, hneko, hwaifu, versuche den befehl mal mit (!gig (befehl) )`)
     break
 
 case 'reaction': case 'react': case 'reactions': case 'r':
@@ -1500,7 +1502,6 @@ case 'ping': case 'a2': case 'p': case 'a':
         if (isBan) return reply(mess.banned)	 			
         if (isBanChat) return reply(mess.bangc)
             reply(` *「 System Info 」*\n
-	        react: "💻",
                 Speed : ${latensie.toFixed(4)} 
                 mls Up Time : ${runtime(process.uptime())}
                 Bot Name : ${global.BotName}
@@ -3922,7 +3923,7 @@ case 'nsfwloli' :  {
     if (!AntiNsfw) return reply(mess.nonsfw)
     
 reply(mess.waiting)
- waifudhgd = await getBuffer(`https://api-reysekha.herokuapp.com/api/wallpaper/${command}?apikey=APIKEY  `)     
+ waifudhgd = await getBuffer(`https://fantox-apis.vercel.app/${command}?apikey=APIKEY  `)     
  let nsfwapireply = [
     {buttonId: `${prefix}${command}`, buttonText: {displayText: `>>`}, type: 1},
     ]
@@ -3950,7 +3951,7 @@ case 'ahegao' : case 'ass' : case 'bdsm' :  case 'cuckold' :  case 'cum' : case 
     if (!AntiNsfw) return reply(mess.nonsfw)
     
     reply(mess.waiting)
-     waifudhgd = await getBuffer(`https://api-reysekha.herokuapp.com/api/nsfw/${command}?apikey=APIKEY`)     
+     waifudhgd = await getBuffer(`https://fantox-apis.vercel.app/${command}?apikey=APIKEY`)     
      let nsfwapireply = [
         {buttonId: `${prefix}${command}`, buttonText: {displayText: `>>`}, type: 1},
         ]
