@@ -3916,14 +3916,13 @@ case 'truth':
 
 //let bjif = await GIFBufferToVideoBuffer(bjf) 
 
-case 'nsfwloli' :  {
+case 'loli2' :  {
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
     if (!m.isGroup) return replay(mess.grouponly)
-    if (!AntiNsfw) return reply(mess.nonsfw)
     
 reply(mess.waiting)
- waifudhgd = await getBuffer(`https://fantox-apis.vercel.app/${command}?apikey=APIKEY  `)     
+ waifudhgd = await getBuffer(`https://fantox-apis.vercel.app/loli  `)     
  let nsfwapireply = [
     {buttonId: `${prefix}${command}`, buttonText: {displayText: `>>`}, type: 1},
     ]
@@ -3951,7 +3950,7 @@ case 'ahegao' : case 'ass' : case 'bdsm' :  case 'cuckold' :  case 'cum' : case 
     if (!AntiNsfw) return reply(mess.nonsfw)
     
     reply(mess.waiting)
-     waifudhgd = await getBuffer(`https://fantox-apis.vercel.app/${command}?apikey=APIKEY`)     
+     waifudhgd = await getBuffer(`https://fantox-apis.vercel.app/${command}`)     
      let nsfwapireply = [
         {buttonId: `${prefix}${command}`, buttonText: {displayText: `>>`}, type: 1},
         ]
