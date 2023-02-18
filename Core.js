@@ -1500,6 +1500,7 @@ case 'ping': case 'a2': case 'p': case 'a':
         if (isBan) return reply(mess.banned)	 			
         if (isBanChat) return reply(mess.bangc)
             reply(` *「 System Info 」*\n
+	        react: "💻",
                 Speed : ${latensie.toFixed(4)} 
                 mls Up Time : ${runtime(process.uptime())}
                 Bot Name : ${global.BotName}
@@ -2441,7 +2442,6 @@ if (isBanChat) return reply(mess.bangc)
  break
 		
 
-/*
      case 'purge':{
         if (isBan) return reply(mess.banned)	 			
      if (isBanChat) return reply(mess.bangc)
@@ -2460,7 +2460,6 @@ if (isBanChat) return reply(mess.bangc)
     }
      break
 
-*/
 
 case 'purge':{mess
     if (isBan) return reply(mess.banned)	 			
