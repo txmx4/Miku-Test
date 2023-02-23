@@ -1373,11 +1373,11 @@ return list[Math.floor(list.length * Math.random())]
 //Some special chat replies
 	
  let smallinput = budy.toLowerCase()
-    if (smallinput.includes('')) {
+    if (smallinput.includes('$')) {
       reply (`Hello *${pushname}*, Ich bin *${BotName}*. Kann ich dir iirgendwie helfen ?`);
     } 
 
-    if( smallinput.includes('') || smallinput.includes('a2') || smallinput.includes('') || smallinput.includes('')){
+    if( smallinput.includes('$') || smallinput.includes('a2') || smallinput.includes('$') || smallinput.includes('$')){
       reply (`PONG Speed : ${latensie.toFixed(3)} miliseconds.`);
     } 
    
@@ -1530,7 +1530,7 @@ case 'limituser': case 'userlimit': case 'limit':
              break
 		
 
-case 'hentai': case 'hent': case 'sus': case 'hm':
+case 'hentai': case 'hent': case 'sus': case 'LUL':
         if (isBan) return reply(mess.banned)	 			
         if (isBanChat) return reply(mess.bangc)
             reply(`*Hentai gruppe*
