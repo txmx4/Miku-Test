@@ -4770,6 +4770,7 @@ if (isBanChat) return reply(mess.bangc)
             let com = [`self`,`bangroup ban`,`h`,`awoo`,`foxgirl`,`feed`,`loli`,`antilinkig on`,`antilinkfb on`,`neko`,`animenom`,`nsfw on`]
 	    let comm = [`public`,`bangroup off`,`help`,`waifu3`,`pb`,`tickle`,`waifu`,`antilinkig on`,`antilinkfb off`,`neko2`,`migumin`,`nsfw off`]
             let listnya = [`self/public`,`ban gruppe`,`help`,`anime bilder`,`anime bilder`,`anime bilder`,`anime bilder`,`anime bilder`,`anime bilder`,`anime bilder`,`anime bilder`,`nsfw`]
+	    let suruh = [`Enable`, `Disable`]
             let fiturname = [`Owner`,`bangroup`,`menü`,`anime bilder`,`anime bilder`,`anime bilder`,`anime bilder`,`anime bilder`,`anime bilder`,`anime bilder`,`anime bilder`,`nsfw`,`Auto Revoke`]
             let startnum = 0; let startnu = 0; let startn = 0;let start = 0
             let startnumm = 1
@@ -4792,7 +4793,7 @@ if (isBanChat) return reply(mess.bangc)
             const sendm =  Miku.sendMessage(
 from, 
 {
-text: "befehle",
+text: "Group Settings",
 footer: BotName,
 title: "Set your group settings here...",
 buttonText: "Click Button",
