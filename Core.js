@@ -1381,7 +1381,7 @@ return list[Math.floor(list.length * Math.random())]
       reply (`PONG Speed : ${latensie.toFixed(3)} miliseconds.`);
     } 
    
-    if (smallinput=='') {
+    if (smallinput=='$') {
       reply (`Hello *${pushname}*, I am *${BotName}*, a WhatsApp bot made by *Sebastian* and curbarently being hosted by *${OwnerName}*.  type  *${prefix}help* to get my full command list.`);
     }
 
@@ -4761,7 +4761,6 @@ Miku.send5ButImg(yoi, txt, `${global.BotName}`, BotLogo, btn, Thumb)
 replay('Sendung gesendet !')
 }
 break  
-		
 		
   case 'beta':
     case 'hm':{
