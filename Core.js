@@ -913,7 +913,7 @@ setInterval(() => {
 fs.writeFileSync('./src/database.json', JSON.stringify(global.db, null, 2))
 }, 60 * 1000)
 
-// reset limit every 24 hours
+//reset limit every 24 hours
 let cron = require('node-cron')
     cron.schedule('00 12 * * *', () => {
     let user = Object.keys(global.db.users)
@@ -1373,15 +1373,15 @@ return list[Math.floor(list.length * Math.random())]
 //Some special chat replies
 	
  let smallinput = budy.toLowerCase()
-    if (smallinput.includes('hello')) {
+    if (smallinput.includes('')) {
       reply (`Hello *${pushname}*, Ich bin *${BotName}*. Kann ich dir iirgendwie helfen ?`);
     } 
 
-    if( smallinput.includes('speed') || smallinput.includes('a2') || smallinput.includes('ping') || smallinput.includes('+')){
+    if( smallinput.includes('') || smallinput.includes('a2') || smallinput.includes('') || smallinput.includes('')){
       reply (`PONG Speed : ${latensie.toFixed(3)} miliseconds.`);
     } 
    
-    if (smallinput=='!') {
+    if (smallinput=='') {
       reply (`Hello *${pushname}*, I am *${BotName}*, a WhatsApp bot made by *Sebastian* and curbarently being hosted by *${OwnerName}*.  type  *${prefix}help* to get my full command list.`);
     }
 
@@ -1393,7 +1393,7 @@ return list[Math.floor(list.length * Math.random())]
         reply (`Alle User von diesem bot 𝗧𝗼𝘁𝗮𝗹 𝗨𝘀𝗲𝗿 : ${Object.keys(global.db.users).length}`)
     }
     
-     if (smallinput=='Ping') {
+     if (smallinput=='a2') {
         reply (`PONG Speed : ${latensie.toFixed(3)} miliseconds`)
     }
 
@@ -1402,7 +1402,7 @@ return list[Math.floor(list.length * Math.random())]
     }
 
     if (smallinput.includes('gute nacht')) {
-      reply (`warum schon so früh 🥲 oder willst du noch etwas machen 😏 *${pushname}* 😇. Sleep well and sweet dreams.`);
+      reply (`gute nacht ;)`);
     }
 
     if (smallinput.includes('^')|| smallinput.includes('¢') || smallinput.includes('¥')) {
@@ -1508,6 +1508,13 @@ case 'ping': case 'a2': case 'p': case 'a':
                 Owner Name : ${global.OwnerName}
 		𝗧𝗼𝘁𝗮𝗹 𝗨𝘀𝗲𝗿 : ${Object.keys(global.db.users).length}`)
         break
+		
+		
+case 'schäm': case 'schem': case 'scham': case 'sch':
+        if (isBan) return reply(mess.banned)	 			
+        if (isBanChat) return reply(mess.bangc)
+            reply(`${pushname} geht in die ecke und schämt sich `)
+        break
      
 
 case 'limituser': case 'userlimit': case 'limit':
@@ -1522,15 +1529,22 @@ case 'limituser': case 'userlimit': case 'limit':
               }
              break
 		
+
+case 'hentai': case 'hent': case 'sus': case 'hm':
+        if (isBan) return reply(mess.banned)	 			
+        if (isBanChat) return reply(mess.bangc)
+            reply(`*Hentai gruppe*
+	          https://chat.whatsapp.com/FMDqCkfLfbkHA3oaxtuAc9`)
+        break
+		
 		
 
 case 'sup': case 'support': case 'frage': case '!':
         if (isBan) return reply(mess.banned)	 			
         if (isBanChat) return reply(mess.bangc)
-            reply(` *Support* \n Hallo, *${pushname}* danke für deine Support Anfrage, derzeit ist es uns nicht möglich eine Weiterleitung an die Supportgruppe zu stellen, bitte schreibe deine Anfrage in dieser Gruppe erneut, 
+            reply(` *Support*  Hallo *${pushname}* danke für deine Support Anfrage, derzeit ist es uns nicht möglich eine Weiterleitung an die Supportgruppe zu stellen, bitte schreibe deine Anfrage in dieser Gruppe erneut, 
          Link: https://chat.whatsapp.com/DOnXPARAhdg3qptwUlPuye`)
-        break
-		
+        break		
 		
 case 'ow': case 'ownergruppen': case 'og': case 'gruppen':
         if (isBan) return reply(mess.banned)	 			
@@ -1688,7 +1702,7 @@ if (isBanChat) return reply(mess.bangc)
             let comm = [`group close`,`leveling off`,`antilinkgc off`,`antilinktg off`,`antilinktt off`,`antilinkytch off`,`antilinkytvid off`,`antilinkig on`,`antilinkfb off`,`antilinktwit off`,`antilinkall off`,`antiwame off`]
             let listnya = [`Group open/close`,`Leveling on/off`,`Antilink Group on/off`,`Antilink Telegram on/off`,`Antilink Tiktok on/off`,`Antilink Youtube Channel on/off`,`Antilink Youtube Video on/off`,`Antilink Instagram on/off`,`Antilink Facebook on/off`,`Antilink Twitter on/off`,`Antilink All on/off`,`Anti Wame on/off`]
             let suruh = [`Enable`, `Disable`]
-            let fiturname = [`Group`,`Leveling`,`Auto Sticker`,`Antilink Group`,`Antilink Telegram`,`Antilink Tiktok`,`Antilink Youtube Channel`,`Antilink Youtube Video`,`Antilink Instagram`,`Antilink Facebook`,`Antilink Twitter`,`Antilink All`,`Anti Wame`,`Auto Revoke`]
+            let fiturname = [`Group`,`Leveling`,`Antilink Group`,`Antilink Telegram`,`Antilink Tiktok`,`Antilink Youtube Channel`,`Antilink Youtube Video`,`Antilink Instagram`,`Antilink Facebook`,`Antilink Twitter`,`Antilink All`,`Anti Wame`,`Auto Revoke`]
             let startnum = 0; let startnu = 0; let startn = 0;let start = 0
             let startnumm = 1
             for (let x of com) {
@@ -1720,7 +1734,7 @@ sections
 }
 break
 
-/*
+		
 case 'animesearchxxx': case 'anime':{
     await fetchJson(`https://api.jikan.moe/v4/anime/${q}`)
     .then((res) => {
@@ -1729,7 +1743,7 @@ case 'animesearchxxx': case 'anime':{
     })
     }
     break
-*/
+		
 
 case 'coffee': case 'kopi': {
         if (isBan) return reply(mess.banned)	 			
@@ -2269,7 +2283,7 @@ await Miku.sendMessage(m.chat, { delete: key })
     if (isBan) return reply(mess.banned)	 			
 if (isBanChat) return reply(mess.bangc)
 if (!isCreator) return replay(mess.botowner)
-if (!args[0]) return replay(`Wählen Sie „Hinzufügen“ oder „Entfernen“ (zum Sperren hinzufügen, zum Entsperren löschen). Zum Beispiel: Antworten Sie mit *${prefix}ban add* auf den Benutzer, den Sie sperren möchten.`)
+if (!args[0]) return replay(`Wählen Sie „add“ oder „del“ (zum Sperren hinzufügen, zum Entsperren löschen). Zum Beispiel: Antworten Sie mit *${prefix}ban add* auf den Benutzer, den Sie sperren möchten.`)
 if (args[1]) {
 orgnye = args[1] + "@s.whatsapp.net"
 } else if (m.quoted) {
@@ -2303,31 +2317,6 @@ case 'listonline': case 'listaktif': case 'here':{
  }
  break
 
- case 'ban': {
-    if (isBan) return reply(mess.banned)	 			
-if (isBanChat) return reply(mess.bangc)
-if (!isCreator) return replay(mess.botowner)
-if (!args[0]) return replay(`Select add or del (add to ban, del to unban), For Example: Reply *${prefix}ban add* to the user you want to ban.`)
-if (args[1]) {
-orgnye = args[1] + "@s.whatsapp.net"
-} else if (m.quoted) {
-orgnye = m.quoted.sender
-}
-const isBane = banUser.includes(orgnye)
-if (args[0] === "add") {
-if (isBane) return ads('Benutzer wurde bereits gesperrt.')
-banUser.push(orgnye)
-replay(`Der Benutzer wurde erfolgreich gesperrt`)
-} else if (args[0] === "del") {
-if (!isBane) return ads('Benutzer wurde bereits entbannt.')
-let delbans = banUser.indexOf(orgnye)
-banUser.splice(delbans, 1)
-replay(`Der Benutzer wurde erfolgreich entbannt.`)
-} else {
-replay("Error")
-}
-}
-break
 
 
 case 'happymod': {
@@ -2443,6 +2432,16 @@ if (isBanChat) return reply(mess.bangc)
  break
 		
 
+ case 'hidetag': {
+    if (isBan) return reply(mess.banned)	 			
+ if (isBanChat) return reply(mess.bangc)
+ if (!m.isGroup) return replay(mess.grouponly)
+ if (!isAdmins && !isCreator) return replay(mess.useradmin)
+ Miku.sendMessage(m.chat, { text : args.join(" ") ? args.join(" ") : '' , mentions: participants.map(a => a.id)}, { quoted: m })
+ }
+ break
+		
+
      case 'purge':{
         if (isBan) return reply(mess.banned)	 			
      if (isBanChat) return reply(mess.bangc)
@@ -2460,22 +2459,6 @@ if (isBanChat) return reply(mess.bangc)
         }
     }
      break
-
-
-case 'purge':{mess
-    if (isBan) return reply(mess.banned)	 			
-     if (isBanChat) return reply(mess.bangc)
-     if (!m.isGroup) return replay(mess.grouponly)
-     if (!isBotAdmins) return replay(mess.botadmin)
-     if (!isAdmins && !isCreator) return replay(mess.useradmin)
-const delay = time => new Promise(res=>setTimeout(res,time));
-let mentioned = participants.map(v => v.jid)
-      for (let member of mentioned) {     
-      Miku.groupParticipantsUpdate(m.chat, [member], 'remove')
-      }
-    }
-
-    break
 
 
 
@@ -2589,7 +2572,7 @@ let mentioned = participants.map(v => v.jid)
     break
 
 
-    case 'group': case 'grup': {
+    case 'group': case 'hh': {
         if (isBan) return reply(mess.banned)	 			
      if (isBanChat) return reply(mess.bangc)
      if (!m.isGroup) return replay(mess.grouponly)
@@ -2664,7 +2647,6 @@ let mentioned = participants.map(v => v.jid)
      case 'join': {
         if (isBan) return reply(mess.banned)	 			
      if (isBanChat) return reply(mess.bangc)
-     if (!isCreator) return replay(mess.botowner)
      if (!args[0]) return replay(`Where's the link?`)
      vdd = args[0]
      let vcc = vdd.split("https://chat.whatsapp.com/")[1]
@@ -2683,7 +2665,7 @@ let mentioned = participants.map(v => v.jid)
      content: [{ tag: "invite", attrs: { code: vcc } }]
      }).then(async(res) => {
      sizny = res.content[0].attrs.size
-     if (sizny < 20) {
+     if (sizny < 5) {
      teks = `Tut mir leid, munimun 20 Mitglieder sind in einer Gruppe erforderlich, um einen Bot hinzuzufügen!`
      sendOrder(m.chat, teks, "667140254502463", fs.readFileSync('./Assets/pic7.jpg'), `${global.packname}`, `${global.BotName}`, "4915212908434@s.whatsapp.net", "AR6NCY8euY5cbS8Ybg5Ca55R8HFSuLO3qZqrIYCT7hQp0g==", "99999999999999999999")
      } else if (sizny > 20) {
@@ -3550,7 +3532,7 @@ case 'pinterest': case 'pin': {
 
 
 
-case 'swm': case 'take': case 'stickerwm': case 'steal': case 'Meins':{
+case 'swm': case 'take': case 'stickerwm': case 'steal': case 'meins':{
     if (isBan) return reply(mess.banned)
     if (isBanChat) return reply(mess.bangc)
 if (!args.join(" ")) return reply(`Use command: -steal Miku|By: sebastian`)
@@ -3941,7 +3923,7 @@ break
 
 case 'ahegao' : case 'ass' : case 'bdsm' :  case 'cuckold' :  case 'cum' : case 'ero' :
     case 'femdom' : case 'gangbang' : case 'foot' : case 'glasses':  case 'hentai': 
-     case 'masturbation': case 'neko': case 'orgy': case 'panties': 
+     case 'masturbation': case 'lol': case 'orgy': case 'panties': 
     case 'pussy': case 'tentacles': case 'things': case 'yuri': 
 {
     if (isBan) return reply(mess.banned)	 			
@@ -4458,7 +4440,7 @@ break
 
 
 
-/*
+
 
 case 'cry': case 'kill': case 'hug': case 'pat': case 'lick': case 'kiss': case 'bite': case 'yeet':
 case 'bully': case 'bonk': case 'wink': case 'poke': case 'nom': case 'slap': case 'smile':
@@ -4477,7 +4459,7 @@ let resmain = await GIFBufferToVideoBuffer(resffj)
                                   })
 break
 
-*/
+
 
 
 
@@ -4778,7 +4760,50 @@ Miku.send5ButImg(yoi, txt, `${global.BotName}`, BotLogo, btn, Thumb)
 }
 replay('Sendung gesendet !')
 }
-break    
+break  
+		
+		
+  case 'beta':
+    case 'hm':{
+        if (isBan) return reply(mess.banned)	 			
+if (isBanChat) return reply(mess.bangc)
+            let sections = []
+            let com = [`self`,`bangroup ban`,`h`,`awoo`,`foxgirl`,`feed`,`loli`,`antilinkig on`,`antilinkfb on`,`neko`,`animenom`,`nsfw on`]
+	    let comm = [`public`,`bangroup off`,`help`,`waifu3`,`pb`,`tickle`,`waifu`,`antilinkig on`,`antilinkfb off`,`neko2`,`migumin`,`nsfw off`]
+            let listnya = [`self/public`,`ban gruppe`,`help`,`anime bilder`,`anime bilder`,`anime bilder`,`anime bilder`,`anime bilder`,`anime bilder`,`anime bilder`,`anime bilder`,`nsfw`]
+            let fiturname = [`Owner`,`bangroup`,`menü`,`anime bilder`,`anime bilder`,`anime bilder`,`anime bilder`,`anime bilder`,`anime bilder`,`anime bilder`,`anime bilder`,`nsfw`,`Auto Revoke`]
+            let startnum = 0; let startnu = 0; let startn = 0;let start = 0
+            let startnumm = 1
+            for (let x of com) {
+                const yy = {title: `${listnya[startnum++]}`,
+            rows: [
+               {
+                title: `${suruh[0]}`,
+                description: `Activate ${fiturname[startnu++]}`,
+                rowId: `${prefix}${x}`
+              },{
+                title: `${suruh[1]}`,
+                description: `Deactivate ${fiturname[startn++]}`,
+                rowId: `${prefix}${comm[start++]}`
+              }
+            ]
+           }
+                sections.push(yy)
+            }
+            const sendm =  Miku.sendMessage(
+from, 
+{
+text: "befehle",
+footer: BotName,
+title: "Set your group settings here...",
+buttonText: "Click Button",
+sections
+}, { quoted : m }
+)  
+}
+break
+
+		
 
 
 case 'help': case 'h': case 'menu': case 'allmenu': case 'listmenu': case 'hilfe':{
@@ -4848,17 +4873,18 @@ stickermeme, quotes, darkjoke
 
  *━━━〈  🎐 Fun 🎐  〉━━━*
 
-reaction, truth, dare, couple, soulmate, handsomecheck, beautifulcheck, awesomecheck, greatcheck, gaycheck, cutecheck, lesbiancheck, hornycheck, prettycheck, lovelycheck, uglycheck, charactercheck
+schäm, reaction, truth, dare, couple, soulmate, handsomecheck, beautifulcheck, awesomecheck, greatcheck, gaycheck, cutecheck, lesbiancheck, hornycheck, prettycheck, lovelycheck, uglycheck, charactercheck
 
  *━━━〈  🪁 Essentials 🪁  〉━━━*
 
  say, translate, fliptext, toletter, Wetter
 
  *━━━〈  💥 NSFW 💥  〉━━━*
+ 
+ wir haben ne hentai gruppe wenn du da rein willst dan mach !sus dan kommt der link bitte beachtet das der bot nicht gekick wird
 
-🍁 Geben Sie " *${prefix}nsfw* " ein und aktivieren Sie dann NSFW (nur Administrator!)
+Geben Sie " *${prefix}nsfw* " ein und aktivieren Sie dann NSFW (nur Administrator!)
 
-🍁Geben Sie dann „*${prefix}nsfwmenu*“ ein, um eine vollständige Liste der NSFW-Befehle zu erhalten.
 
 
        「 System Info 」
@@ -4867,12 +4893,12 @@ reaction, truth, dare, couple, soulmate, handsomecheck, beautifulcheck, awesomec
     Up Time : ${runtime(process.uptime())}
     Bot Name : ${global.BotName}
     Owner Name : ${global.OwnerName}
-    𝗣𝗹𝗮𝘁𝗳𝗼𝗿𝗺 : Amazon AWS
+    𝗣𝗹𝗮𝘁𝗳𝗼𝗿𝗺 : XAIOMI 12 T Pro 〈Userland〉
     𝗧𝗼𝘁𝗮𝗹 𝗨𝘀𝗲𝗿 : ${Object.keys(global.db.users).length}
     
     
        「 User Info 」
-    
+    Use Name: : ${pushname} 
     User Level: ${levelMenu}
     User XP : ${xpMenu} \ ${reqXp}
     User Role : ${role}
@@ -4886,7 +4912,7 @@ reaction, truth, dare, couple, soulmate, handsomecheck, beautifulcheck, awesomec
     
 
  let buttonshelpm = [
-    {buttonId: `${prefix}owner`, buttonText: {displayText: '😍Bot Owner😍'}, type: 1}
+    {buttonId: `${prefix}owner`, buttonText: {displayText: 'Bot Owner'}, type: 1}
     ]
                 let buttonMessage = {
                     video:fs.readFileSync('./system/miku2.mp4'),gifPlayback:false,
@@ -4909,7 +4935,7 @@ case '':
       mikupic ='https://wallpapercave.com/wp/wp6299451.jpg'
     
         
- const needhelpmenu = `Brauchst du Hilfe, ${pushname} Senpai? Geben Sie *${prefix}help* ein, um meine vollständige Befehlsliste zu erhalten.`
+ const needhelpmenu = `Brauchst du Hilfe, ${pushname} Senpai? Geben Sie *${prefix}help* ein wenn sie meine befehlsliste sehen wollen .`
      
          let butRun = [
                 {buttonId: `${prefix}help`, buttonText: {displayText: 'Help'}, type: 1}
@@ -4971,6 +4997,43 @@ const mikuarray= [
             const mikuselection = mikuarray[Math.floor(Math.random()*mikuarray.length)]
         
             Miku.sendMessage(from,{video:{url:mikuselection},gifPlayback:true,caption:txt},{quoted:m})
+		
+		
+ case "sayger":  case "sayde": {
+    if (isBan) return reply(mess.banned)	 			
+    if (isBanChat) return reply(mess.bangc)
+
+    if (!args[0]) return reply("Please give me a text so that i can speak it!")
+      
+      let texttosay = text
+        ? text
+        : m.quoted && m.quoted.text
+        ? m.quoted.text
+        : m.text;
+      const SpeakEngine = require("google-tts-api"); 
+      const texttospeechurl = SpeakEngine.getAudioUrl(texttosay, {lang: "de", slow: false, host: "https://translate.google.com",});
+      Miku.sendMessage(m.chat,{audio: {url: texttospeechurl,},mimetype: "audio/mpeg",fileName: `MikuSpeechEngine.mp3`,},{quoted: m,});
+    }
+    break
+		
+		
+ case "sayeng":  case "sayen": {
+    if (isBan) return reply(mess.banned)	 			
+    if (isBanChat) return reply(mess.bangc)
+
+    if (!args[0]) return reply("Please give me a text so that i can speak it!")
+      
+      let texttosay = text
+        ? text
+        : m.quoted && m.quoted.text
+        ? m.quoted.text
+        : m.text;
+      const SpeakEngine = require("google-tts-api"); 
+      const texttospeechurl = SpeakEngine.getAudioUrl(texttosay, {lang: "en", slow: false, host: "https://translate.google.com",});
+      Miku.sendMessage(m.chat,{audio: {url: texttospeechurl,},mimetype: "audio/mpeg",fileName: `MikuSpeechEngine.mp3`,},{quoted: m,});
+    }
+    break
+
 
 
 
