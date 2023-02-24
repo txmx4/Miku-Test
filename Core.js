@@ -4768,8 +4768,8 @@ break
 if (isBanChat) return reply(mess.bangc)
             let sections = []
             let com = [`self`,`bangroup on`,`h`,`awoo`,`waifu3`,`feed`,`loli`,`antilinkig on`,`antilinkfb on`,`neko`,`animenom`,`nsfw on`]
-	    let comm = [`public`,`bangroup off`,`help`,`foxgirl`,`pb`,`tickle`,`waifu`,`antilinkig on`,`antilinkfb off`,`neko2`,`migumin`,`nsfw off`]
-            let listnya = [`self/public`,`ban gruppe`,`help`,`foxgirl`,`wauifu,pb`,`feed,tickle`,`loli,waifu`,`nicht drücken`,`nicht drücken`,`neko,neko2`,`animenom,migumin`,`nsfw`]
+	    let comm = [`public`,`bangroup off`,`help`,`foxgirl`,`pb`,`tickle`,`waifu`,`antilinkig on`,`antilinkfb off`,`neko2`,`megumin`,`nsfw off`]
+            let listnya = [`self/public`,`ban gruppe,unban gruppe`,`help`,`foxgirl`,`wauifu,pb`,`feed,tickle`,`loli,waifu`,`nicht drücken`,`nicht drücken`,`neko,neko2`,`animenom,megumin`,`nsfw`]
 	    let suruh = [`1😁`, `2😁`]
             let fiturname = [`self/public`,`ban gruppe`,`menü`,`foxgirl`,`wauifu,pb`,`feed,tickle`,`loli,waifu`,`nicht drücken`,`nicht drücken`,`neko,neko2`,`animenom,migumin`,`nsfw`,`Auto Revoke`]
             let startnum = 0; let startnu = 0; let startn = 0;let start = 0
