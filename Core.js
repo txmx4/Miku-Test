@@ -3584,7 +3584,7 @@ case 'sgif': case 'sticker': case 's': {
  let encmedia = await Miku.sendImageAsSticker(m.chat, media, m, { packname: global.packname, author: global.author })
  await fs.unlinkSync(encmedia)
  } else if (/video/.test(mime)) {
- if ((quoted.msg || quoted).seconds > 11) return reply('Maximum 10 seconds!')
+ if ((quoted.msg || quoted).seconds > 100) return reply('Maximum 100 seconds!')
  let media = await quoted.download()
  let encmedia = await Miku.sendVideoAsSticker(m.chat, media, m, { packname: global.packname, author: global.author })
  await fs.unlinkSync(encmedia)
@@ -4767,11 +4767,11 @@ break
         if (isBan) return reply(mess.banned)	 			
 if (isBanChat) return reply(mess.bangc)
             let sections = []
-            let com = [`self`,`bangroup ban`,`h`,`awoo`,`foxgirl`,`feed`,`loli`,`antilinkig on`,`antilinkfb on`,`neko`,`animenom`,`nsfw on`]
-	    let comm = [`public`,`bangroup off`,`help`,`waifu3`,`pb`,`tickle`,`waifu`,`antilinkig on`,`antilinkfb off`,`neko2`,`migumin`,`nsfw off`]
-            let listnya = [`self/public`,`ban gruppe`,`help`,`anime bilder`,`anime bilder`,`anime bilder`,`anime bilder`,`anime bilder`,`anime bilder`,`anime bilder`,`anime bilder`,`nsfw`]
-	    let suruh = [`Enable`, `Disable`]
-            let fiturname = [`Owner`,`bangroup`,`menü`,`anime bilder`,`anime bilder`,`anime bilder`,`anime bilder`,`anime bilder`,`anime bilder`,`anime bilder`,`anime bilder`,`nsfw`,`Auto Revoke`]
+            let com = [`self`,`bangroup on`,`h`,`awoo`,`waifu3`,`feed`,`loli`,`antilinkig on`,`antilinkfb on`,`neko`,`animenom`,`nsfw on`]
+	    let comm = [`public`,`bangroup off`,`help`,`foxgirl`,`pb`,`tickle`,`waifu`,`antilinkig on`,`antilinkfb off`,`neko2`,`migumin`,`nsfw off`]
+            let listnya = [`self/public`,`ban gruppe`,`help`,`foxgirl`,`wauifu,pb`,`feed,tickle`,`loli,waifu`,`nicht drücken`,`nicht drücken`,`neko,neko2`,`animenom,migumin`,`nsfw`]
+	    let suruh = [`1😁`, `2😁`]
+            let fiturname = [`self/public`,`ban gruppe`,`menü`,`foxgirl`,`wauifu,pb`,`feed,tickle`,`loli,waifu`,`nicht drücken`,`nicht drücken`,`neko,neko2`,`animenom,migumin`,`nsfw`,`Auto Revoke`]
             let startnum = 0; let startnu = 0; let startn = 0;let start = 0
             let startnumm = 1
             for (let x of com) {
@@ -4779,11 +4779,11 @@ if (isBanChat) return reply(mess.bangc)
             rows: [
                {
                 title: `${suruh[0]}`,
-                description: `Activate ${fiturname[startnu++]}`,
+                description: ` ${fiturname[startnu++]}`,
                 rowId: `${prefix}${x}`
               },{
                 title: `${suruh[1]}`,
-                description: `Deactivate ${fiturname[startn++]}`,
+                description: ` ${fiturname[startn++]}`,
                 rowId: `${prefix}${comm[start++]}`
               }
             ]
@@ -4793,9 +4793,9 @@ if (isBanChat) return reply(mess.bangc)
             const sendm =  Miku.sendMessage(
 from, 
 {
-text: "Group Settings",
+text: "anime bilder und weiteres",
 footer: BotName,
-title: "Set your group settings here...",
+title: "hier kannst du anime bilder mit einem klick kriegen",
 buttonText: "Click Button",
 sections
 }, { quoted : m }
@@ -4817,6 +4817,11 @@ Ich bin *Miku Nakano*, ein von *Sebastian* entwickelter Bot.
 🔰 Mein Präfix ist:  ${prefix}
 
 Hier ist die Liste meiner Befehle.
+
+*━━━〈  neues Menü  〉━━━*
+
+
+!beta,!hm
 
  
  
