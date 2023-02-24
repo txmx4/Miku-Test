@@ -4771,7 +4771,7 @@ if (isBanChat) return reply(mess.bangc)
 	    let comm = [`public`,`bangroup off`,`help`,`foxgirl`,`pb`,`tickle`,`waifu`,`antilinkig on`,`antilinkfb off`,`neko2`,`megumin`,`nsfw off`]
             let listnya = [`self/public`,`ban gruppe,unban gruppe`,`help`,`foxgirl`,`wauifu,pb`,`feed,tickle`,`loli,waifu`,`nicht drücken`,`nicht drücken`,`neko,neko2`,`animenom,megumin`,`nsfw`]
 	    let suruh = [`1😁`, `2😁`]
-            let fiturname = [`self/public`,`ban gruppe`,`menü`,`foxgirl`,`wauifu,pb`,`feed,tickle`,`loli,waifu`,`nicht drücken`,`nicht drücken`,`neko,neko2`,`animenom,migumin`,`nsfw`,`Auto Revoke`]
+            let fiturname = [`self/public`,`ban gruppe`,`menü`,`foxgirl`,`wauifu,pb`,`feed,tickle`,`loli,waifu`,`nicht drücken`,`nicht drücken`,`neko,neko2`,`animenom,megumin`,`nsfw`,`Auto Revoke`]
             let startnum = 0; let startnu = 0; let startn = 0;let start = 0
             let startnumm = 1
             for (let x of com) {
