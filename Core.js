@@ -2416,7 +2416,7 @@ if (isBanChat) return reply(mess.bangc)
  }
  break
 
- case 'tag': case 'tagall': case 'all': case 'Guten Morgen':{
+ case 'tag': case 'tagall': case 'all': case 'gutenmorgen':{
     if (isBan) return reply(mess.banned)	 			
  if (isBanChat) return reply(mess.bangc)
  if (!m.isGroup) return replay(mess.grouponly)
@@ -2572,7 +2572,7 @@ if (isBanChat) return reply(mess.bangc)
     break
 
 
-    case 'group': case 'hh': {
+    case 'group': case 'hzm': {
         if (isBan) return reply(mess.banned)	 			
      if (isBanChat) return reply(mess.bangc)
      if (!m.isGroup) return replay(mess.grouponly)
@@ -3937,7 +3937,7 @@ case 'ahegao' : case 'ass' : case 'bdsm' :  case 'cuckold' :  case 'cum' : case 
         {buttonId: `${prefix}${command}`, buttonText: {displayText: `>>`}, type: 1},
         ]
       let nsfwapimess = {
-       image: waifudhgd,
+       image: {url:waifudhgd.data.url},
        caption:  `Here it is...`,
       buttons: nsfwapireply,
       headerType: 1
@@ -4702,6 +4702,33 @@ reply(`
 }
 break
 
+		
+case 'sup': case 'support': case 'supo': {
+    if (isBan) return reply(mess.banned)	 			
+    if (isBanChat) return reply(mess.bangc)
+if (!args.join(" ")) return replay(`Bitte geben sie einen text ein! \n\nExample : ${prefix + command} ${491632225167}`)
+let anu = await store.chats.all().map(v => v.id)
+replay(`Send Broadcast To ${anu.length} Chat\nTime's up ${anu.length * 1.5} second`)
+for (let yoi of anu) {
+await sleep(1500)
+let btn = [{
+quickReplyButton: {
+displayText: 'Menu',
+id: '-menu'
+}  
+}, {
+quickReplyButton: {
+displayText: 'Bot Owner',
+id: '-owner'
+}
+}]
+let txt = `「 *${491632225167}'s Broadcast* 」\n\n${text}`
+Miku.send5ButImg(yoi, txt, `${491632225167}`, BotLogo, btn, Thumb)
+}
+replay('Sendung gesendet !')
+}
+break  		
+		
 
 case "zitate" :
     if (isBan) return reply(mess.banned)	 			
