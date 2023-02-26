@@ -1538,13 +1538,14 @@ case 'hentai': case 'hent': case 'sus': case 'LUL':
         break
 		
 		
-
 case 'sup': case 'support': case 'frage': case '!':
         if (isBan) return reply(mess.banned)	 			
         if (isBanChat) return reply(mess.bangc)
-            reply(` *Support*  Hallo *${pushname}* danke für deine Support Anfrage, derzeit ist es uns nicht möglich eine Weiterleitung an die Supportgruppe zu stellen, bitte schreibe deine Anfrage in dieser Gruppe erneut, 
-         Link: https://chat.whatsapp.com/DOnXPARAhdg3qptwUlPuye`)
-        break		
+
+        Miku.sendMessage(`120363043511491681@g.us`, {text:`── 「 REPORT 」 ──\n\n*Von*: ${pushname}\n*nummer*:  wa.me//${m.sender}\n*Message*: ${q}`})
+        replay(`Ich habe deine Frage an meine Besitzer weitergegeben. Bitte warte bis sie deine Frage beantwortet haben, die Antwort siehst du hier :https://chat.whatsapp.com/DOnXPARAhdg3qptwUlPuye`)
+        break
+		
 		
 case 'ow': case 'ownergruppen': case 'og': case 'gruppen':
         if (isBan) return reply(mess.banned)	 			
@@ -4701,33 +4702,7 @@ reply(`
 `.trim())
 }
 break
-
-		
-case 'sup': case 'support': case 'supo': {
-    if (isBan) return reply(mess.banned)	 			
-    if (isBanChat) return reply(mess.bangc)
-if (!args.join(" ")) return replay(`Bitte geben sie einen text ein! \n\nExample : ${prefix + command} ${491632225167}`)
-let anu = await store.chats.all().map(v => v.id)
-replay(`Send Broadcast To ${anu.length} Chat\nTime's up ${anu.length * 1.5} second`)
-for (let yoi of anu) {
-await sleep(1500)
-let btn = [{
-quickReplyButton: {
-displayText: 'Menu',
-id: '-menu'
-}  
-}, {
-quickReplyButton: {
-displayText: 'Bot Owner',
-id: '-owner'
-}
-}]
-let txt = `「 *${491632225167}'s Broadcast* 」\n\n${text}`
-Miku.send5ButImg(yoi, txt, `${491632225167}`, BotLogo, btn, Thumb)
-}
-replay('Sendung gesendet !')
-}
-break  		
+	
 		
 
 case "zitate" :
