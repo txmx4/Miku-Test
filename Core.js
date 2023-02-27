@@ -1982,8 +1982,8 @@ await Miku.sendMessage(m.chat, { delete: key })
    }
    }
    break
-
-
+		
+		
 
      case 'antilinkyoutubech': case 'antilinkyoutubechannel': case 'antilinkytch': {
     if (isBan) return reply(mess.banned)	 			
@@ -2484,6 +2484,8 @@ if (isBanChat) return reply(mess.bangc)
             randomxx = 100
         } else if (random_length == 3) {
             randomxx = 1000
+        } else if (random_length == 4) {
+            randomxx = 10000
         }
         var nomerny = `*『 Liste der WhatsApp-Nummern 』*\n\n`
         var nobio = `\n*Bio:* || \nHey there! I am using WhatsApp.\n`
@@ -2908,7 +2910,7 @@ case 'togif': case 'getgif':{
 case 'translate': case 'trans': {
     if (isBan) return reply(mess.banned)
     if (!args.join(" ")) return replay("Pls enter any text to translate")
-    tes = await fetchJson (`https://megayaa.herokuapp.com/api/translate?to=en&kata=${args.join(" ")}`)
+    tes = await fetchJson (`https://megayaa.herokuapp.com/api/translate?to=de&kata=${args.join(" ")}`)
     Infoo = tes.info
     Detek = tes.translate
     replay(`Input : ${Detek}\nTranslation Results : ${Infoo}`)
@@ -3352,8 +3354,8 @@ case 'music': case 'play': case 'song': case 'ytplay': {
           return;
         }
         let infoYt = await ytdl.getInfo(urlYt);
-        //30 MIN
-        if (infoYt.videoDetails.lengthSeconds >= 1800) {
+        //100 MIN
+        if (infoYt.videoDetails.lengthSeconds >= 180000) {
           reply(`❌ Video too big!`);
           return;
         }
@@ -3485,7 +3487,7 @@ break
  const YT=require('./lib/ytdlcore')
     const ytmp4play2 = await YT.mp4(text)
     let vidduration =ytmp4play2.duration;
-    if (vidduration > 1800) return reply('Cant send videos longer than *300 min*')
+    if (vidduration > 50000) return reply('Cant send videos longer than *300 min*')
  Miku.sendMessage(from, {video:{url:ytmp4play2.videoUrl}, mimetype:"video/mp4", caption:'Downloaded by *Miku MD*',}, {quoted:m})
  }
  break
@@ -3933,7 +3935,7 @@ case 'ahegao' : case 'ass' : case 'bdsm' :  case 'cuckold' :  case 'cum' : case 
     if (!AntiNsfw) return reply(mess.nonsfw)
     
     reply(mess.waiting)
-     waifudhgd = await getBuffer(`https://fantox-apis.vercel.app/${command}`)     
+     waifudhgd = await axios.get(`https://fantox-apis.vercel.app/${command}`)     
      let nsfwapireply = [
         {buttonId: `${prefix}${command}`, buttonText: {displayText: `>>`}, type: 1},
         ]
