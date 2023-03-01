@@ -1489,7 +1489,7 @@ case 'nsfwmenu':
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
     if (!AntiNsfw) return reply(mess.nonsfw)
-        reply(` *━━━〈  📛 NSFW Menu 📛  〉━━━*\n\nahegao	(leider def.), ass , bdsm (leider def.), cuckold (leider def.), cum (leider def.), ero (leider def.), femdom (leider def.), gangbang (leider def.), foot (leider def.), glasses (leider def.), hentai (leider def.), masturbation (leider def.), orgy (leider def.), panties (leider def.) , pussy (leider def.), tentacles (leider def.), things (leider def.), yuri (leider def.),nsfwloli (leider def.), blowjobgif, hentaivideo, trap, hneko, hwaifu, versuche den befehl mal mit (!gig (befehl) )`)
+        reply(` *━━━〈  📛 NSFW Menu 📛  〉━━━*\n\n ass ,  cum , glasses, pussy, yuri,loli,blonde ,tree, food,nude,sex,foxgirl,twogirls,genshin,bed,schooluniform,twogirls,dress,horns, blowjobgif, hentaivideo, trap, hneko, hwaifu, versuche den befehl mal mit (!gig (befehl) )`)
     break
 
 case 'reaction': case 'react': case 'reactions': case 'r':
@@ -1530,7 +1530,7 @@ case 'limituser': case 'userlimit': case 'limit':
              break
 		
 
-case 'hentai': case 'hent': case 'sus': case 'LUL':
+case 'hentaigroup': case 'hent': case 'sus': case 'LUL':
         if (isBan) return reply(mess.banned)	 			
         if (isBanChat) return reply(mess.bangc)
             reply(`*Hentai gruppe*
@@ -3904,7 +3904,6 @@ case 'truth':
 case 'loli2' :  {
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
-    if (!m.isGroup) return replay(mess.grouponly)
     
 reply(mess.waiting)
  waifudhgd = await getBuffer(`https://fantox-apis.vercel.app/loli  `)     
@@ -3912,7 +3911,7 @@ reply(mess.waiting)
     {buttonId: `${prefix}${command}`, buttonText: {displayText: `>>`}, type: 1},
     ]
   let nsfwapimess = {
-   image: waifudhgd,
+   image: {url:waifudhgd.data.url},
    caption:  `Here it is...`,
   buttons: nsfwapireply,
   headerType: 1
@@ -3924,10 +3923,10 @@ reply(mess.waiting)
 break
 
 
-case 'ahegao' : case 'ass' : case 'bdsm' :  case 'cuckold' :  case 'cum' : case 'ero' :
-    case 'femdom' : case 'gangbang' : case 'foot' : case 'glasses':  case 'hentai': 
-     case 'masturbation': case 'lol': case 'orgy': case 'panties': 
-    case 'pussy': case 'tentacles': case 'things': case 'yuri': 
+case 'blonde' : case 'ass' : case 'tree' :  case 'food' :  case 'cum' : case 'genshin' :
+    case 'horns' : case 'nude' : case 'bed' : case 'glasses':  case 'dress': 
+     case 'schooluniform': case 'loli': case 'orgy': case 'sex': 
+    case 'pussy': case 'twogirls': case 'foxgirl': case 'yuri': 
 {
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
@@ -4070,7 +4069,7 @@ reply(mess.waiting)
                 })
 break
 
-case 'foxgirl' :
+case 'foxgirls' :
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
     if (!m.isGroup) return replay(mess.grouponly)
@@ -4664,7 +4663,7 @@ reply(mess.waiting)
 break
 
 
-case 'loli' :
+case 'loli1' :
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
     if (!m.isGroup) return replay(mess.grouponly)
@@ -4771,8 +4770,8 @@ break
         if (isBan) return reply(mess.banned)	 			
 if (isBanChat) return reply(mess.bangc)
             let sections = []
-            let com = [`self`,`bangroup on`,`h`,`awoo`,`waifu3`,`feed`,`loli`,`antilinkig on`,`antilinkfb on`,`neko`,`animenom`,`nsfw on`]
-	    let comm = [`public`,`bangroup off`,`help`,`foxgirl`,`pb`,`tickle`,`waifu`,`antilinkig on`,`antilinkfb off`,`neko2`,`megumin`,`nsfw off`]
+            let com = [`self`,`bangroup on`,`h`,`awoo`,`waifu3`,`feed`,`loli1`,`antilinkig `,`antilinkfb `,`neko`,`animenom`,`nsfw on`]
+	    let comm = [`public`,`bangroup off`,`help`,`foxgirls`,`pb`,`tickle`,`waifu`,`antilinkig `,`antilinkfb`,`neko2`,`megumin`,`nsfw off`]
             let listnya = [`self/public`,`ban gruppe,unban gruppe`,`help`,`foxgirl`,`wauifu,pb`,`feed,tickle`,`loli,waifu`,`nicht drücken`,`nicht drücken`,`neko,neko2`,`animenom,megumin`,`nsfw`]
 	    let suruh = [`1😁`, `2😁`]
             let fiturname = [`self/public`,`ban gruppe`,`menü`,`foxgirl`,`wauifu,pb`,`feed,tickle`,`loli,waifu`,`nicht drücken`,`nicht drücken`,`neko,neko2`,`animenom,megumin`,`nsfw`,`Auto Revoke`]
