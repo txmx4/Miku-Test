@@ -1373,15 +1373,15 @@ return list[Math.floor(list.length * Math.random())]
 //Some special chat replies
 	
  let smallinput = budy.toLowerCase()
-    if (smallinput.includes('$')) {
+    if (smallinput.includes('¢')) {
       reply (`Hello *${pushname}*, Ich bin *${BotName}*. Kann ich dir iirgendwie helfen ?`);
     } 
 
-    if( smallinput.includes('$') || smallinput.includes('a2') || smallinput.includes('$') || smallinput.includes('$')){
+    if( smallinput.includes('$') || smallinput.includes('a2') || smallinput.includes('¢') || smallinput.includes('¢')){
       reply (`PONG Speed : ${latensie.toFixed(3)} miliseconds.`);
     } 
    
-    if (smallinput=='$') {
+    if (smallinput=='¢') {
       reply (`Hello *${pushname}*, I am *${BotName}*, a WhatsApp bot made by *Sebastian* and curbarently being hosted by *${OwnerName}*.  type  *${prefix}help* to get my full command list.`);
     }
 
@@ -1393,7 +1393,7 @@ return list[Math.floor(list.length * Math.random())]
         reply (`Alle User von diesem bot 𝗧𝗼𝘁𝗮𝗹 𝗨𝘀𝗲𝗿 : ${Object.keys(global.db.users).length}`)
     }
     
-     if (smallinput=='a2') {
+     if (smallinput=='¢') {
         reply (`PONG Speed : ${latensie.toFixed(3)} miliseconds`)
     }
 
@@ -1405,7 +1405,7 @@ return list[Math.floor(list.length * Math.random())]
       reply (`gute nacht ;)`);
     }
 
-    if (smallinput.includes('^')|| smallinput.includes('¢') || smallinput.includes('¥')) {
+    if (smallinput.includes('¢')|| smallinput.includes('¢') || smallinput.includes('¥')) {
       reply (`Yai endlich wider da *${pushname}*`);
     }      
 
