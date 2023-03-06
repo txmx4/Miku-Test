@@ -4048,6 +4048,39 @@ break
 
 
 /////////////////////////// NFFW end /////////////////////
+		
+		
+case 'reddit': //credit: Ray Senpai ❤️ https://github.com/EternityBots/Nezuko
+if (!text) throw `Where is the subreddit name?`
+const RedditImageFetcher = require("reddit-image-fetcher")
+RedditImageFetcher.fetch({
+            type: 'custom',
+            total: 1, 
+            addSubreddit:text,
+        }).then(result => {
+            console.log(result);
+            let akusingle = result[0]
+            Miku.sendMessage(m.chat,{image:{url:akusingle.image}},{quoted:m})
+        })
+        .catch(err => {
+            m.reply ("Not found!")
+        })
+        break
+		
+case 'spotify': //credit: Ray Senpai❤️ https://github.com/EternityBots/Nezuko
+if (!text) return m.reply(`Where is the link?`)
+        const Spotify = require('./lib/spotify')
+        const spotify = new Spotify(text)
+        const info = await spotify.getInfo()
+        if ((info).error) throw `The link you provided is not spotify link`
+        const { name, artists, album_name, release_date, cover_url } = info
+        const details = `${themeemoji} *Title:* ${name || ''}\n${themeemoji} *Artists:* ${(artists || []).join(
+            ','
+        )}\n${themeemoji} *Album:* ${album_name}\n${themeemoji} *Release Date:* ${release_date || ''}`
+       const response = await Miku.sendMessage(m.chat, { image: { url: cover_url }, caption: details }, { quoted: m })
+        const bufferpotify = await spotify.download()
+        await Miku.sendMessage(m.chat, { audio: bufferpotify }, { quoted: response })
+break
 
 case 'smug2':
     if (isBan) return reply(mess.banned)	 			
