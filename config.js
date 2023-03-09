@@ -8,9 +8,9 @@ global.antitags = true
 
 
 global.ownernomer = "436764242454" 
-global.Owner = ['436764242454','491632225167']  // -- Add multiple numbers like  ['918101967835','919357940276','917896587453']
-global.OwnerNumber = ['436764242454','491632225167']  // -- Add multiple numbers like  ['918101967835','919357940276','917896587453']
-global.ownertag = ['436764242454','491632225167']  // -- Add multiple numbers like  ['918101967835','919357940276','917896587453']
+global.Owner = ['436764242454','491632225167','493023180366']  // -- Add multiple numbers like  ['918101967835','919357940276','917896587453']
+global.OwnerNumber = ['436764242454','491632225167','493023180366']  // -- Add multiple numbers like  ['918101967835','919357940276','917896587453']
+global.ownertag = ['436764242454','491632225167','493023180366']  // -- Add multiple numbers like  ['918101967835','919357940276','917896587453']
 global.BotName = "Miku-beta"
 global.packname = "Erstellt für mein Meister"
 global.author = "ich"

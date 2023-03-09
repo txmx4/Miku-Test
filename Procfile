@@ -1,1 +1,1 @@
-worker: npm i -g forever && forever index.js
+web: node . --server --autocleartmp

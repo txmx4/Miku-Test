@@ -1397,7 +1397,7 @@ return list[Math.floor(list.length * Math.random())]
         reply (`PONG Speed : ${latensie.toFixed(3)} miliseconds`)
     }
 
-    if (smallinput.includes('Guten Morgen ') || smallinput.includes('good morning')) {
+    if (smallinput.includes('Guten Morgen') || smallinput.includes('guten morgen')) {
       reply (`🌝was willst du jetzt 🌚`);
     }
 
@@ -1502,12 +1502,51 @@ case 'ping': case 'a2': case 'p': case 'a':
         if (isBan) return reply(mess.banned)	 			
         if (isBanChat) return reply(mess.bangc)
             reply(` *「 System Info 」*\n
-                Speed : ${latensie.toFixed(4)} 
-                mls Up Time : ${runtime(process.uptime())}
-                Bot Name : ${global.BotName}
-                Owner Name : ${global.OwnerName}
-		𝗧𝗼𝘁𝗮𝗹 𝗨𝘀𝗲𝗿 : ${Object.keys(global.db.users).length}`)
+Speed : ${latensie.toFixed(4)} 
+Up Time : ${runtime(process.uptime())} 
+Bot Name : ${global.BotName}
+Owner Name : ${global.OwnerName}
+𝗧𝗼𝘁𝗮𝗹 𝗨𝘀𝗲𝗿 : ${Object.keys(global.db.users).length}`)
         break
+
+
+case 'oz': case 'time': case 'ut': case 'a3':
+        if (isBan) return reply(mess.banned)	 			
+        if (isBanChat) return reply(mess.bangc)
+            reply(`Online:${runtime(process.uptime())}`)
+	break 
+
+
+case 'team': case 't': case 'tem': case 'tam':
+        if (isBan) return reply(mess.banned)	 			
+        if (isBanChat) return reply(mess.bangc)
+	if (!isCreator) return replay(mess.botowner)
+            reply(`Das Mk&A-Team: 
+
+Inhaber/in:
+
+1.  +491766927731 
+2. +4917770628225
+3. +436764242454 
+
+Stlv. Inhaber/in:
+
+1.  +493023180366 
+
+Manager/in:
+
+1.  +491632225167
+
+Supporter/in:
+
+1.  +494916093444217
+2.  +491788781873
+
+Hoster/in:
+
+1.  +4916093444217
+2. +49 177 7108553`)
+	break
 		
 		
 case 'schäm': case 'schem': case 'scham': case 'sch':
@@ -1542,7 +1581,7 @@ case 'sup': case 'support': case 'frage': case '!':
         if (isBan) return reply(mess.banned)	 			
         if (isBanChat) return reply(mess.bangc)
 
-        Miku.sendMessage(`120363043511491681@g.us`, {text:`── 「 REPORT 」 ──\n\n*Von*: ${pushname}\n*nummer*:  wa.me//${m.sender}\n*Message*: ${q}`})
+        Miku.sendMessage(`120363043511491681@g.us`, {text:`── 「 REPORT 」 ──\n\n*Von*: ${pushname}\n*nummer*:  wa.me//${m.sender}\n*Message*: ${q}\n *Antwort* :`})
         replay(`Ich habe deine Frage an meine Besitzer weitergegeben. Bitte warte bis sie deine Frage beantwortet haben, die Antwort siehst du hier :https://chat.whatsapp.com/DOnXPARAhdg3qptwUlPuye`)
         break
 		
