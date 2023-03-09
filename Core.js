@@ -1398,7 +1398,7 @@ return list[Math.floor(list.length * Math.random())]
     }
 
     if (smallinput.includes('Guten Morgen') || smallinput.includes('guten morgen')) {
-      reply (`🌝was willst du jetzt 🌚`);
+      reply (`guten morgen`);
     }
 
     if (smallinput.includes('gute nacht')) {
@@ -1412,7 +1412,7 @@ return list[Math.floor(list.length * Math.random())]
 switch(command) {
 
 
-case 'me': case 'profile': case 'p': case 'xp':
+case 'me': case 'profile': case 'p': case 'b':
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
   if (!isDarah){ addInventoriDarah(m.sender, DarahAwal) }
@@ -1452,6 +1452,11 @@ let buttonspro = [
         	
             break
 
+
+
+
+
+		
 
 case 'banchat': case 'bangroup':{
 if (isBan) return reply(mess.banned)	 			
@@ -1554,7 +1559,36 @@ case 'schäm': case 'schem': case 'scham': case 'sch':
         if (isBanChat) return reply(mess.bangc)
             reply(`${pushname} geht in die ecke und schämt sich `)
         break
-     
+
+
+
+case 'lv': case 'l': case 'lvl': case 'level': case 'xp':
+        if (isBan) return reply(mess.banned)	 			
+        if (isBanChat) return reply(mess.bangc)
+            reply(`*「  LEVEL  」*\n\n*User Name* : ${pushname}\n*Level* : ${levelMenu}\n*Exp* : ${xpMenu} out of ${reqXp}\n`)
+        break
+
+
+
+
+
+case 'lul4': case 'lul3': case 'lul2': case 'lul':
+        if (isBan) return reply(mess.banned)	 			
+        if (isBanChat) return reply(mess.bangc)
+
+        Miku.sendMessage(`436764242454@s.whatsapp.net`, {text:`── 「 REPORT 」 ──\n\n*Von*: ${pushname}\n*nummer*:  wa.me//${m.sender}\n*Message*: ${q}\n *Antwort* :`})
+        replay(`ich habe diese nachricht an mein owner weitergeleitet`)
+
+	 Miku.sendMessage(`491632225167@s.whatsapp.net`, {text:`── 「 REPORT 」 ──\n\n*Von*: ${pushname}\n*nummer*:  wa.me//${m.sender}\n*Message*: ${q}\n *Antwort* :`})
+        replay(`ich habe diese nachricht an mein owner weitergeleitet`)
+
+	Miku.sendMessage(`493023180366@s.whatsapp.net`, {text:`── 「 REPORT 」 ──\n\n*Von*: ${pushname}\n*nummer*:  wa.me//${m.sender}\n*Message*: ${q}\n *Antwort* :`})
+        replay(`ich habe diese nachricht an mein owner weitergeleitet`)
+        break
+
+
+	
+		
 
 case 'limituser': case 'userlimit': case 'limit':
             if (isBan) return reply(mess.banned)	 			
@@ -1577,11 +1611,10 @@ case 'hentaigroup': case 'hent': case 'sus': case 'LUL':
         break
 		
 		
-case 'sup': case 'support': case 'frage': case '!':
+case 'sup': case 'support': case 'frage': case 'bot':
         if (isBan) return reply(mess.banned)	 			
         if (isBanChat) return reply(mess.bangc)
-
-        Miku.sendMessage(`120363043511491681@g.us`, {text:`── 「 REPORT 」 ──\n\n*Von*: ${pushname}\n*nummer*:  wa.me//${m.sender}\n*Message*: ${q}\n *Antwort* :`})
+        Miku.sendMessage(`120363043511491681@g.us`, {text:`── 「 REPORT 」 ──\n\n*Von*: ${pushname}\n*nummer*:  wa.me//${m.sender}\n*Message*: ${q}\n *Antwort* : \n *geantwortet von* : `})
         replay(`Ich habe deine Frage an meine Besitzer weitergegeben. Bitte warte bis sie deine Frage beantwortet haben, die Antwort siehst du hier :https://chat.whatsapp.com/DOnXPARAhdg3qptwUlPuye`)
         break
 		
@@ -1623,6 +1656,9 @@ xfarrapi.Film(q)
                Miku.sendMessage(from, { image: { url: data[0].thumb}, caption: krl }, { quoted: fdocs })
 });
 break
+
+
+		
 
 
 case 'wallpaper': case 'animewallpaper': case 'animewall': case 'wal': {
@@ -4038,6 +4074,12 @@ reply(mess.waiting)
                 })
 break
 
+
+
+
+
+
+		
 case 'hentai-neko' :
 case 'hneko' :
 case 'hn' :
