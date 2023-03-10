@@ -16,7 +16,7 @@ sudo apt install imagemagick
 git clone https://github.com/Sebi127391/Test32
 
 ls
-cd Miku-MD
+cd Test32 
 npm i
 
 
@@ -31,7 +31,7 @@ curl -sL https://deb.nodesource.com/setup_18.x | sudo -E bash -
 
 sudo apt-get install -y nodejs
 yarn add sharp
-cd Miku-MD
+cd Test32
 npm i
 npm start
 
@@ -48,7 +48,7 @@ npm start
 
 #### ✧ Start bot after UserLand session is cleared
 ```
-cd Miku-MD
+cd Test32 
 npm start
 ```
 #### ✧ What to do if you logged out from the WhatsApp linked device section and want to get new qr to login
