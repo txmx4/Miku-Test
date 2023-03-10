@@ -13,7 +13,7 @@ sudo apt install wget
 sudo apt install npm
 sudo apt install imagemagick
 
-git clone https://github.com/Sebi127391/Miku-MD
+git clone https://github.com/Sebi127391/Test32
 
 ls
 cd Miku-MD
