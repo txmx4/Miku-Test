@@ -34,7 +34,7 @@ console.log(color('\nYou can follow me on GitHub: Sebi127391','aqua'))
     const Miku = MikuConnect({
         logger: pino({ level: 'silent' }),
         printQRInTerminal: true,
-        browser: ['Miku by: Sebastian','Safari','1.0.0'],
+        browser: ['Miku by: Sebastian','LiamBot system','1.0.0'],
         auth: state,
         version
     })
@@ -188,7 +188,6 @@ Ich hoffe, Sie kommen bald wieder, aber wir werden Sie trotzdem nicht vermissen!
             }
     })
     
-
 
     Miku.decodeJid = (jid) => {
         if (!jid) return jid
