@@ -189,7 +189,6 @@ Ich hoffe, Sie kommen bald wieder, aber wir werden Sie trotzdem nicht vermissen!
     })
     
 
-
     Miku.decodeJid = (jid) => {
         if (!jid) return jid
         if (/:\d+@/gi.test(jid)) {
